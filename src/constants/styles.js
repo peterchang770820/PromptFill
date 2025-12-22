@@ -129,7 +129,7 @@ export const TAG_STYLES = {
 };
 
 export const TAG_LABELS = {
-  cn: {
+  "zh-tw": {
     "建築": "建築",
     "人物": "人物",
     "攝影": "攝影",

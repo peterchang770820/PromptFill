@@ -154,7 +154,7 @@ const App = () => {
   // bump version keys to强制刷新新增詞庫与默认值
   const [banks, setBanks] = useStickyState(INITIAL_BANKS, "app_banks_v9");
   const [defaults, setDefaults] = useStickyState(INITIAL_DEFAULTS, "app_defaults_v9");
-  const [language, setLanguage] = useStickyState("cn", "app_language_v1"); 
+  const [language, setLanguage] = useStickyState("zh-tw", "app_language_v1"); 
   const [categories, setCategories] = useStickyState(INITIAL_CATEGORIES, "app_categories_v1"); // New state
   
   const [templates, setTemplates] = useStickyState(INITIAL_TEMPLATES_CONFIG, "app_templates_v10");
@@ -272,7 +272,7 @@ const App = () => {
 
   // Helper: Translate
   const t = (key, params = {}) => {
-    let str = TRANSLATIONS[language][key] || key;
+    let str = TRANSLATIONS[language]?.[key] || key;
     Object.keys(params).forEach(k => {
         str = str.replace(`{{${k}}}`, params[k]);
     });

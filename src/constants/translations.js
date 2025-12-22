@@ -1,6 +1,6 @@
-// 翻译配置 (Translations)
+// 翻譯配置 (Translations)
 export const TRANSLATIONS = {
-  cn: {
+  "zh-tw": {
     template_management: "模板管理",
     template_details: "模板詳情",
     template_subtitle: "切換或管理不同 Prompt",
