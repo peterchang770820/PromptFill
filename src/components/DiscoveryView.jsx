@@ -328,10 +328,8 @@ export const DiscoveryView = React.memo(({
                   </button>
               </div>
 
-              {/* Right: Author Info (optional link removed) */}
-              <div className="flex flex-col items-end gap-1.5 opacity-60 transition-opacity px-4 py-2">
-                  <p className="text-[11px] font-medium text-gray-700">Made by CornerStudio</p>
-              </div>
+              {/* Right: Author Info removed */}
+              <div className="flex flex-col items-end gap-1.5 opacity-60 transition-opacity px-4 py-2" />
           </div>
       </div>
     </div>

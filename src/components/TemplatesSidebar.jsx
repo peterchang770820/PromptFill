@@ -272,9 +272,7 @@ export const TemplatesSidebar = React.memo(({
             </PremiumButton>
           </div>
           
-          <div className="hidden md:block p-4 pt-0 border-t border-transparent text-[10px] leading-relaxed text-center opacity-60 transition-opacity" style={{ color: '#545454' }}>
-              <p>{t('author_info')}</p>
-          </div>
+          <div className="hidden md:block p-4 pt-0 border-t border-transparent text-[10px] leading-relaxed text-center opacity-60 transition-opacity" style={{ color: '#545454' }} />
       </div>
     </div>
   );

@@ -65,7 +65,7 @@ export const TRANSLATIONS = {
     collapse_view: "收合視圖",
     settings: "設定",
     app_title: "提示詞填空器",
-    author_info: "Made by CornerStudio",
+    author_info: "",
     export_template: "匯出模板",
     import_template: "匯入模板",
     export_all_templates: "匯出全部",
