@@ -83,7 +83,7 @@ export const TemplatesSidebar = React.memo(
           isMobile
             ? `fixed inset-y-0 left-0 z-[300] w-[75%] max-w-[320px] transform transition-transform duration-500 ease-out shadow-2xl ${isTemplatesDrawerOpen ? 'translate-x-0' : '-translate-x-full'}`
             : 'relative md:flex flex-col flex-shrink-0 h-full w-[380px] border-r border-gray-200'
-        } 
+        }
         flex bg-white overflow-hidden
         ${!isMobile && mobileTab !== 'editor' && mobileTab !== 'banks' ? 'hidden md:flex' : ''}
       `}
@@ -156,7 +156,7 @@ export const TemplatesSidebar = React.memo(
                     className="text-[10px] px-2 py-1 rounded-full border transition-colors flex items-center gap-1 shadow-sm bg-transparent text-gray-400 border-gray-200 hover:text-orange-600 hover:bg-orange-50"
                   >
                     <Globe size={10} />
-                    {language.toUpperCase()}
+                    {language.toUpperCase() === 'ZH-TW' ? '中' : 'EN'}
                   </button>
                   <button
                     onClick={() => setIsSettingsOpen(true)}
