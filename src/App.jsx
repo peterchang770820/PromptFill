@@ -283,7 +283,7 @@ const ImagePreviewModal = React.memo(
             {/* Bottom Card Section - Light Glassmorphism */}
             <div
               className={`
-                  flex-1 bg-white/70 backdrop-blur-2xl border-t border-white/60 
+                  flex-1 bg-white/70 backdrop-blur-2xl border-t border-white/60
                   transition-all duration-500 ease-in-out flex flex-col overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.05)]
                   ${isTextExpanded ? 'rounded-t-[2.5rem] mt-0' : 'rounded-t-[2rem] mt-4'}
                 `}
@@ -2004,6 +2004,44 @@ const App = () => {
   };
 
   const handleExportImage = async () => {
+    setIsExporting(true);
+
+    try {
+      // 生成最終提示詞
+      let finalString = getLocalized(activeTemplate.content, templateLanguage);
+      const counters = {};
+
+      finalString = finalString.replace(/{{(.*?)}}/g, (match, key) => {
+        const k = key.trim();
+        const idx = counters[k] || 0;
+        counters[k] = idx + 1;
+
+        const uniqueKey = `${k}-${idx}`;
+        const value = activeTemplate.selections[uniqueKey] || defaults[k];
+        return getLocalized(value, templateLanguage) || match;
+      });
+
+      const cleanText = finalString
+        .replace(/###\s/g, '')
+        .replace(/\*\*(.*?)\*\*/g, '$1')
+        .replace(/\n\s*\n/g, '\n\n');
+
+      // URL 編碼提示詞
+      const encodedPrompt = encodeURIComponent(cleanText);
+
+      // 開啟 Gemini 網頁
+      const geminiUrl = `https://gemini.google.com/app#autoSubmit=false&prompt=${encodedPrompt}&tool=image`;
+      window.open(geminiUrl, '_blank');
+
+    } catch (err) {
+      console.error('Failed to open Gemini:', err);
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
+  // 保留原始的匯出長圖功能（已註解，備用）
+  const handleExportImageOld = async () => {
     const element = document.getElementById('preview-card');
     if (!element) return;
 
@@ -2236,8 +2274,8 @@ const App = () => {
             footer.style.fontFamily = 'sans-serif';
 
             const qrCodeHtml = qrCodeBase64
-              ? `<img src="${qrCodeBase64}" 
-                               style="width: 80px; height: 80px; border: 3px solid #e2e8f0; border-radius: 8px; display: block; background: white;" 
+              ? `<img src="${qrCodeBase64}"
+                               style="width: 80px; height: 80px; border: 3px solid #e2e8f0; border-radius: 8px; display: block; background: white;"
                                alt="QR Code" />`
               : `<div style="width: 80px; height: 80px; border: 3px dashed #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: #f8fafc; font-size: 10px; color: #94a3b8; font-weight: 500;">QR Code</div>`;
 
@@ -2516,7 +2554,7 @@ const App = () => {
           {/* --- 2. Main Editor (Middle) --- */}
           <div
             className={`
-          ${mobileTab === 'editor' || mobileTab === 'settings' ? 'flex fixed inset-0 z-50 bg-white md:static md:bg-white/80' : 'hidden'} 
+          ${mobileTab === 'editor' || mobileTab === 'settings' ? 'flex fixed inset-0 z-50 bg-white md:static md:bg-white/80' : 'hidden'}
           md:flex flex-1 flex-col h-full overflow-hidden relative
           md:rounded-3xl border border-white/40 shadow-xl
           origin-left
@@ -2616,17 +2654,6 @@ const App = () => {
                   <div className="h-6 w-px bg-gray-200 mx-1 hidden md:block"></div>
 
                   <PremiumButton
-                    onClick={handleExportImage}
-                    disabled={isEditing || isExporting}
-                    title={isExporting ? t('exporting') : t('export_image')}
-                    icon={ImageIcon}
-                    color="orange"
-                  >
-                    <span className="hidden sm:inline">
-                      {isExporting ? t('exporting') : t('export_image')}
-                    </span>
-                  </PremiumButton>
-                  <PremiumButton
                     onClick={handleCopy}
                     title={copied ? t('copied') : t('copy_result')}
                     icon={copied ? Check : CopyIcon}
@@ -2634,8 +2661,20 @@ const App = () => {
                     active={true} // Always active look for CTA
                     className="transition-all duration-300 transform hover:-translate-y-0.5"
                   >
-                    <span className="hidden md:inline ml-1">
+                    <span className="hidden md:inline">
                       {copied ? t('copied') : t('copy_result')}
+                    </span>
+                  </PremiumButton>
+                  <PremiumButton
+                    onClick={handleExportImage}
+                    disabled={isEditing || isExporting}
+                    title={isExporting ? t('exporting') : t('export_image')}
+                    color="orange"
+                    className="whitespace-nowrap"
+                  >
+                    <img src="/gemini.svg" alt="Gemini" className="w-4 h-4 flex-shrink-0" />
+                    <span className="hidden sm:inline">
+                      {isExporting ? t('exporting') : t('export_image')}
                     </span>
                   </PremiumButton>
                 </div>

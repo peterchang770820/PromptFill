@@ -2,16 +2,16 @@
 import React, { useState } from 'react';
 import { PREMIUM_STYLES } from '../constants/styles';
 
-export const PremiumButton = ({ 
-  onClick, 
-  children, 
-  className = "", 
-  active = false, 
-  disabled = false, 
-  title, 
-  icon: Icon, 
+export const PremiumButton = ({
+  onClick,
+  children,
+  className = "",
+  active = false,
+  disabled = false,
+  title,
+  icon: Icon,
   color = "orange",
-  hoverColor = null 
+  hoverColor = null
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const currentColor = (isHovered && hoverColor) ? hoverColor : color;
@@ -21,6 +21,7 @@ export const PremiumButton = ({
   const baseClasses = `
     flex items-center justify-center gap-2 px-3 py-1.5 rounded-lg font-medium transition-all duration-300
     disabled:opacity-50 disabled:cursor-not-allowed disabled:grayscale
+    whitespace-nowrap
     ${className}
   `;
 
@@ -48,8 +49,8 @@ export const PremiumButton = ({
       style={style}
       title={title}
     >
-      {Icon && <Icon size={16} />}
-      {children && <span>{children}</span>}
+      {Icon && <Icon size={16} className="flex-shrink-0" />}
+      {children}
     </button>
   );
 };
