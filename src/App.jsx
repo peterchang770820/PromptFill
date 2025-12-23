@@ -2030,7 +2030,7 @@ const App = () => {
       const encodedPrompt = encodeURIComponent(cleanText);
 
       // 開啟 Gemini 網頁
-      const geminiUrl = `https://gemini.google.com/app#autoSubmit=false&tool=image&prompt=${encodedPrompt}`;
+      const geminiUrl = `https://gemini.google.com/app#autoSubmit=false&pasteImage=1&tool=image&prompt=${encodedPrompt}`;
       window.open(geminiUrl, '_blank');
 
     } catch (err) {
