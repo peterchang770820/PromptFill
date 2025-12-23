@@ -35,7 +35,6 @@ import {
   RefreshCw,
   Sparkles,
 } from 'lucide-react';
-import html2canvas from 'html2canvas';
 
 // ====== 匯入資料設定 ======
 import { INITIAL_TEMPLATES_CONFIG, TEMPLATE_TAGS, SYSTEM_DATA_VERSION } from './data/templates';
@@ -2000,402 +1999,7 @@ const App = () => {
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       })
-      .catch(() => {});
-  };
-
-  const handleExportImage = async () => {
-    const element = document.getElementById('preview-card');
-    if (!element) return;
-
-    setIsExporting(true);
-
-    // --- 關鍵修復：預處理圖片為 Base64 ---
-    // 這能徹底解決 html2canvas 的跨域 (CORS) 與圖片載入不全問題
-    // 我們手動 fetch 圖片 blob 並轉為 base64，繞過 canvas 的跨域限制
-    const templateDefault = INITIAL_TEMPLATES_CONFIG.find((t) => t.id === activeTemplateId);
-    const originalImageSrc = activeTemplate.imageUrl || templateDefault?.imageUrl || '';
-    let tempBase64Src = null;
-    const imgElement = element.querySelector('img');
-
-    if (imgElement && originalImageSrc) {
-      // 若當前 img 沒有正確的 src，先補上預設 src
-      if (
-        !imgElement.src ||
-        imgElement.src.trim() === '' ||
-        imgElement.src.includes('data:image') === false
-      ) {
-        imgElement.src = originalImageSrc;
-      }
-    }
-
-    if (imgElement && originalImageSrc && originalImageSrc.startsWith('http')) {
-      try {
-        // 嘗試透過 fetch 取得圖片資料
-        const response = await fetch(originalImageSrc);
-        const blob = await response.blob();
-        tempBase64Src = await new Promise((resolve) => {
-          const reader = new FileReader();
-          reader.onloadend = () => resolve(reader.result);
-          reader.readAsDataURL(blob);
-        });
-
-        // 臨時替換為 Base64
-        imgElement.src = tempBase64Src;
-        await waitForImageLoad(imgElement);
-      } catch (e) {
-        console.warn('圖片 Base64 轉換失敗，嘗試直接匯出', e);
-        // 若 fetch 失敗（例如完全被 CORS 封鎖），只能嘗試允許 canvas 污染
-        // 但通常 fetch 失敗也意味著 canvas 會失敗
-      }
-    } else if (imgElement) {
-      // 即便未轉 base64，也要確保當前展示圖已載入完成
-      await waitForImageLoad(imgElement);
-    }
-
-    // 預載 QR Code（使用本地檔案並轉為 base64）
-    const websiteUrl = 'https://promptfill.tanshilong.com/';
-    const localQrCodePath = '/QRCode.png';
-    let qrCodeBase64 = null;
-
-    try {
-      console.log('正在載入本地 QR Code...', localQrCodePath);
-      const qrResponse = await fetch(localQrCodePath);
-      if (!qrResponse.ok) throw new Error('本地 QR Code 載入失敗');
-      const qrBlob = await qrResponse.blob();
-      qrCodeBase64 = await new Promise((resolve) => {
-        const reader = new FileReader();
-        reader.onloadend = () => {
-          console.log('本地 QR Code 載入成功');
-          resolve(reader.result);
-        };
-        reader.readAsDataURL(qrBlob);
-      });
-    } catch (e) {
-      console.error('本地 QR Code 載入失敗', e);
-      // 即使失敗也繼續，會顯示占位符
-    }
-
-    try {
-      // 建立一個臨時的匯出容器
-      const exportContainer = document.createElement('div');
-      exportContainer.id = 'export-container-temp';
-      exportContainer.style.position = 'fixed';
-      exportContainer.style.left = '-99999px';
-      exportContainer.style.top = '0';
-      exportContainer.style.width = '900px'; // 調整寬度：860px 卡片 + 20px*2 邊距
-      exportContainer.style.minHeight = '800px';
-      exportContainer.style.padding = '20px'; // 橘色背景距卡片四周各 20px
-      exportContainer.style.background = '#fafafa';
-      exportContainer.style.display = 'flex';
-      exportContainer.style.alignItems = 'center';
-      exportContainer.style.justifyContent = 'center';
-      document.body.appendChild(exportContainer);
-
-      // 建立橘色漸層背景層
-      const bgLayer = document.createElement('div');
-      bgLayer.style.position = 'absolute';
-      bgLayer.style.inset = '0';
-      bgLayer.style.background = 'linear-gradient(180deg, #F08F62 0%, #EB7A54 100%)';
-      bgLayer.style.zIndex = '0';
-      exportContainer.appendChild(bgLayer);
-
-      // 複製 preview-card
-      const clonedCard = element.cloneNode(true);
-      clonedCard.style.position = 'relative';
-      clonedCard.style.zIndex = '10';
-      clonedCard.style.background = 'rgba(255, 255, 255, 0.98)';
-      clonedCard.style.borderRadius = '24px';
-      clonedCard.style.boxShadow =
-        '0 8px 32px -4px rgba(0, 0, 0, 0.12), 0 4px 16px -2px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.05)'; // 更細膩的多層陰影
-      clonedCard.style.border = '1px solid rgba(255, 255, 255, 0.8)';
-      clonedCard.style.padding = '40px 45px';
-      clonedCard.style.margin = '0 auto';
-      clonedCard.style.width = '860px'; // 固定卡片寬度為 860px
-      clonedCard.style.boxSizing = 'border-box';
-      clonedCard.style.fontFamily = '"PingFang SC", "Microsoft YaHei", sans-serif';
-      clonedCard.style.webkitFontSmoothing = 'antialiased';
-      exportContainer.appendChild(clonedCard);
-
-      const canvas = await html2canvas(exportContainer, {
-        scale: 2.0, // 適中的解析度，640px 容器輸出 1280px 寬度
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: '#ffffff',
-        logging: false,
-        onclone: (clonedDoc) => {
-          const clonedElement = clonedDoc.getElementById('export-container-temp');
-          if (clonedElement) {
-            const card = clonedElement.querySelector('#preview-card');
-            if (!card) return;
-
-            // 取得原始資料
-            const originalImg = card.querySelector('img');
-            const imgSrc = tempBase64Src || (originalImg ? originalImg.src : '');
-            const titleElement = card.querySelector('h2');
-            const titleText = titleElement
-              ? titleElement.textContent.trim()
-              : getLocalized(activeTemplate.name, language);
-            const contentElement = card.querySelector('#final-prompt-content');
-            const contentHTML = contentElement ? contentElement.innerHTML : '';
-
-            console.log('正文內容取得:', contentHTML ? '成功' : '失敗', contentHTML.length);
-
-            // 取得版本號（動態自原始 DOM）
-            const metaContainer = card.querySelector('.flex.flex-wrap.gap-2');
-            const versionElement = metaContainer
-              ? metaContainer.querySelector('.bg-orange-50')
-              : null;
-            const versionText = versionElement ? versionElement.textContent.trim() : '';
-
-            // 清空卡片內容
-            card.innerHTML = '';
-
-            // --- 1. 圖片區域（頂部，保持原始寬高比不裁切）---
-            if (imgSrc) {
-              const imgContainer = clonedDoc.createElement('div');
-              imgContainer.style.width = '100%';
-              imgContainer.style.marginBottom = '30px';
-              imgContainer.style.display = 'flex';
-              imgContainer.style.justifyContent = 'center';
-              imgContainer.style.alignItems = 'center';
-
-              const img = clonedDoc.createElement('img');
-              img.src = imgSrc;
-              img.style.width = '100%'; // 充分利用卡片寬度
-              img.style.height = 'auto'; // 高度自動，保持原始寬高比
-              img.style.objectFit = 'contain'; // 包含模式，不裁切圖片
-              img.style.borderRadius = '12px'; // 加入圓角
-              img.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-              img.style.boxSizing = 'border-box';
-
-              imgContainer.appendChild(img);
-              card.appendChild(imgContainer);
-            }
-
-            // --- 2. 標題區域（無版本號、無標籤）---
-            const titleContainer = clonedDoc.createElement('div');
-            titleContainer.style.marginBottom = '25px';
-
-            const title = clonedDoc.createElement('h2');
-            title.textContent = titleText;
-            title.style.fontSize = '32px'; // 恢復原狀
-            title.style.fontWeight = '700';
-            title.style.color = '#1f2937';
-            title.style.margin = '0';
-            title.style.lineHeight = '1.2';
-
-            titleContainer.appendChild(title);
-            card.appendChild(titleContainer);
-
-            // --- 3. 正文區域（不重複標題）---
-            if (contentHTML) {
-              const contentContainer = clonedDoc.createElement('div');
-              contentContainer.innerHTML = contentHTML;
-              contentContainer.style.fontSize = '18px'; // 恢復原狀
-              contentContainer.style.lineHeight = '1.8';
-              contentContainer.style.color = '#374151';
-              contentContainer.style.marginBottom = '40px';
-
-              // 修復膠囊樣式 - 使用更精確的屬性選擇器
-              const variables = contentContainer.querySelectorAll('[data-export-pill="true"]');
-              variables.forEach((v) => {
-                // 優化父層容器（如果是 Variable 元件的 wrapper）
-                if (v.parentElement && v.parentElement.classList.contains('inline-block')) {
-                  v.parentElement.style.display = 'inline';
-                  v.parentElement.style.margin = '0';
-                }
-
-                // 保留原有的背景色與文字顏色，只優化佈局
-                v.style.display = 'inline-flex';
-                v.style.alignItems = 'center';
-                v.style.justifyContent = 'center';
-                v.style.padding = '4px 12px'; // 恢復原狀
-                v.style.margin = '2px 4px';
-                v.style.borderRadius = '6px'; // 恢復原狀
-                v.style.fontSize = '17px'; // 恢復原狀
-                v.style.fontWeight = '600';
-                v.style.lineHeight = '1.5';
-                v.style.verticalAlign = 'middle';
-                v.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
-                v.style.color = '#ffffff'; // 確保文字是白色
-                v.style.border = 'none'; // 匯出時移除半透明邊框，減少干擾
-              });
-
-              card.appendChild(contentContainer);
-            }
-
-            // --- 4. 底部浮水印區域（增加版本號）---
-            const footer = clonedDoc.createElement('div');
-            footer.style.marginTop = '40px';
-            footer.style.paddingTop = '25px';
-            footer.style.paddingBottom = '15px';
-            footer.style.borderTop = '2px solid #e2e8f0';
-            footer.style.display = 'flex';
-            footer.style.justifyContent = 'space-between';
-            footer.style.alignItems = 'center';
-            footer.style.fontFamily = 'sans-serif';
-
-            const qrCodeHtml = qrCodeBase64
-              ? `<img src="${qrCodeBase64}" 
-                               style="width: 80px; height: 80px; border: 3px solid #e2e8f0; border-radius: 8px; display: block; background: white;" 
-                               alt="QR Code" />`
-              : `<div style="width: 80px; height: 80px; border: 3px dashed #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: #f8fafc; font-size: 10px; color: #94a3b8; font-weight: 500;">QR Code</div>`;
-
-            footer.innerHTML = `
-                       <div style="flex: 1; padding-right: 20px;">
-                           <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
-                               <div style="font-size: 15px; font-weight: 600; color: #1f2937;">
-                                   Generated by <span style="color: #6366f1; font-weight: 700;">Prompt Fill</span>
-                               </div>
-                               ${versionText ? `<span style="font-size: 11px; padding: 3px 10px; background: #fff7ed; color: #f97316; border-radius: 5px; font-weight: 600; border: 1px solid #fed7aa;">${versionText}</span>` : ''}
-                           </div>
-                           <div style="font-size: 12px; color: #6b7280; margin-bottom: 6px; font-weight: 500;">提示詞填空器</div>
-                           <div style="font-size: 11px; color: #3b82f6; font-weight: 500; background: #eff6ff; padding: 4px 8px; border-radius: 4px; display: inline-block; letter-spacing: 0.3px;">
-                               ${websiteUrl}
-                           </div>
-                       </div>
-                       <div style="display: flex; align-items: center;">
-                           <div style="text-align: center;">
-                               ${qrCodeHtml}
-                               <div style="font-size: 9px; color: #94a3b8; margin-top: 4px; font-weight: 500;">掃碼訪問</div>
-                           </div>
-                       </div>
-                   `;
-
-            card.appendChild(footer);
-            console.log('新版面已套用');
-          }
-        },
-      });
-
-      // 使用 JPG 格式，质量 0.92（高质量同时节省空间）
-      const image = canvas.toDataURL('image/jpeg', 0.92);
-      const activeTemplateName = getLocalized(activeTemplate.name, language);
-      const filename = `${activeTemplateName.replace(/\s+/g, '_')}_prompt.jpg`;
-
-      // 檢測是否為行動裝置與 iOS
-      const isMobileDevice =
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        ) || window.innerWidth < 768;
-      const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-      if (isMobileDevice) {
-        // 行動端：嘗試使用 Web Share API 存到相簿
-        try {
-          // 將 base64 轉為 blob
-          const base64Response = await fetch(image);
-          const blob = await base64Response.blob();
-          const file = new File([blob], filename, { type: 'image/jpeg' });
-
-          // 檢查是否支援 Web Share API（iOS 13+ 支援）
-          if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-            await navigator.share({
-              files: [file],
-              title: activeTemplateName,
-              text: '匯出的提示詞模板',
-            });
-            showToastMessage('✅ 圖片已分享，請選擇「儲存圖像」保存到相簿');
-          } else {
-            // 降級方案：對於 iOS，開啟新標籤頁顯示圖片
-            if (isIOS) {
-              // iOS 特殊處理：在新視窗開啟圖片，使用者可長按儲存
-              const newWindow = window.open();
-              if (newWindow) {
-                newWindow.document.write(`
-                                <html>
-                                <head>
-                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                    <title>${activeTemplateName}</title>
-                                    <style>
-                                        body { margin: 0; padding: 20px; background: #000; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-                                        img { max-width: 100%; height: auto; }
-                                        .tip { position: fixed; top: 10px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.95); padding: 12px 20px; border-radius: 8px; color: #333; font-size: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 1000; }
-                                    </style>
-                                </head>
-                                <body>
-                                    <div class="tip">長按圖片保存到相簿 📱</div>
-                                    <img src="${image}" alt="${activeTemplateName}" />
-                                </body>
-                                </html>
-                            `);
-                showToastMessage('✅ 請在新頁面長按圖片保存');
-              } else {
-                // 若無法開啟新視窗，嘗試下載
-                const link = document.createElement('a');
-                link.href = image;
-                link.download = filename;
-                link.target = '_blank';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                showToastMessage('✅ 圖片已匯出，請在新頁面保存');
-              }
-            } else {
-              // Android 等其他行動裝置：觸發下載
-              const link = document.createElement('a');
-              link.href = image;
-              link.download = filename;
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-              showToastMessage('✅ 圖片已儲存到下載資料夾');
-            }
-          }
-        } catch (shareError) {
-          console.log('Share failed:', shareError);
-          // 最終降級方案
-          if (isIOS) {
-            // iOS 最終方案：開啟新標籤頁
-            const newWindow = window.open();
-            if (newWindow) {
-              newWindow.document.write(`
-                            <html>
-                            <head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${activeTemplateName}</title></head>
-                            <body style="margin:0;padding:20px;background:#000;text-align:center;">
-                                <p style="color:#fff;margin-bottom:20px;">長按圖片保存到相簿 📱</p>
-                                <img src="${image}" style="max-width:100%;height:auto;" />
-                            </body>
-                            </html>
-                        `);
-            }
-            showToastMessage('⚠️ 請在新頁面長按圖片保存');
-          } else {
-            const link = document.createElement('a');
-            link.href = image;
-            link.download = filename;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            showToastMessage('✅ 圖片已儲存');
-          }
-        }
-      } else {
-        // 桌面端：直接下載
-        const link = document.createElement('a');
-        link.href = image;
-        link.download = filename;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        showToastMessage('✅ 圖片匯出成功！');
-      }
-    } catch (err) {
-      console.error('Export failed:', err);
-      showToastMessage('❌ 匯出失敗，請重試');
-    } finally {
-      // 清理臨時容器
-      const tempContainer = document.getElementById('export-container-temp');
-      if (tempContainer) {
-        document.body.removeChild(tempContainer);
-      }
-
-      // 恢復原始圖片 src
-      if (imgElement && originalImageSrc) {
-        imgElement.src = originalImageSrc;
-      }
-      setIsExporting(false);
-    }
+      .catch(() => { });
   };
 
   // 行動端模擬拖曳處理器
@@ -2586,11 +2190,10 @@ const App = () => {
                       onClick={() => setIsEditing(false)}
                       className={`
                           p-1.5 md:px-3 md:py-1.5 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-1.5
-                          ${
-                            !isEditing
-                              ? 'bg-white text-orange-600 shadow-sm ring-1 ring-black/5'
-                              : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
-                          }
+                          ${!isEditing
+                          ? 'bg-white text-orange-600 shadow-sm ring-1 ring-black/5'
+                          : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
+                        }
                       `}
                       title={t('preview_mode')}
                     >
@@ -2601,11 +2204,10 @@ const App = () => {
                       onClick={() => setIsEditing(true)}
                       className={`
                           p-1.5 md:px-3 md:py-1.5 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-1.5
-                          ${
-                            isEditing
-                              ? 'bg-white text-orange-600 shadow-sm ring-1 ring-black/5'
-                              : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
-                          }
+                          ${isEditing
+                          ? 'bg-white text-orange-600 shadow-sm ring-1 ring-black/5'
+                          : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
+                        }
                       `}
                       title={t('edit_mode')}
                     >
@@ -2616,27 +2218,14 @@ const App = () => {
                   <div className="h-6 w-px bg-gray-200 mx-1 hidden md:block"></div>
 
                   <PremiumButton
-                    onClick={handleExportImage}
-                    disabled={isEditing || isExporting}
-                    title={isExporting ? t('exporting') : t('export_image')}
-                    icon={ImageIcon}
-                    color="orange"
-                  >
-                    <span className="hidden sm:inline">
-                      {isExporting ? t('exporting') : t('export_image')}
-                    </span>
-                  </PremiumButton>
-                  <PremiumButton
                     onClick={handleCopy}
                     title={copied ? t('copied') : t('copy_result')}
                     icon={copied ? Check : CopyIcon}
-                    color={copied ? 'emerald' : 'orange'}
+                    color={copied ? "emerald" : "orange"}
                     active={true} // Always active look for CTA
                     className="transition-all duration-300 transform hover:-translate-y-0.5"
                   >
-                    <span className="hidden md:inline ml-1">
-                      {copied ? t('copied') : t('copy_result')}
-                    </span>
+                    <span className="hidden md:inline ml-1">{copied ? t('copied') : t('copy_result')}</span>
                   </PremiumButton>
                 </div>
               </div>
@@ -2929,11 +2518,10 @@ const App = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <button
                     onClick={handleSwitchToLocalStorage}
-                    className={`relative w-full px-5 py-4 text-sm font-semibold rounded-2xl transition-all duration-300 border-2 flex items-center justify-between overflow-hidden group ${
-                      storageMode === 'browser'
+                    className={`relative w-full px-5 py-4 text-sm font-semibold rounded-2xl transition-all duration-300 border-2 flex items-center justify-between overflow-hidden group ${storageMode === 'browser'
                         ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white border-blue-500 shadow-lg shadow-blue-500/30'
                         : 'bg-gradient-to-br from-white to-gray-50 text-gray-700 border-gray-200 hover:border-blue-300 hover:shadow-md hover:scale-[1.02]'
-                    }`}
+                      }`}
                   >
                     <div className="flex items-center gap-3 relative z-10">
                       <Globe size={18} />
@@ -2951,11 +2539,10 @@ const App = () => {
                   <button
                     onClick={handleSelectDirectory}
                     disabled={!isFileSystemSupported || isMobileDevice}
-                    className={`relative w-full px-5 py-4 text-sm font-semibold rounded-2xl transition-all duration-300 border-2 flex items-center justify-between overflow-hidden group ${
-                      storageMode === 'folder'
+                    className={`relative w-full px-5 py-4 text-sm font-semibold rounded-2xl transition-all duration-300 border-2 flex items-center justify-between overflow-hidden group ${storageMode === 'folder'
                         ? 'bg-gradient-to-br from-green-500 to-green-600 text-white border-green-500 shadow-lg shadow-green-500/30'
                         : `bg-gradient-to-br from-white to-gray-50 text-gray-700 border-gray-200 ${!isFileSystemSupported || isMobileDevice ? 'opacity-50 cursor-not-allowed' : 'hover:border-green-300 hover:shadow-md hover:scale-[1.02]'}`
-                    }`}
+                      }`}
                     title={
                       isMobileDevice
                         ? t('use_browser_storage')
@@ -3090,7 +2677,7 @@ const App = () => {
               (t) => t.imageUrl === zoomedImage || t.imageUrls?.includes(zoomedImage)
             ) ||
             (activeTemplate.imageUrl === zoomedImage ||
-            activeTemplate.imageUrls?.includes(zoomedImage)
+              activeTemplate.imageUrls?.includes(zoomedImage)
               ? activeTemplate
               : null)
           }

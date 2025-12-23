@@ -151,29 +151,8 @@ export const TemplatesSidebar = React.memo(
                     )}
                   </div>
 
-                  <button
-                    onClick={() => setLanguage(language === 'zh-tw' ? 'en' : 'zh-tw')}
-                    className="text-[10px] px-2 py-1 rounded-full border transition-colors flex items-center gap-1 shadow-sm bg-transparent text-gray-400 border-gray-200 hover:text-orange-600 hover:bg-orange-50"
-                  >
-                    <Globe size={10} />
-                    {language.toUpperCase()}
-                  </button>
-                  <button
-                    onClick={() => setIsSettingsOpen(true)}
-                    className="p-1.5 rounded-lg transition-colors text-gray-400 hover:text-orange-600 hover:bg-orange-50"
-                    title={t('settings')}
-                  >
-                    <Settings size={16} />
-                  </button>
-                  <a
-                    href="https://github.com/doggy8088/PromptFill"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-1.5 rounded-lg transition-colors text-gray-400 hover:text-gray-900 hover:bg-gray-50"
-                    title="GitHub Repository"
-                  >
-                    <Github size={16} />
-                  </a>
+                                    <button onClick={() => setLanguage(language === 'zh-tw' ? 'en' : 'zh-tw')} className="text-[10px] px-2 py-1 rounded-full border transition-colors flex items-center gap-1 shadow-sm bg-transparent text-gray-400 border-gray-200 hover:text-orange-600 hover:bg-orange-50"><Globe size={10} />{language.toUpperCase() === 'ZH-TW' ? '中文' : 'EN'}</button>
+                  <button onClick={() => setIsSettingsOpen(true)} className="p-1.5 rounded-lg transition-colors text-gray-400 hover:text-orange-600 hover:bg-orange-50" title={t('settings')}><Settings size={16} /></button>
                 </div>
               </div>
 
