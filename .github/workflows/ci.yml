@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - test
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+
+      - name: Detect data.json changes
+        id: data_changed
+        run: |
+          if git rev-parse HEAD^ >/dev/null 2>&1; then
+            CHANGED=$(git diff --name-only HEAD^ HEAD | grep '^src/data/data.json' || true)
+          else
+            CHANGED=$(git ls-files src/data/data.json)
+          fi
+          if [ -n "$CHANGED" ]; then
+            echo "data.json changed."
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "data.json not changed."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Sync data from data.json (check only)
+        if: steps.data_changed.outputs.changed == 'true'
+        run: |
+          if [ -f src/data/data.json ]; then
+            node scripts/sync-data.mjs
+          else
+            echo "src/data/data.json not found, skip sync."
+          fi
+
+      - name: Ensure data is synced
+        if: steps.data_changed.outputs.changed == 'true'
+        run: |
+          if ! git diff --quiet -- src/data/banks.js src/data/templates.js; then
+            echo "data.json 已更新但未同步 banks/templates，請在本地執行 node scripts/sync-data.mjs 後再推送。"
+            git diff --stat -- src/data/banks.js src/data/templates.js
+            exit 1
+          fi
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
