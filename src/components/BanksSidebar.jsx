@@ -253,6 +253,18 @@ export const CategoryManager = ({ isOpen, onClose, categories, setCategories, ba
       ...prev,
       [newId]: { id: newId, label: newCatName, color: newCatColor }
     }));
+    
+    // 新增分類時同時建立一個預設詞庫
+    const newBankKey = `bank_${Date.now()}`;
+    setBanks(prev => ({
+      ...prev,
+      [newBankKey]: { 
+        label: newCatName, 
+        category: newId,
+        options: []
+      }
+    }));
+    
     setNewCatName("");
     setNewCatColor("slate");
   };
@@ -313,7 +325,7 @@ export const CategoryManager = ({ isOpen, onClose, categories, setCategories, ba
           <button onClick={onClose} className="p-1 hover:bg-gray-200 rounded text-gray-500"><X size={18}/></button>
         </div>
         
-        <div className="flex-1 overflow-y-auto p-4 space-y-3">
+        <div className="flex-1 overflow-y-auto p-4 space-y-3 pb-20">
            {/* Add New */}
            <div className="flex gap-2 items-center mb-4 p-3 bg-gray-50 rounded-lg border border-gray-200">
               <input 
