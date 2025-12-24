@@ -2684,7 +2684,7 @@ const App = () => {
                     color="orange"
                     className="whitespace-nowrap"
                   >
-                    <img src="/gemini.svg" alt="Gemini" className="w-4 h-4 flex-shrink-0" />
+                    <img src="./gemini.svg" alt="Gemini" className="w-4 h-4 flex-shrink-0" />
                     <span className="hidden sm:inline">
                       {isExporting ? t('exporting') : t('export_image')}
                     </span>

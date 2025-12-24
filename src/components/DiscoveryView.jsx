@@ -48,7 +48,7 @@ export const DiscoveryView = React.memo(
             {/* 1. 頂部 SVG 標題區域 */}
             <div className="w-full flex justify-center px-4">
               <img
-                src="/Title.svg"
+                src="./Title.svg"
                 alt="Prompt Fill Logo"
                 className="w-full max-w-[280px] h-auto"
               />
@@ -187,7 +187,7 @@ export const DiscoveryView = React.memo(
             {/* Left Side: Logo & Slogan */}
             <div className="flex flex-col justify-center items-center lg:items-start lg:w-[380px] xl:w-[460px] flex-shrink-0 px-4 lg:pl-8 lg:pr-6 gap-8">
               <div className="w-full max-w-[400px] scale-75 sm:scale-90 lg:scale-100 origin-center lg:origin-left">
-                <img src="/Title.svg" alt="Prompt Fill Logo" className="w-full h-auto" />
+                <img src="./Title.svg" alt="Prompt Fill Logo" className="w-full h-auto" />
               </div>
               <AnimatedSlogan isActive={isSloganActive} language={language} />
             </div>
