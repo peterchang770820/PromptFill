@@ -1,0 +1,2909 @@
+{
+  "templates": [
+    {
+      "id": "tpl_default",
+      "name": {
+        "cn": "角色概念分解图",
+        "en": "Character Concept Sheet"
+      },
+      "content": {
+        "cn": "### Role (角色设定)\n你是一位顶尖的 {{role}}，擅长制作详尽的角色设定图（Character Sheet）。你具备“像素级拆解”的能力，能够透视角色的穿着层级、捕捉微表情变化，并将与其相关的物品进行具象化还原。你特别擅长通过 {{subject}} 的私密物品、随身物件和生活细节来侧面丰满人物性格与背景故事。\n\n### Task (任务目标)\n根据用户上传或描述的主体形象，生成一张**“全景式角色深度概念分解图”**。该图片必须包含 {{layout_focus}}，并在其周围环绕展示该人物的服装分层、不同表情、核心道具、材质特写，以及极具生活气息的私密与随身物品展示。\n\n### Visual Guidelines (视觉规范)\n**1. 构图布局 (Layout):**\n- **中心位 (Center):** 放置角色的 {{layout_focus}}，作为视觉锚点。\n- **环绕位 (Surroundings):** 在中心人物四周空白处，有序排列拆解后的元素。\n- **视觉引导 (Connectors):** 使用{{connectors}}，将周边的拆解物品与中心人物的对应部位或所属区域连接起来。\n\n**2. 拆解内容 (Deconstruction Details):**\n- **服装分层 (Clothing Layers):** 将角色的服装拆分为单品展示\n- **私密内着拆解:** 独立展示角色的内层衣物，重点突出设计感与材质。例如： {{underwear_style}} （展示细节与剪裁）。\n- **表情集 (Expression Sheet):** 在角落绘制 3-4 个不同的头部特写，展示不同的情绪，如： {{expressions}} 。\n- **材质特写 (Texture & Zoom):** 选取关键部位进行放大特写. 例如： {{texture_zoom}} ，增加对小物件材质的描绘。\n- **动作:** 绘制特殊的动作和表情，例如：{{action_detail}}，增加动作的深度刻画。\n- **特殊视角:** 绘制从某种特殊场景下拍摄的特殊视角，例如：{{special_view}}\n\n- **关联物品 (Related Items):**\n - **随身包袋与内容物:** 绘制 {{bag_content}}，并将其“打开”，展示散落在旁的物品。\n - **美妆与护理:** 展示 {{cosmetics}}。\n - **私密生活物件:** 具象化角色隐藏面的物品。根据角色性格可能包括： {{private_items}}，需以一种设计图的客观视角呈现。\n\n**3.风格与注释 (Style & Annotations):**\n- **画风:** {{art_style}}，线条干净利落。\n- **背景:** {{background_style}}，营造设计手稿的氛围。\n- **文字说明:** 在每个拆解元素旁模拟手写注释，简要说明材质或品牌/型号暗示。\n\n### Workflow (执行逻辑)\n1. 分析主体的核心特征、穿着风格及潜在性格。\n2. 提取可拆解的一级元素（外套、鞋子、大表情）。\n3. 脑补并设计二级深度元素（她内衣穿什么风格？包里装什么？独处时用什么？）。\n4. 生成一张包含所有这些元素的组合图，确保透视准确，光影统一，注释清晰。\n5. 使用中文，高清输出。",
+        "en": "### Role\nYou are a top-tier {{role}}, specializing in creating detailed Character Sheets. You possess the ability of \"pixel-level deconstruction,\" capable of seeing through the layering of characters' outfits, capturing subtle facial expressions, and restoring related items into concrete visuals. You particularly excel at enriching character personalities and background stories through {{subject}}'s private items, personal belongings, and daily life details.\n\n### Task\nBased on the subject image uploaded or described by the user, generate a **\"Panoramic Deep Concept Deconstruction Map\"**. This image must include the character's {{layout_focus}}, surrounded by displays of their clothing layers, different expressions, core props, material close-ups, and intimate and everyday items that evoke a sense of life.\n\n### Visual Guidelines\n**1. Layout:**\n- **Center:** Place the character's {{layout_focus}} as the visual anchor.\n- **Surroundings:** Arrange the deconstructed elements in an orderly manner in the empty spaces around the central character.\n- **Connectors:** Use {{connectors}} to link the peripheral items to the corresponding body parts or areas of the central character.\n\n**2. Deconstruction Details:**\n- **Clothing Layers:** Break down the character's clothing into individual items for display.\n- **Intimate Underwear Deconstruction:** Independently display the character's inner layers, highlighting design sense and materials. For example: {{underwear_style}} (showcasing details and tailoring).\n- **Expression Sheet:** Draw 3-4 different head close-ups in the corner, showing different emotions like: {{expressions}}.\n- **Texture & Zoom:** Select key parts for enlarged close-ups. For example: {{texture_zoom}}, adding more depiction of the materials of small items.\n- **Action:** Draw special movements and expressions, such as: {{action_detail}}, increasing depth in action portrayal.\n- **Special View:** Draw from unique scene perspectives, for example: {{special_view}}.\n\n- **Related Items:**\n - **Bag Content:** Draw {{bag_content}} and \"open\" it to show the items scattered beside it.\n - **Cosmetics & Care:** Show {{cosmetics}}.\n - **Private Life Items:** Concretize the character's hidden-side items. Depending on the personality, these could include: {{private_items}}, presented from an objective design-sheet perspective.\n\n**3. Style & Annotations:**\n- **Art Style:** {{art_style}}, with clean and crisp lines.\n- **Background:** {{background_style}}, creating a design manuscript atmosphere.\n- **Annotations:** Simulate handwritten notes next to each deconstructed element, briefly explaining the material or suggesting brands/models.\n\n### Workflow\n1. Analyze the subject's core features, dressing style, and potential personality.\n2. Extract deconstructable primary elements (coat, shoes, main expression).\n3. Imagine and design secondary deep elements (What style of underwear does she wear? What's in her bag? What does she use when alone?).\n4. Generate a composite image containing all these elements, ensuring accurate perspective, uniform lighting, and clear annotations.\n5. Use English, high-definition output."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/08/ec433cf214faf102.jpg",
+      "author": "官方",
+      "selections": {},
+      "tags": [
+        "人物",
+        "创意",
+        "图表"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_photo_grid",
+      "name": {
+        "cn": "3x3 摄影网格",
+        "en": "3x3 Photo Grid"
+      },
+      "content": {
+        "cn": "### Photo Grid Composition (九宫格摄影)\n\n**编辑场景:** 3x3网格布局，采用冷灰色无缝背景。人物（面部特征与上传图片完全一致）身穿 {{clothing}}，确保每张照片中人物形象保持一致。\n\n**灯光设置:** {{lighting}}，营造统一而富有层次的光影效果。\n\n**照片细节包括 (Grid Details)：**\n1. {{grid_pose}}，画面风格统一，镜头参数为 {{lens_param}}；\n2. {{grid_pose}}，镜头参数为 {{lens_param}}，展现不同的拍摄角度和表情；\n3. {{grid_pose}}，镜头参数为 {{lens_param}}，捕捉细腻的情感表达；\n4. {{grid_pose}}，镜头参数为 {{lens_param}}，利用景深营造层次感；\n5. {{grid_pose}}，镜头参数为 {{lens_param}}，突出动态瞬间的生动性；\n6. {{grid_pose}}，镜头参数为 {{lens_param}}，通过前景虚化增强视觉焦点；\n7. {{grid_pose}}，镜头参数为 {{lens_param}}，展现优雅的姿态和放松的状态；\n8. {{grid_pose}}，镜头参数为 {{lens_param}}，捕捉自然光线下的表情变化；\n9. {{grid_pose}}，镜头参数为 {{lens_param}}，微距特写展现面部细节和质感。\n\n**后期处理:** 保持原始素材的真实感，平滑对比度，适度应用柔化效果，确保整体色调统一且富有质感。",
+        "en": "### Photo Grid Composition\n\n**Scene:** 3x3 grid layout, using a seamless cool grey background. The character (facial features exactly as in the uploaded image) is wearing {{clothing}}, ensuring character consistency across all photos.\n\n**Lighting:** {{lighting}}, creating a unified and layered lighting effect.\n\n**Grid Details:**\n1. {{grid_pose}}, unified style, lens parameter: {{lens_param}};\n2. {{grid_pose}}, lens parameter: {{lens_param}}, showing different angles and expressions;\n3. {{grid_pose}}, lens parameter: {{lens_param}}, capturing subtle emotional expressions;\n4. {{grid_pose}}, lens parameter: {{lens_param}}, using depth of field to create layers;\n5. {{grid_pose}}, lens parameter: {{lens_param}}, highlighting the vividness of dynamic moments;\n6. {{grid_pose}}, lens parameter: {{lens_param}}, enhancing visual focus through foreground blur;\n7. {{grid_pose}}, lens parameter: {{lens_param}}, showing elegant posture and relaxed state;\n8. {{grid_pose}}, lens parameter: {{lens_param}}, capturing facial changes under natural light;\n9. {{grid_pose}}, lens parameter: {{lens_param}}, macro close-up showing facial details and texture.\n\n**Post-processing:** Maintain the realism of the original material, smooth contrast, apply moderate softening effects, ensuring uniform overall tone and high-quality texture."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/08/5302794e63fa130b.jpg",
+      "author": "官方",
+      "selections": {
+        "clothing": {
+          "cn": "炭灰色无袖连衣裙",
+          "en": "Charcoal grey sleeveless dress"
+        },
+        "grid_pose-0": {
+          "cn": "前景手指虚化",
+          "en": "Out-of-focus fingers in foreground"
+        },
+        "grid_pose-1": {
+          "cn": "目光锁定镜头",
+          "en": "Eyes locked on camera"
+        },
+        "grid_pose-2": {
+          "cn": "单色下巴托手",
+          "en": "Monochrome hand on chin"
+        },
+        "grid_pose-3": {
+          "cn": "正面特写阴影",
+          "en": "Frontal close-up with shadows"
+        },
+        "grid_pose-4": {
+          "cn": "斜角拍摄",
+          "en": "Angled shot"
+        },
+        "grid_pose-5": {
+          "cn": "双手置于锁骨",
+          "en": "Hands on collarbones"
+        },
+        "grid_pose-6": {
+          "cn": "坐姿半身侧面",
+          "en": "Seated half-body profile"
+        },
+        "grid_pose-7": {
+          "cn": "侧面微距水滴",
+          "en": "Side macro with water drops"
+        },
+        "grid_pose-8": {
+          "cn": "回眸一笑",
+          "en": "Looking back with a smile"
+        },
+        "lens_param-0": {
+          "cn": "85mm, f/1.8",
+          "en": "85mm, f/1.8"
+        },
+        "lens_param-1": {
+          "cn": "85mm, f/2.0",
+          "en": "85mm, f/2.0"
+        },
+        "lens_param-2": {
+          "cn": "50mm, f/2.2",
+          "en": "50mm, f/2.2"
+        },
+        "lens_param-3": {
+          "cn": "50mm, f/2.5",
+          "en": "50mm, f/2.5"
+        },
+        "lens_param-4": {
+          "cn": "50mm, f/3.2",
+          "en": "50mm, f/3.2"
+        },
+        "lens_param-5": {
+          "cn": "35mm, f/4.5",
+          "en": "35mm, f/4.5"
+        },
+        "lens_param-6": {
+          "cn": "85mm, f/1.9",
+          "en": "85mm, f/1.9"
+        },
+        "lens_param-7": {
+          "cn": "50mm, f/1.8",
+          "en": "50mm, f/1.8"
+        },
+        "lens_param-8": {
+          "cn": "85mm, f/2.2",
+          "en": "85mm, f/2.2"
+        }
+      },
+      "tags": [
+        "人物",
+        "摄影"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_fashion",
+      "name": {
+        "cn": "时尚情绪板插画",
+        "en": "Fashion Moodboard"
+      },
+      "content": {
+        "cn": "### Fashion Illustration Moodboard (时尚插画情绪板)\n一张9:16竖屏的高级时尚插画情绪板，模拟平板扫描效果。\n\n**背景:** 纯手绘的奶油色水彩晕染纸张，带有淡淡的粉色网格。\n**视觉核心:** 数张具有明显白色模切宽边和柔和投影的亮面乙烯基贴纸。\n\n**贴纸内容:**\n- **中央:** {{sticker_core}}，光线明亮。\n- **左侧:** {{fashion_deconstruct}}。\n- **右下角:** 关键的隐藏层贴纸：一套折叠整齐的内衣，展现细腻纹理。\n- **互动元素:** 一只穿着粉色系、与用户服装呼应的 {{toy_companion}} 正趴在一个手绘对话框上。\n\n**装饰细节:** 周围装饰着蜡笔质感的 {{sticker_decor}} 和潦草的中文书法标注OOTD。\n**注意:** 画面中绝无任何人手、笔或物理桌面背景，纯粹的平面艺术插画。",
+        "en": "### Fashion Illustration Moodboard\nA high-end 9:16 vertical fashion illustration moodboard, simulating a tablet scan effect.\n\n**Background:** Hand-painted cream-colored watercolor stained paper with a faint pink grid.\n**Visual Core:** Several glossy vinyl stickers with distinct white die-cut borders and soft shadows.\n\n**Sticker Contents:**\n- **Center:** {{sticker_core}}, with bright lighting.\n- **Left Side:** {{fashion_deconstruct}}.\n- **Bottom Right:** Key hidden layer sticker: a set of neatly folded underwear, showing fine texture.\n- **Interactive Element:** A {{toy_companion}} wearing pink tones that match the user's outfit is leaning on a hand-drawn speech bubble.\n\n**Decorative Details:** Surrounded by crayon-textured {{sticker_decor}} and scribbled calligraphy OOTD annotations.\n**Note:** Absolutely no hands, pens, or physical desk backgrounds in the frame; pure flat art illustration."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/08/4d9f92ccb4113fdd.jpg",
+      "author": "官方",
+      "selections": {},
+      "tags": [
+        "人物",
+        "创意",
+        "卡通"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_character_selfie",
+      "name": {
+        "cn": "人物趣味合影",
+        "en": "Character Selfie"
+      },
+      "content": {
+        "cn": "### Character Selfie (人物趣味合影)\n让 {{character_companion}} 站在男人旁边，{{action_pose}}，同时对着镜头露出调皮的表情。\n\n**背景:** 以 {{background_scene}} 为背景。\n\n**要求:** 保持自拍构图不变，让两个角色自然地融入画面，光影统一，互动自然。",
+        "en": "### Character Selfie\nHave {{character_companion}} stand next to the man, {{action_pose}}, while making a playful expression at the camera.\n\n**Background:** Set against the backdrop of {{background_scene}}.\n\n**Requirements:** Maintain the selfie composition, integrating both characters naturally into the frame with unified lighting and natural interaction."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/08/c2312d24d0f2c38e.jpeg",
+      "author": "官方",
+      "selections": {},
+      "tags": [
+        "人物",
+        "创意"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_classic_scene",
+      "name": {
+        "cn": "经典场景微缩复刻",
+        "en": "Classic Scene Miniature"
+      },
+      "content": {
+        "cn": "### 经典场景微缩复刻\n\n展示一个精致的、微缩 3D 卡通风格的{{classic_scene}}场景，采用清晰的 45° 俯视等轴侧视角（Isometric view）。\n\n**核心构图：** 将主体最经典的形象突出地置于中心。自动搭配比例适宜的关键元素图标、象征性物品、迷人的小角色以及能诠释主体故事的道具。整体布局应当充满趣味且紧凑聚集，宛如一套高端的玩具盲盒套装。\n\n**渲染与材质：** 采用{{render_style}}风格进行渲染。建模必须精细、圆润流畅且质感丰富。使用逼真的 PBR 材质：混合用于有机形态的柔和哑光粘土、用于水体/玻璃元素的光泽树脂，以及用于结构组件的光滑 PVC 材质。着重表现具有触感、“看起来手感很好”的纹理细节。\n\n**灯光与氛围：** 采用柔和、逼真的摄影棚布光配合全局光照（Global Illumination）。利用柔和的阴影营造出温暖、舒适且充满魔力的氛围。\n\n**布局：** 保持干净、极简的布局，使用与主体配色相协调的纯色背景。\n\n**文字：** 在{{position}}，使用巨大的、圆润的 3D 字体醒目地展示主体名称，使其轻微悬浮于场景上方。",
+        "en": "### Classic Scene Miniature Restoration\nShowcase an exquisite, miniature 3D cartoon-style {{classic_scene}} scene, using a clear 45° isometric view.\n\n**Core Composition:** Place the most classic image of the subject prominently in the center. Automatically pair it with appropriately scaled key element icons, symbolic items, charming little characters, and props that interpret the subject's story. The overall layout should be playful and tightly clustered, like a high-end toy blind box set.\n\n**Rendering & Materials:** Render in {{render_style}} style. Modeling must be fine, rounded, smooth, and rich in texture. Use realistic PBR materials: a mix of soft matte clay for organic forms, glossy resin for water/glass elements, and smooth PVC for structural components. Focus on tactile, \"looks good to touch\" texture details.\n\n**Lighting & Atmosphere:** Use soft, realistic studio lighting with Global Illumination. Utilize soft shadows to create a warm, cozy, and magical atmosphere.\n\n**Layout:** Maintain a clean, minimalist layout with a solid color background that coordinates with the subject's color scheme.\n\n**Text:** At {{position}}, prominently display the subject's name in giant, rounded 3D font, making it slightly float above the scene."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/10/1eac697f5a438542.jpg",
+      "author": "官方",
+      "selections": {
+        "classic_scene": {
+          "cn": "千与千寻",
+          "en": "Spirited Away"
+        },
+        "render_style": {
+          "cn": "Octane Render 和 Cinema 4D",
+          "en": "Octane Render and Cinema 4D"
+        },
+        "position": {
+          "cn": "顶部中央",
+          "en": "Top Center"
+        }
+      },
+      "tags": [
+        "卡通",
+        "创意",
+        "游戏"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_corporate_growth",
+      "name": {
+        "cn": "可视化企业成长之路",
+        "en": "Corporate Evolution Path"
+      },
+      "content": {
+        "cn": "### 可视化企业成长之路\n\n**角色定义**  \n你是一位企业演变建筑师 (Corporate Evolution Architect)。你的目标是创建一个超高密度、垂直堆叠的等距轴测（Isometric）3D 渲染可视化图像，展示 {{company}} 公司的技术和产品历史。通过图像展示一个企业的时间线：底部是简陋的创业故事，通过产品迭代垂直向上升起，直到现代或未来的巅峰。\n\n**核心能力 | 关键视觉策略（rameless Tech-Lapse）：**\n- **根除容器：** 严禁使用底板、边框或横截面视图。底部边缘是创业基地（车库/实验室/小办公室），无限延伸。\n- **垂直时间线：** “之字形上升（Zig-Zag Ascent）”穿越创新历程。  \n  - 底部（前景）：创业阶段岁月 + 第一个原型机  \n  - 中部（上升中）：快速增长 / 全球扩张 / 标志性的中期产品  \n  - 顶部（背景）：当前总部 / 生态系统 / 未来研发\n- **集成 3D 标题：** 企业 Logo 必须渲染为巨大的、电影般的 3D 字体，矗立在前景，使用公司标志性字体/材质。\n\n**检索与梳理：**\n- 提取企业历史的几个阶段。\n- 列出定义每个时代的“经典产品”。\n- 劳动力演变：可视化员工与设备的变化。\n\n**构图与光影：**  \n无框架、无边界、无横截面。垂直之字形时间线，将产品代际从底部的创业阶段堆叠到未来的顶部。灯光从近现代的暖光（创业初期）过渡到干净的白/蓝 LED 光（现代科技）。环境与公司经典产品随高度演变。公司的多款经典产品以“巨物化”呈现。  \n移轴摄影（Tilt-shift）与 {{render_style}}，画幅 {{ratio}}。",
+        "en": "### Visualized Corporate Growth Path\n**Role Definition**\nYou are a Corporate Evolution Architect. Your goal is to create an ultra-high-density, vertically stacked isometric 3D rendered visualization showing the technological and product history of {{company}}. Showcase a corporate timeline: the base is the humble startup story, rising vertically through product iterations to the modern or future peak.\n\n**Core Competency | Key Visual Strategy (Frameless Tech-Lapse):**\n- **Eradicate Containers:** Strictly forbid base plates, borders, or cross-section views. The bottom edge is the startup base (garage/lab/small office), extending infinitely.\n- **Vertical Timeline:** A \"Zig-Zag Ascent\" through the innovation journey.\n  - Bottom (Foreground): Startup years + the first prototype.\n  - Middle (Ascending): Rapid growth / global expansion / iconic mid-term products.\n  - Top (Background): Current headquarters / ecosystem / future R&D.\n- **Integrated 3D Title:** The corporate logo must be rendered as a giant, cinematic 3D font, standing in the foreground, using the company's signature font/material.\n\n**Retrieval & Organization:**\n- Extract several stages of corporate history.\n- List \"classic products\" defining each era.\n- Workforce Evolution: Visualize changes in employees and equipment.\n\n**Composition & Lighting:**\nFrameless, borderless, no cross-sections. A vertical zig-zag timeline stacking product generations from the startup phase at the bottom to the future at the top. Lighting transitions from warm near-modern light (early startup) to clean white/blue LED light (modern tech). The environment and company's classic products evolve with height. Multiple classic products are presented as \"megaliths.\"\nTilt-shift photography with {{render_style}}, aspect ratio {{ratio}}."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/10/a7e87e49c6144fdc.jpg",
+      "author": "官方",
+      "selections": {
+        "company": {
+          "cn": "任天堂（Nintendo）",
+          "en": "Nintendo"
+        },
+        "render_style": {
+          "cn": "3D像素风格",
+          "en": "3D Pixel Art Style"
+        },
+        "ratio": {
+          "cn": "3:4竖构图",
+          "en": "3:4 Vertical"
+        }
+      },
+      "tags": [
+        "建筑",
+        "创意",
+        "图表"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_fisheye_urban",
+      "name": {
+        "cn": "极端鱼眼都市奇观",
+        "en": "Fisheye Urban Wonder"
+      },
+      "content": {
+        "cn": "### 极端鱼眼都市奇观\n\n{{character_originality}}，用{{lens_type}}拍摄的照片，主体是一位穿着{{school_uniform}}的{{subject}}，在{{urban_location}}兴奋地跳起，{{dynamic_action}}。\n\n**视觉焦点：**\n- **前景细节：** {{fingernail_detail}}\n- **背景景观：** {{building_cluster}}，街道上挤满行人和车辆\n- **超现实元素：** {{monster_element}}漂浮在城市上空，{{monster_feature}}环绕着扭曲的城市景观\n\n**整体基调：**\n创造一个融合现实与奇幻的都市奇观，鱼眼镜头的畸变效果与卡通怪兽的出现形成强烈对比，营造出梦幻而充满活力的视觉冲击。",
+        "en": "### Extreme Fisheye Urban Spectacle\n{{character_originality}}, a photo taken with {{lens_type}}, the subject is a {{subject}} wearing {{school_uniform}}, jumping excitedly in {{urban_location}}, {{dynamic_action}}.\n\n**Visual Focus:**\n- **Foreground Detail:** {{fingernail_detail}}.\n- **Background Landscape:** {{building_cluster}}, streets packed with pedestrians and vehicles.\n- **Surreal Elements:** {{monster_element}} floating above the city, with {{monster_feature}} surrounding the distorted urban landscape.\n\n**Overall Tone:**\nCreate an urban spectacle blending reality and fantasy. The distortion of the fisheye lens contrasted with the appearance of cartoon monsters creates a dreamy and vibrant visual impact."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/14/b21165a2afefaf4d.jpg",
+      "author": "官方",
+      "selections": {
+        "lens_type": {
+          "cn": "极端鱼眼镜头",
+          "en": "Extreme Fisheye Lens"
+        },
+        "role": {
+          "cn": "年轻女性",
+          "en": "Young woman"
+        },
+        "character_originality": {
+          "cn": "使用附图中的人物，确保结果与人物一致性",
+          "en": "Use character in attachment, ensure consistency"
+        },
+        "school_uniform": {
+          "cn": "灰色开衫和格子裙校服",
+          "en": "Grey cardigan and plaid skirt uniform"
+        },
+        "urban_location": {
+          "cn": "涩谷十字路口",
+          "en": "Shibuya Crossing"
+        },
+        "dynamic_action": {
+          "cn": "一只手夸张地伸向镜头前景",
+          "en": "One hand exaggeratedly reaching towards the foreground"
+        },
+        "fingernail_detail": {
+          "cn": "手指甲清晰可见",
+          "en": "Fingernails clearly visible"
+        },
+        "building_cluster": {
+          "cn": "扭曲的涩谷109大楼和其他建筑林立",
+          "en": "Distorted Shibuya 109 building and other forest of buildings"
+        },
+        "crowd_traffic": {
+          "cn": "挤满行人和车辆",
+          "en": "Bustling traffic"
+        },
+        "monster_element": {
+          "cn": "巨大的粉色和蓝色渐变卡通怪兽",
+          "en": "Giant pink and blue gradient cartoon monster"
+        },
+        "monster_feature": {
+          "cn": "巨大的触手和角",
+          "en": "Giant tentacles and horns"
+        },
+        "distorted_city": {
+          "cn": "扭曲的城市景观",
+          "en": "Distorted urban landscape"
+        },
+        "lighting_atmosphere": {
+          "cn": "阳光明媚",
+          "en": "Sunny"
+        },
+        "shadow_contrast": {
+          "cn": "光影对比强烈",
+          "en": "Strong light-shadow contrast"
+        },
+        "ratio": {
+          "cn": "圆形画幅",
+          "en": "Circular Aspect Ratio"
+        },
+        "render_style": {
+          "cn": "高质量的 2D 插画风格",
+          "en": "High-quality 2D illustration style"
+        }
+      },
+      "tags": [
+        "摄影",
+        "创意",
+        "人物"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_detective_social",
+      "name": {
+        "cn": "历史名人的朋友圈",
+        "en": "Historical Figure's Moments"
+      },
+      "content": {
+        "cn": "发挥你的创意帮我一起脑洞，假设{{character_groups}}使用{{social_media}}，包括回复评论点赞，设计一些有趣、有反差的人物使用社交媒体互动朋友圈的场景，结合一些符合人物的大事件，有趣有梗有反差，制作一张{{social_media}}的截图，使用中文，{{ratio}}。",
+        "en": "Use your creativity to brainstorm with me. Imagine {{character_groups}} using {{social_media}}, including replying, commenting, and liking. Design some fun, high-contrast scenarios of characters interacting on social media feeds, combining big events that fit the characters with humor, memes, and contrast. Create a screenshot of {{social_media}}, in English, with aspect ratio {{ratio}}."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/14/6ff892060de55ea9.jpg",
+      "author": "@dotey(宝玉)",
+      "selections": {
+        "character_groups": {
+          "cn": "中国古代开国皇帝",
+          "en": "Ancient Chinese Founding Emperors"
+        },
+        "social_media": {
+          "cn": "微信朋友圈",
+          "en": "WeChat Moments"
+        },
+        "ratio": {
+          "cn": "9:16竖构图",
+          "en": "9:16 Vertical"
+        }
+      },
+      "tags": [
+        "创意",
+        "人物",
+        "摄影"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_magazine_cover",
+      "name": {
+        "cn": "杂志大片",
+        "en": "Magazine Cover"
+      },
+      "content": {
+        "cn": "### PROJECT GOAL | 项目目标\n生成一张 9:16 旅游杂志封面级照片，以我上传的真人照片为基准，实现 100% 五官还原，呈现专业、精致、具有真实杂志质感的封面画面。\n\n### SUBJECT | 人物设定\n根据我上传人物的五官特征进行完整还原；人物置身于 {{travel_location}}，请根据这个地理位置给人物穿着符合当地此刻的实时天气、温度与季节服装逻辑；整体风格自然、优雅、有现场氛围。\n\n### POSE & EXPRESSION | 姿态与表情\n人物以杂志封面标准姿态入镜，略带从容质感；面部表情自然放松但具吸引力；\n身体姿势根据场景与天气自由适配，呈现\"在当地旅行中的真实状态\"。\n\n### ENVIRONMENT | 场景要求\n背景呈现用户输入的地名代表性视觉线索，请根据用户输入的地理位置呈现符合当地此刻的实时天气、温度与季节场景逻辑；保持高级写实风格，不夸张、不超现实；\n光线以真实自然光为主，具有现场环境的时间感。\n\n### CAMERA & AESTHETICS | 拍摄规格\n画幅比例: {{ratio}}\n构图: 充分利用竖幅空间，打造\"封面级\"视觉中心；镜头语言: 专业摄影棚级别的清晰度与景深；肤质感可见毛孔与自然纹理（非磨皮）；整体氛围具有高级旅行杂志的真实感与美感。\n\n### MAGAZINE DESIGN | 封面设计\n版面风格现代、干净、具有国际旅行杂志氛围；\n主标题、副标题、杂志图形元素可自动生成但需与人物与地点匹配；\n色彩搭配高级、协调；\n最终呈现接近《Vogue》《National Geographic Traveler》级别的封面气质。",
+        "en": "### PROJECT GOAL\nGenerate a 9:16 travel magazine cover-quality photo based on the uploaded real-life photo, achieving 100% facial feature restoration, presenting a professional, exquisite, and authentic magazine-textured cover.\n\n### SUBJECT\nFully restore based on the uploaded person's facial features; the person is located in {{travel_location}}. Please dress the character according to the real-time weather, temperature, and seasonal clothing logic of that location; the overall style should be natural, elegant, and atmospheric.\n\n### POSE & EXPRESSION\nThe person enters the frame in a standard magazine cover pose, with a touch of composed quality; natural and relaxed facial expressions but with attractiveness.\nBody posture adapts freely according to the scene and weather, presenting a \"real state of traveling locally.\"\n\n### ENVIRONMENT\nThe background shows representative visual cues of the location input by the user. Please present scene logic consistent with the local real-time weather, temperature, and season; maintain a high-end realistic style, not exaggerated or surreal.\nLighting is mainly natural, with a sense of time of the site environment.\n\n### CAMERA & AESTHETICS\nAspect Ratio: {{ratio}}\nComposition: Make full use of vertical space to create a \"cover-level\" visual center. Lens language: Professional studio-level clarity and depth of field; skin texture shows pores and natural grain (no smoothing); overall atmosphere has the realism and beauty of a high-end travel magazine.\n\n### MAGAZINE DESIGN\nModern, clean layout with an international travel magazine vibe.\nMain title, subtitle, and magazine graphic elements can be automatically generated but must match the person and location.\nHigh-end, coordinated color palette.\nThe final result should approach the cover temperament of \"Vogue\" or \"National Geographic Traveler.\""
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/16/a6106f5cc6e92a74.jpg",
+      "imageUrls": [
+        "https://s3.bmp.ovh/imgs/2025/12/16/a6106f5cc6e92a74.jpg",
+        "https://s3.bmp.ovh/imgs/2025/12/16/cf8edb6f54db15bf.jpg"
+      ],
+      "author": "官方",
+      "selections": {
+        "travel_location": {
+          "cn": "东北雪乡",
+          "en": "Snow Village in Northeast China"
+        },
+        "ratio": {
+          "cn": "9:16竖构图",
+          "en": "9:16 Vertical"
+        }
+      },
+      "tags": [
+        "人物",
+        "摄影",
+        "创意"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_manga_reality",
+      "name": {
+        "cn": "漫画人物成真",
+        "en": "Manga to Reality"
+      },
+      "content": {
+        "cn": "### SUBJECT | 人物主体\n{{character_originality}}，从漫画分镜边框中跨步走出并打破界限。真实版本与漫画版本之间充满动态且无缝的互动。\n\n### SETTING | 场景设定\n地点：{{comic_scene}}\n地板上摊开一本巨大的漫画书。\n\n### MANGA DETAILS | 漫画细节\n- **风格：** 超现实风格的黑白四格漫画\n- **技法：** 正宗日式排版，网点纸效果，粗黑墨线，线条清晰利落\n- **内容：** 同一个人的漫画版本被困在漫画书里面\n- **对比：** 单色漫画世界与鲜艳现实世界的强烈视觉对比\n\n### REAL LIFE VERSION | 真实版本\n- **视觉质感：** 生动、色彩丰富、照片级真实感、超逼真 8K 画质\n- **互动方式：** 动态地浮现于漫画表面，直接与漫画版本互动\n- **情绪氛围：** 元风格 (Meta)，幽默的相遇\n\n### TECHNICAL SPECS | 技术规格\n- **画质：** 超逼真，8K 分辨率，高度细节化\n- **融合效果：** 漫画线条艺术与现实摄影的无缝融合\n- **画幅比例：** {{ratio}}",
+        "en": "### SUBJECT\n{{character_originality}}, stepping out from the manga panel borders and breaking boundaries. A dynamic and seamless interaction between the real-life version and the manga version.\n\n### SETTING\nLocation: {{comic_scene}}\nA giant manga book is spread open on the floor.\n\n### MANGA DETAILS\n- **Style:** Surreal black and white four-panel manga.\n- **Technique:** Authentic Japanese layout, screentone effects, thick black ink lines, clean and sharp linework.\n- **Content:** The manga version of the same person is trapped inside the manga book.\n- **Contrast:** Strong visual contrast between the monochromatic manga world and the vibrant real world.\n\n### REAL LIFE VERSION\n- **Visual Texture:** Vivid, colorful, photo-realistic, ultra-realistic 8K quality.\n- **Interaction:** Dynamically emerging from the manga surface, interacting directly with the manga version.\n- **Atmosphere:** Meta-style, a humorous encounter.\n\n### TECHNICAL SPECS\n- **Image Quality:** Ultra-realistic, 8K resolution, highly detailed.\n- **Blending:** Seamless fusion of manga line art and real-life photography.\n- **Aspect Ratio:** {{ratio}}"
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/16/f5291c56ece88cd9.jpg",
+      "author": "官方",
+      "selections": {
+        "character_originality": {
+          "cn": "使用附图中的人物，确保结果与人物一致性",
+          "en": "Use character in attachment, ensure consistency"
+        },
+        "comic_scene": {
+          "cn": "唯美的卧室",
+          "en": "Beautiful bedroom"
+        },
+        "ratio": {
+          "cn": "9:16竖构图",
+          "en": "9:16 Vertical"
+        }
+      },
+      "tags": [
+        "人物",
+        "创意",
+        "卡通"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_industrial_design",
+      "name": {
+        "cn": "设计大师的产品设计",
+        "en": "Industrial Design Masterpiece"
+      },
+      "content": {
+        "cn": "### 目标\n设计一个顶级的工业设计产品介绍页，使用极简的宣传页风格；需要深刻理解该设计师的设计理念、设计风格，并将这种设计理解完全融入到设计产品的工业设计与展示页面中\n\n### 内容\n- **设计师：** {{designer}}\n- **产品：** {{design_item}}\n\n### 画面\n- **设计师介绍：**\n约占整个画面非常少的部分，包括设计师的介绍（极具氛围感的头像）与设计师对于这个产品的设计思路与设计理解，以及设计师的签名。\n- **画面核心内容：**\n占整个画面的80%或更多用于呈现产品本身，一个完全符合设计师自己设计风格与设计方法的顶级产品设计图（一个完整的单张产品效果的呈现），基于工业成品设计成果使用不同的构图。整体配色需要与设计师的风格与产品内容完全相符\n- **构图：**\n最终构图：{{ratio}} \n整体排版主次分明，规整，极具格调与设计特色",
+        "en": "### Goal\nDesign a top-tier industrial design product introduction page using a minimalist promotional layout. Deeply understand the designer's philosophy and style, and fully integrate this design understanding into the product's industrial design and presentation page.\n\n### Content\n- **Designer:** {{designer}}\n- **Product:** {{design_item}}\n\n### Visuals\n- **Designer Intro:**\nOccupies a very small part of the frame, including a bio (with an atmospheric portrait), the designer's thoughts and design philosophy for this product, and their signature.\n- **Core Content:**\n80% or more of the frame is used to present the product itself—a top-tier product design illustration fully consistent with the designer's own style and methods (a complete single product effect presentation). Use different compositions based on the industrial design results. The overall color scheme must match the designer's style and product content.\n- **Composition:**\nFinal Composition: {{ratio}}.\nThe overall layout is clear in hierarchy, organized, and highly stylish and characteristic."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/17/7dbe43ae66b1a78c.jpg",
+      "author": "官方",
+      "selections": {
+        "designer": {
+          "cn": "Jonathan Ive (Jony Ive)",
+          "en": "Jonathan Ive"
+        },
+        "design_item": {
+          "cn": "无人机",
+          "en": "Drone"
+        },
+        "ratio": {
+          "cn": "3:4竖构图",
+          "en": "3:4 Vertical"
+        }
+      },
+      "tags": [
+        "产品",
+        "创意",
+        "图表"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_photo_grid_v2",
+      "name": {
+        "cn": "3x3 摄影网格出格版",
+        "en": "3x3 Photo Grid (Out of Box)"
+      },
+      "content": {
+        "cn": "### Photo Grid Composition (九宫格摄影出格版)\n\n**编辑场景:** 3x3网格布局，采用冷灰色无缝背景。人物（面部特征与上传图片完全一致）身穿 {{clothing}}，确保每张照片中人物形象保持一致。\n\n**灯光设置:** {{lighting}}，营造统一而富有层次的光影效果。\n\n**照片细节包括 (Grid Details)：**\n1. {{grid_pose}}，画面风格统一，镜头参数为 {{lens_param}}；\n2. {{grid_pose}}，镜头参数为 {{lens_param}}，展现不同的拍摄角度和表情；\n3. {{grid_pose}}，镜头参数为 {{lens_param}}，捕捉细腻的情感表达；\n4. {{grid_pose}}，镜头参数为 {{lens_param}}，利用景深营造层次感；\n5. {{grid_pose}}，镜头参数为 {{lens_param}}，突出动态瞬间的生动性；\n6. {{grid_pose}}，镜头参数为 {{lens_param}}，通过前景虚化增强视觉焦点；\n7. {{grid_pose}}，镜头参数为 {{lens_param}}，展现优雅的姿态和放松的状态；\n8. {{grid_pose}}，镜头参数为 {{lens_param}}，捕捉自然光线下的表情变化；\n9. {{grid_pose}}，镜头参数为 {{lens_param}}，微距特写展现面部细节和质感。\n\n**后期处理:** 保持原始素材的真实感，平滑对比度，适度应用柔化效果，确保整体色调统一且富有质感。\n\n**需要单独处理:**中央宫格的图片不局限在自己的宫格内，形成一种从中央宫格跃出画面的3D立体视觉，中央宫格人物占据图片较大面积且全身出镜，会覆盖到其他宫格，并对其他宫格形成阴影效果，营造一种裸眼3D的视觉张力",
+        "en": "### Photo Grid Composition (Out-of-Box Version)\n\n**Scene:** 3x3 grid layout, using a seamless cool grey background. The character (facial features exactly as in the uploaded image) is wearing {{clothing}}, ensuring character consistency across all photos.\n\n**Lighting:** {{lighting}}, creating a unified and layered lighting effect.\n\n**Grid Details:**\n1. {{grid_pose}}, unified style, lens parameter: {{lens_param}};\n2. {{grid_pose}}, lens parameter: {{lens_param}}, showing different angles and expressions;\n3. {{grid_pose}}, lens parameter: {{lens_param}}, capturing subtle emotional expressions;\n4. {{grid_pose}}, lens parameter: {{lens_param}}, using depth of field to create layers;\n5. {{grid_pose}}, lens parameter: {{lens_param}}, highlighting the vividness of dynamic moments;\n6. {{grid_pose}}, lens parameter: {{lens_param}}, enhancing visual focus through foreground blur;\n7. {{grid_pose}}, lens parameter: {{lens_param}}, showing elegant posture and relaxed state;\n8. {{grid_pose}}, lens parameter: {{lens_param}}, capturing facial changes under natural light;\n9. {{grid_pose}}, lens parameter: {{lens_param}}, macro close-up showing facial details and texture.\n\n**Post-processing:** Maintain the realism of the original material, smooth contrast, apply moderate softening effects, ensuring uniform overall tone and high-quality texture.\n\n**Special Instructions:** The central grid image is not confined to its own square, creating a 3D visual effect as if jumping out of the frame. The central character occupies a larger area and is shown in full-body, overlapping other squares and casting shadows on them, creating a naked-eye 3D visual tension."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/17/77bfd2bf7abc3eac.png",
+      "author": "官方",
+      "selections": {
+        "clothing": {
+          "cn": "炭灰色无袖连衣裙",
+          "en": "Charcoal grey sleeveless dress"
+        },
+        "grid_pose-0": {
+          "cn": "前景手指虚化",
+          "en": "Out-of-focus fingers in foreground"
+        },
+        "grid_pose-1": {
+          "cn": "目光锁定镜头",
+          "en": "Eyes locked on camera"
+        },
+        "grid_pose-2": {
+          "cn": "单色下巴托手",
+          "en": "Monochrome hand on chin"
+        },
+        "grid_pose-3": {
+          "cn": "正面特写阴影",
+          "en": "Frontal close-up with shadows"
+        },
+        "grid_pose-4": {
+          "cn": "斜角拍摄",
+          "en": "Angled shot"
+        },
+        "grid_pose-5": {
+          "cn": "双手置于锁骨",
+          "en": "Hands on collarbones"
+        },
+        "grid_pose-6": {
+          "cn": "坐姿半身侧面",
+          "en": "Seated half-body profile"
+        },
+        "grid_pose-7": {
+          "cn": "侧面微距水滴",
+          "en": "Side macro with water drops"
+        },
+        "grid_pose-8": {
+          "cn": "回眸一笑",
+          "en": "Looking back with a smile"
+        },
+        "lens_param-0": {
+          "cn": "85mm, f/1.8",
+          "en": "85mm, f/1.8"
+        },
+        "lens_param-1": {
+          "cn": "85mm, f/2.0",
+          "en": "85mm, f/2.0"
+        },
+        "lens_param-2": {
+          "cn": "50mm, f/2.2",
+          "en": "50mm, f/2.2"
+        },
+        "lens_param-3": {
+          "cn": "50mm, f/2.5",
+          "en": "50mm, f/2.5"
+        },
+        "lens_param-4": {
+          "cn": "50mm, f/3.2",
+          "en": "50mm, f/3.2"
+        },
+        "lens_param-5": {
+          "cn": "35mm, f/4.5",
+          "en": "35mm, f/4.5"
+        },
+        "lens_param-6": {
+          "cn": "85mm, f/1.9",
+          "en": "85mm, f/1.9"
+        },
+        "lens_param-7": {
+          "cn": "50mm, f/1.8",
+          "en": "50mm, f/1.8"
+        },
+        "lens_param-8": {
+          "cn": "85mm, f/2.2",
+          "en": "85mm, f/2.2"
+        }
+      },
+      "tags": [
+        "人物",
+        "摄影"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_raindrop_art",
+      "name": {
+        "cn": "雨滴定格艺术",
+        "en": "Raindrop Art"
+      },
+      "content": {
+        "cn": "### Raindrop Art (雨滴定格艺术)\n\n**核心表现:**\n捕捉了雨滴落入水面的瞬间，雨滴打落在水面上，飞溅的水珠在空中形成一个抽象的 {{rain_shape}}。\n\n**艺术视觉:**\n水滴构成的结果相对比较概念化，更遵从水滴溅落形成的动态感，但能从动作或神态中感受到其表达的艺术视觉。画面将雨水与自然交互的微妙之美的定格艺术作品，动感与优雅交融，呈现出诗意的视觉表达。\n\n**环境背景:**\n背景是朦胧的雨景。\n\n**规格:**\n{{ratio}}",
+        "en": "### Raindrop Art\n**Core Performance:**\nCapture the moment a raindrop falls into the water surface, with the splashing droplets forming an abstract {{rain_shape}} in the air.\n\n**Artistic Vision:**\nThe resulting water droplet form is relatively conceptual, following the dynamic feel of the splash, yet the artistic vision can be felt through the movement or pose. The image is a frozen-in-time artwork of the subtle beauty of rain interacting with nature, blending dynamism and elegance to present a poetic visual expression.\n\n**Environment/Background:**\nThe background is a hazy rainy scene.\n\n**Specifications:**\n{{ratio}}"
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/19/6b6e14845635b168.jpg",
+      "author": "@tanshilong",
+      "selections": {
+        "rain_shape": {
+          "cn": "芭蕾舞者",
+          "en": "Ballerina"
+        },
+        "ratio": {
+          "cn": "3:4竖构图",
+          "en": "3:4 Vertical"
+        }
+      },
+      "tags": [
+        "摄影",
+        "创意"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_art_growth",
+      "name": {
+        "cn": "可视化艺术成长之路",
+        "en": "Artistic Evolution Path"
+      },
+      "content": {
+        "cn": "### 可视化艺术成长之路\n\n**角色定义**  \n你是一位历史演变建筑师 (History Evolution Architect)。你的目标是创建一个超高密度、垂直堆叠的等距轴测（Isometric）3D 展厅渲染可视化图像，展示 {{art_type}} 的发展历史。通过展厅来展示一个里程发展的时间线：底部是简陋的发展初期，通过历史更迭迭代垂直向上升起，直到现代或未来的巅峰。\n\n**核心能力 | 关键视觉策略（rameless Tech-Lapse）：**\n- **展厅模拟：** 使用一个多层的艺术展厅承载所要表达的事物发展，层级代表时间维度的发展，每层可能存在不同的“房间”用于展示同一时代不同风格的作品\n- **根除容器：** 严禁使用底板、边框或横截面视图。底部边缘是历史起源（原始社会或古代社会）\n- **垂直时间线：** “之字形上升（Zig-Zag Ascent）”穿越创新历程。  \n  - 底部（前景）：起源与原型  \n  - 中部（上升中）：古代到现代的辉煌发展  \n  - 顶部（背景）：当前的发展状态与未来的可能性\n- **集成 3D 标题：** 明确的与主题相符合的标题\n\n**检索与梳理：**\n- 提取重要发展历史中的的几个阶段。\n- 列出定义每个时代的“经典”。\n- 工具与媒介的变化\n\n**构图与光影：**  \n等距视角的展厅视角。垂直之字形时间线，将事物发展从底部的创业阶段堆叠到未来的顶部，环境与划时代的经典作品随高度演变。多款经典产品以“巨物化”呈现。  \n移轴摄影（Tilt-shift）与 {{render_style}}，画幅 {{ratio}}。",
+        "en": "### Visualized Artistic Growth Path\n**Role Definition**\nYou are a History Evolution Architect. Your goal is to create an ultra-high-density, vertically stacked isometric 3D gallery render showing the development history of {{art_type}}. Use a gallery to showcase a milestone timeline: the base is the humble early stages, rising vertically through historical changes to the modern or future peak.\n\n**Core Competency | Key Visual Strategy (Frameless Tech-Lapse):**\n- **Gallery Simulation:** Use a multi-level art gallery to host the development. Levels represent temporal progression, with different \"rooms\" potentially showing different styles from the same era.\n- **Eradicate Containers:** Strictly forbid base plates, borders, or cross-section views. The bottom edge is the historical origin (primitive or ancient society).\n- **Vertical Timeline:** A \"Zig-Zag Ascent\" through the innovation journey.\n  - Bottom (Foreground): Origins and prototypes.\n  - Middle (Ascending): Brilliant development from ancient to modern times.\n  - Top (Background): Current development status and future possibilities.\n- **Integrated 3D Title:** A clear title consistent with the theme.\n\n**Retrieval & Organization:**\n- Extract several important historical development stages.\n- List \"classics\" defining each era.\n- Changes in tools and media.\n\n**Composition & Lighting:**\nIsometric gallery view. A vertical zig-zag timeline stacking development from the base to the future at the top. The environment and era-defining classics evolve with height. Multiple classic products are presented as \"megaliths.\"\nTilt-shift photography with {{render_style}}, aspect ratio {{ratio}}."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/19/47a2cbfec635a29a.jpg",
+      "author": "@sundyme",
+      "selections": {
+        "art_type": {
+          "cn": "美术学",
+          "en": "Fine Arts"
+        },
+        "render_style": {
+          "cn": "3D像素风格",
+          "en": "3D Pixel Art Style"
+        },
+        "ratio": {
+          "cn": "3:4竖构图",
+          "en": "3:4 Vertical"
+        }
+      },
+      "tags": [
+        "建筑",
+        "创意",
+        "图表"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_miniature_desk",
+      "name": {
+        "cn": "窗边书桌微缩场景",
+        "en": "Window Desk Miniature"
+      },
+      "content": {
+        "cn": "### 窗边书桌微缩场景\n\n展示一个在窗边书桌上的场景。\n\n**核心内容：**\n《{{show_name}}》的经典镜头微缩场景展示，采用了{{render_style}}风格，充分体现了微缩摄影的艺术表达。\n\n**环境背景：**\n背景是真实的书桌，有一些制作工具，散乱的书本，营造一种刚刚加工完这个场景的凌乱感。书桌上还有编制的图纸和原型手稿。\n\n**窗外互动：**\n窗外，真实的{{character_name}}正好奇地向内观察这个桌上的作品。\n\n**画面规格：**\n{{ratio}}",
+        "en": "### Window-side Desk Miniature Scene\nDisplays a scene on a desk by a window.\n\n**Core Content:**\nA miniature restoration of a classic scene from \"{{show_name}}\", using the {{render_style}} style, fully embodying the artistic expression of miniature photography.\n\n**Environment/Background:**\nThe background is a real desk, with some crafting tools and scattered books, creating a sense of messiness as if the scene was just finished. There are also woven plans and prototype manuscripts on the desk.\n\n**Window Interaction:**\nOutside the window, a real {{character_name}} is curiously looking inside at the work on the desk.\n\n**Image Specs:**\n{{ratio}}"
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/20/8e9c9c28b3d2cf1b.jpg",
+      "author": "@tanshilong",
+      "selections": {
+        "show_name": {
+          "cn": "龙猫",
+          "en": "My Neighbor Totoro"
+        },
+        "character_name": {
+          "cn": "龙猫",
+          "en": "Totoro"
+        },
+        "render_style": {
+          "cn": "毛毡与粘土",
+          "en": "Felt and Clay"
+        },
+        "ratio": {
+          "cn": "4:3横构图",
+          "en": "4:3 Horizontal"
+        }
+      },
+      "tags": [
+        "摄影",
+        "创意",
+        "卡通"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_japanese_product_poster",
+      "name": {
+        "cn": "日式产品海报",
+        "en": "Japanese Product Poster"
+      },
+      "content": {
+        "cn": "### 日式产品海报（16:9横构图）\n\n高级日式产品海报，16:9横构图格式，编辑级设计展示{{fruit_1}}汁皮肤包装概念，具有精致的视觉叙事：\n\n**左侧（画布40%）：**\n- **主角产品：** 一个大型{{fruit_1}}汁皮肤包装垂直展示，采用戏剧性柔和灯光，展现超写实的{{fruit_1}}果皮纹理包裹矩形容器，符合{{fruit_1}}特征质感的皮肤纹理，覆盖整个表面，具有该水果特有的自然质感、颜色和细节变化，看起来完全像真正的{{fruit_1}}果皮拉伸覆盖在包装上\n- **下方：** 一个横切的新鲜{{fruit_1}}，展示符合{{fruit_1}}特征的果肉质感，展现其独特的内部结构和颜色\n- **日式排版垂直对齐：** \"{{fruit_1}}スキン\"（{{fruit_1}}皮肤）采用优雅的细体哥特字体\n- **副标题：** \"果汁皮肤 / {{fruit_1}}\"采用精致风格\n- **小字设计理念文本（日文）**\n\n**中央（画布30%）：**\n- **大量白色负空间（间 - Ma）**\n- **极简几何元素：** 精致的细线\n- **浮动文字：** \"自然な素材\"（天然材料）\n- **极简品牌标识**\n- **背景中非常微妙的{{fruit_1}}特征纹理图案（低不透明度）**\n\n**右侧（画布30%）：**\n- **两个{{fruit_1}}汁皮肤包装以不同角度和高度艺术性排列**\n- **一个完整的新鲜{{fruit_1}}，带有符合该水果特征的自然皮肤质感**\n- **排版：** \"Natural Packaging / 自然な包装\"\n- **标语：** \"The skin is the package / 皮膚が包装である\"\n- **细节标注指向符合水果特征的皮肤纹理细节**\n\n**设计原则：** 充足的留白，不对称平衡，侘寂美学，无印良品/则武编辑级极简主义\n**色彩调色板：** 符合{{fruit_1}}特征的色调，纯白背景，果肉的特征颜色作为点缀\n**摄影：** 柔和扩散的影棚灯光，超清晰的微距细节展现符合水果特征的纹理，照片级真实渲染\n**关键：** {{fruit_1}}皮肤包装必须看起来极其真实——实际的有机纹理，完全符合该水果的自然特征，包括其特有的质感、颜色和细节，绝非塑料\n\n16:9宽屏，高端日式产品海报，画廊级品质",
+        "en": "### Premium Japanese-style Product Poster (16:9 Landscape)\n\nPremium Japanese-style product poster in 16:9 landscape format, editorial design showcasing {{fruit_1}} juice skin packaging concept with sophisticated visual storytelling:\n\n**LEFT SIDE (40% of canvas):**\n- **Hero product:** One large {{fruit_1}} juice skin package displayed vertically with dramatic soft lighting, showing ultra-realistic {{fruit_1}} peel texture wrapped around rectangular container, skin texture that matches the characteristic features of {{fruit_1}}, covering entire surface, with natural texture, color and detail variations specific to this fruit, looks exactly like real {{fruit_1}} skin stretched over package\n- **Below:** One cross-sectioned fresh {{fruit_1}} showing flesh texture that matches the characteristic features of {{fruit_1}}, displaying its unique internal structure and color\n- **Japanese typography vertically aligned:** \"{{fruit_1}}スキン\" ({{fruit_1}} Skin) in elegant thin gothic font\n- **Subtitle:** \"果汁皮肤 / {{fruit_1}}\" in refined style\n- **Small design philosophy text in Japanese**\n\n**CENTER (30% of canvas):**\n- **Generous white negative space (Ma - 間)**\n- **Minimal geometric elements:** delicate thin lines\n- **Floating text:** \"自然な素材\" (natural materials)\n- **Subtle minimalist brand mark**\n- **Very subtle {{fruit_1}} characteristic texture pattern in background (low opacity)**\n\n**RIGHT SIDE (30% of canvas):**\n- **Two {{fruit_1}} juice skin packages arranged artistically at different angles and heights**\n- **One whole fresh {{fruit_1}} with natural skin texture that matches the characteristic features of this fruit**\n- **Typography:** \"Natural Packaging / 自然な包装\"\n- **Tagline:** \"The skin is the package / 皮膚が包装である\"\n- **Detail callouts pointing to skin texture details that match the fruit's characteristics**\n\n**DESIGN PRINCIPLES:** Abundant white space, asymmetrical balance, Wabi-sabi aesthetic, Muji/Noritake editorial minimalism\n**COLOR PALETTE:** tones that match {{fruit_1}} characteristics, pure white background, characteristic flesh color as accent\n**PHOTOGRAPHY:** Soft diffused studio lighting, ultra-sharp macro details showing texture that matches the fruit's characteristics, photorealistic rendering\n**CRITICAL:** The {{fruit_1}} skin packaging must look incredibly realistic - actual organic texture that fully matches the natural characteristics of this fruit, including its unique texture, color and details, NOT plastic\n\n16:9 widescreen, high-end Japanese product poster, gallery quality"
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/25/a574127d24ac34e3.png",
+      "author": "@berryxia（Berryxia.AI）",
+      "selections": {
+        "fruit_1-0": {
+          "cn": "柠檬",
+          "en": "Lemon"
+        },
+        "ratio": {
+          "cn": "16:9横构图",
+          "en": "16:9 Horizontal"
+        }
+      },
+      "tags": [
+        "产品",
+        "创意",
+        "摄影"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_luxury_editorial",
+      "name": {
+        "cn": "高级时装露背人像",
+        "en": "Luxury Editorial Portrait"
+      },
+      "content": {
+        "cn": "### 高级时装编辑部人像\n\n使用上传的参考图作为同一位{{subject}}。严格保持身份：相同的面部结构、肤色、发型。无性别转换。\n\n**姿态与构图：**\n四分之三背影。背部部分朝向镜头，躯干稍微向左倾斜。头部轻轻向右转动，露出干净的侧脸。眼睛轻轻向下看或闭上。肩膀放松。露背是主要的视觉焦点。\n\n**服装：**\n{{clothing}}。深V露背，带有优雅的垂坠感。哑光面料，无光泽，无闪粉，无婚礼元素。\n\n**配饰：**\n精美小巧的耳环。{{jewelry_style}}，带有微妙的宝石细节，沿着脊柱垂下。\n\n**花卉：**\n{{flower_type}}，拿在右肩上方。花朵部分重叠肩膀，营造出层次感的时尚遮挡效果。\n\n**摄影：**\n平视或略高于肩膀高度。85mm人像镜头质感。浅景深，压缩透视。无广角畸变。\n\n**灯光：**\n{{lighting}}。主光来自左上方，照亮侧脸和上背部。微妙的补光展现皮肤纹理。非常柔和的轮廓光勾勒出裙子和花朵。低对比度，平滑的色调过渡。\n\n**背景：**\n{{background_style}}。无环境，无道具，无纹理。\n\n**风格：**\n奢侈时尚杂志美学。优雅、克制、永恒。自然精致的皮肤纹理，不过度磨皮。",
+        "en": "### High-Fashion Luxury Editorial Portrait\n\nUse the uploaded reference image as the same {{subject}}. Preserve identity strictly: same face structure, skin tone, hairstyle. No gender swap.\n\n**POSE & COMPOSITION:**\nThree-quarter back view. Back partially facing camera, torso angled slightly left. Head gently turned to the right, revealing a clean side profile. Eyes softly lowered or closed. Shoulders relaxed. The open back is the main visual focus.\n\n**WARDROBE:**\n{{clothing}}. Deep V open back with elegant drape. Matte fabric, no shine, no glitter, no bridal elements.\n\n**ACCESSORIES:**\nSmall delicate earrings. {{jewelry_style}} with subtle gemstone details resting along the spine.\n\n**FLOWERS:**\n{{flower_type}} held over the right shoulder. The flowers partially overlap the shoulder, creating layered fashion blocking.\n\n**CAMERA:**\nEye-level to slightly above shoulder height. 85mm portrait lens look. Shallow depth of field, compressed perspective. No wide-angle distortion.\n\n**LIGHTING:**\n{{lighting}}. Key light from upper-left, illuminating side face and upper back. Subtle fill light for skin texture. Very soft rim light outlining dress and flowers. Low contrast, smooth tonal transitions.\n\n**BACKGROUND:**\n{{background_style}}. No environment, no props, no texture.\n\n**STYLE:**\nLuxury fashion magazine aesthetic. Elegant, restrained, timeless. Natural refined skin texture, not over-smoothed."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/25/bb94a5f7b87af2ee.jpg",
+      "author": "@sidona",
+      "selections": {
+        "subject": {
+          "cn": "女性",
+          "en": "Woman"
+        },
+        "clothing": {
+          "cn": "极简黑色高级定制礼服",
+          "en": "Minimalist black couture gown"
+        },
+        "background_style": {
+          "cn": "干净的纯白影棚背景",
+          "en": "Clean pure white studio background"
+        },
+        "lighting": {
+          "cn": "柔和的编辑级影棚布光",
+          "en": "Soft editorial studio lighting"
+        },
+        "ratio": {
+          "cn": "3:4竖构图",
+          "en": "3:4 Vertical"
+        }
+      },
+      "tags": [
+        "人物",
+        "摄影",
+        "创意"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    },
+    {
+      "id": "tpl_street_self_dialogue",
+      "name": {
+        "cn": "街头的自我对话",
+        "en": "Street Self-Dialogue"
+      },
+      "content": {
+        "cn": "### 街头的自我“对话”\n\n1. **核心主题与风格：** 一张具有深刻故事性和极佳摄影质感的街头摄影人像作品，捕捉“自我对话”的哲学瞬间。采用自然光影，呈现电影级叙事感和动态模糊艺术效果。\n2. **场景与背景地点：** {{building_cluster}}。时间与光影：{{lighting_atmosphere}}。光线聚焦于中心人物。氛围：忙碌、疏离，充满动态与静谧的对比。\n3. **核心人物描述位置与状态：** 位于画面正中央，静止站立，神态若有所思或平静凝视镜头，与周围环境的匆忙形成鲜明对比。着装：{{clothing}}，面部与上传图片高度一致\n4. **周边人群描述（关键叙事元素）身份与着装：** 所有路过行人都是核心人物的“不同自我”，身着代表其社会角色的服装：周围人物面部需要保持与上传图片的高度一致，众多不同着装的“我”在核心人物周围穿梭，周边人物快速移动，产生了较大的动态模糊，周边人物全部有移动产生的残影，极大的动态模糊和视觉残留，与核心人物的静态形成了鲜明对比，周边人物与核心人物都是一样的面孔和人物，不要添加其他无关人物，周边人物需要与核心人物有准确的前后关系。\n5. **摄影技术与构图镜头与景深：** {{lens_param}}，偏向与人物特写，较大的景深。核心人物面部和上身清晰锐利，前景和背景（包括动态模糊的人群和街头环境）适度虚化。半身像为主构图：中心构图，核心人物类似半身像，处画面中心较大位置。相机视角稍稍高出人物并微微向下俯视，只有核心人物抬头看向镜头，{{ratio}}。\n6. **画质与色调：** 高分辨率，细腻的胶片质感，轻微颗粒感。色调以暖橙色和深蓝色阴影为主，色彩鲜明但有层次。\n7. **情绪与故事：** 传递出孤独、内省、身份多元性与内心对话的复杂情感。画面在动态中凝结了一个安静的哲学瞬间",
+        "en": "### Street Self-Dialogue\n\n1. **CORE THEME & STYLE:** A deeply storytelling street photography portrait capturing a philosophical moment of \"self-dialogue.\" Uses natural lighting, cinematic narrative feel, and motion blur artistic effects.\n2. **SCENE & BACKGROUND:** {{building_cluster}}. Time & Lighting: {{lighting_atmosphere}}. Light focused on the central character. Atmosphere: Busy, alienated, filled with contrast between dynamics and tranquility.\n3. **CENTRAL CHARACTER:** Located in the center, standing still, with a pensive expression or calmly staring at the camera, forming a sharp contrast with the rush of the surrounding environment. Wardrobe: {{clothing}}, facial features highly consistent with the uploaded image.\n4. **SURROUNDING CROWD (KEY NARRATIVE ELEMENT):** All passing pedestrians are \"different selves\" of the central character, wearing clothes representing their social roles: surrounding characters' faces must remain highly consistent with the uploaded image. Numerous \"selves\" in different outfits weave around the central character. Surrounding characters move rapidly, creating significant motion blur and visual trailing, contrasting with the static nature of the central character. Surrounding characters and the central character share the same face and identity—do not add irrelevant people. Surrounding characters need accurate spatial relationships (front/back) with the central character.\n5. **PHOTOGRAPHY & COMPOSITION:** {{lens_param}}, leaning towards character close-up with larger depth of field. Central character's face and upper body are sharp and clear, while foreground and background (including motion-blurred crowd and street environment) are moderately blurred. Composition: Central composition, half-body style, occupying a large portion of the center. Camera angle slightly above the character looking slightly downward, only the central character looks up at the camera, {{ratio}}.\n6. **QUALITY & TONE:** High resolution, delicate film texture, slight grain. Tones dominated by warm oranges and deep blue shadows, vivid but layered colors.\n7. **EMOTION & STORY:** Conveys feelings of loneliness, introspection, identity multiplicity, and the complexity of inner dialogue. The image freezes a quiet philosophical moment within dynamics."
+      },
+      "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/25/fd3cbc98f5afa970.png",
+      "author": "@MarioTan",
+      "selections": {
+        "building_cluster": {
+          "cn": "纽约摩天大楼群",
+          "en": "New York skyscraper cluster"
+        },
+        "lighting_atmosphere": {
+          "cn": "夕阳余晖",
+          "en": "Sunset afterglow"
+        },
+        "clothing": {
+          "cn": "黑色修身西装",
+          "en": "Black slim-fit suit"
+        },
+        "lens_param": {
+          "cn": "85mm, f/1.8",
+          "en": "85mm, f/1.8"
+        },
+        "ratio": {
+          "cn": "3:4竖构图",
+          "en": "3:4 Vertical"
+        }
+      },
+      "tags": [
+        "人物",
+        "摄影",
+        "创意"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ]
+    }
+  ],
+  "banks": {
+    "role": {
+      "label": {
+        "cn": "角色身份",
+        "en": "Role"
+      },
+      "category": "character",
+      "options": [
+        {
+          "cn": "游戏与动漫概念美术设计大师",
+          "en": "Master of Game and Anime Concept Art"
+        },
+        {
+          "cn": "资深影视角色原画师",
+          "en": "Senior Film Character Concept Artist"
+        },
+        {
+          "cn": "赛博朋克风格设计师",
+          "en": "Cyberpunk Style Designer"
+        },
+        {
+          "cn": "暗黑幻想风格插画师",
+          "en": "Dark Fantasy Style Illustrator"
+        }
+      ]
+    },
+    "subject": {
+      "label": {
+        "cn": "主体对象",
+        "en": "Subject"
+      },
+      "category": "character",
+      "options": [
+        {
+          "cn": "女性角色",
+          "en": "Female Character"
+        },
+        {
+          "cn": "男性角色",
+          "en": "Male Character"
+        },
+        {
+          "cn": "机甲少女",
+          "en": "Mecha Girl"
+        },
+        {
+          "cn": "怪物拟人化",
+          "en": "Monster Anthropomorphism"
+        },
+        {
+          "cn": "奇幻种族(精灵/恶魔)",
+          "en": "Fantasy Race (Elf/Demon)"
+        }
+      ]
+    },
+    "character_companion": {
+      "label": {
+        "cn": "合影角色",
+        "en": "Companion"
+      },
+      "category": "character",
+      "options": [
+        {
+          "cn": "死侍 (Deadpool)",
+          "en": "Deadpool"
+        },
+        {
+          "cn": "超人 (Superman)",
+          "en": "Superman"
+        },
+        {
+          "cn": "爱因斯坦 (Einstein)",
+          "en": "Einstein"
+        },
+        {
+          "cn": "神奇女侠 (Wonder Woman)",
+          "en": "Wonder Woman"
+        },
+        {
+          "cn": "钢铁侠 (Iron Man)",
+          "en": "Iron Man"
+        },
+        {
+          "cn": "皮卡丘 (Pikachu)",
+          "en": "Pikachu"
+        },
+        {
+          "cn": "哥斯拉 (Godzilla)",
+          "en": "Godzilla"
+        },
+        {
+          "cn": "初音未来 (Hatsune Miku)",
+          "en": "Hatsune Miku"
+        }
+      ]
+    },
+    "layout_focus": {
+      "label": {
+        "cn": "构图重心",
+        "en": "Layout Focus"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "全身立绘",
+          "en": "Full-body Portrait"
+        },
+        {
+          "cn": "半身肖像",
+          "en": "Half-body Portrait"
+        },
+        {
+          "cn": "动态战斗姿势",
+          "en": "Dynamic Action Pose"
+        },
+        {
+          "cn": "背影回眸",
+          "en": "Back View Looking Back"
+        }
+      ]
+    },
+    "grid_pose": {
+      "label": {
+        "cn": "九宫格动作",
+        "en": "Grid Pose"
+      },
+      "category": "action",
+      "options": [
+        {
+          "cn": "前景手指虚化",
+          "en": "Out-of-focus fingers in foreground"
+        },
+        {
+          "cn": "目光锁定镜头",
+          "en": "Eyes locked on camera"
+        },
+        {
+          "cn": "单色下巴托手",
+          "en": "Monochrome hand on chin"
+        },
+        {
+          "cn": "透过模糊肩带拍摄",
+          "en": "Shooting through blurred shoulder straps"
+        },
+        {
+          "cn": "正面特写阴影",
+          "en": "Frontal close-up with shadows"
+        },
+        {
+          "cn": "斜角拍摄",
+          "en": "Angled shot"
+        },
+        {
+          "cn": "双手置于锁骨",
+          "en": "Hands on collarbones"
+        },
+        {
+          "cn": "坐姿半身侧面",
+          "en": "Seated half-body profile"
+        },
+        {
+          "cn": "侧面微距水滴",
+          "en": "Side macro with water drops"
+        },
+        {
+          "cn": "闭眼仰头享受",
+          "en": "Eyes closed looking up in enjoyment"
+        },
+        {
+          "cn": "用手遮挡阳光",
+          "en": "Shading eyes from sun with hand"
+        },
+        {
+          "cn": "回眸一笑",
+          "en": "Looking back with a smile"
+        },
+        {
+          "cn": "吹泡泡糖特写",
+          "en": "Close-up blowing bubble gum"
+        },
+        {
+          "cn": "正面直视镜头，表情平静，眼神清澈",
+          "en": "Staring straight at the camera, calm expression, clear eyes"
+        },
+        {
+          "cn": "凝视镜头，嘴角微微上扬，展现自信",
+          "en": "Staring at the camera, slight smile, showing confidence"
+        },
+        {
+          "cn": "专注地看着镜头，表情柔和，眼神温和",
+          "en": "Looking intently at the camera, soft expression, gentle eyes"
+        },
+        {
+          "cn": "侧身回望，眼神温柔，嘴角上扬",
+          "en": "Side view looking back, gentle eyes, smiling"
+        },
+        {
+          "cn": "转身回眸，长发飘逸，笑容自然",
+          "en": "Turning back, flowing hair, natural smile"
+        },
+        {
+          "cn": "手轻抚下巴，表情优雅，眼神柔和",
+          "en": "Hand gently on chin, elegant expression, soft eyes"
+        },
+        {
+          "cn": "单手支撑下巴，表情自然，眼神专注",
+          "en": "Supporting chin with one hand, natural expression, focused eyes"
+        },
+        {
+          "cn": "利用肩带营造景深，焦点清晰在眼睛",
+          "en": "Using shoulder straps for depth of field, focus on eyes"
+        },
+        {
+          "cn": "正在吹泡泡糖，表情可爱，眼神专注",
+          "en": "Blowing bubble gum, cute expression, focused eyes"
+        },
+        {
+          "cn": "侧面微距特写，突出面部轮廓和细节",
+          "en": "Side macro close-up, highlighting facial contours and details"
+        }
+      ]
+    },
+    "camera_angle": {
+      "label": {
+        "cn": "拍摄角度",
+        "en": "Camera Angle"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "脸颊和颈部特写",
+          "en": "Cheek and neck close-up"
+        },
+        {
+          "cn": "目光锁定镜头",
+          "en": "Eyes locked on camera"
+        },
+        {
+          "cn": "单色下巴托手肖像",
+          "en": "Monochrome hand on chin portrait"
+        },
+        {
+          "cn": "透过模糊的肩带拍摄",
+          "en": "Shooting through blurred shoulder straps"
+        },
+        {
+          "cn": "正面特写，面部阴影交错",
+          "en": "Frontal close-up, interlocking facial shadows"
+        },
+        {
+          "cn": "斜角拍摄的原始人像",
+          "en": "Raw portrait from an angle"
+        },
+        {
+          "cn": "双手置于锁骨附近的特写",
+          "en": "Close-up with hands near collarbones"
+        },
+        {
+          "cn": "坐姿半身侧面照",
+          "en": "Seated half-body profile shot"
+        },
+        {
+          "cn": "侧面微距照",
+          "en": "Side macro shot"
+        }
+      ]
+    },
+    "connectors": {
+      "label": {
+        "cn": "视觉引导",
+        "en": "Connectors"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "手绘箭头或引导线",
+          "en": "Hand-drawn arrows or guide lines"
+        },
+        {
+          "cn": "虚线连接",
+          "en": "Dashed line connections"
+        },
+        {
+          "cn": "彩色光束",
+          "en": "Colored light beams"
+        },
+        {
+          "cn": "半透明数据线",
+          "en": "Translucent data cables"
+        }
+      ]
+    },
+    "underwear_style": {
+      "label": {
+        "cn": "私密内着拆解",
+        "en": "Underwear Style"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "成套的蕾丝内衣裤",
+          "en": "Matching lace lingerie set"
+        },
+        {
+          "cn": "运动风格纯棉内衣",
+          "en": "Athletic style cotton underwear"
+        },
+        {
+          "cn": "极简主义丝绸内衣",
+          "en": "Minimalist silk lingerie"
+        },
+        {
+          "cn": "哥特风格绑带内衣",
+          "en": "Gothic style strappy lingerie"
+        }
+      ]
+    },
+    "clothing": {
+      "label": {
+        "cn": "人物服饰",
+        "en": "Clothing"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "炭灰色无袖连衣裙",
+          "en": "Charcoal grey sleeveless dress"
+        },
+        {
+          "cn": "白色丝绸衬衫",
+          "en": "White silk shirt"
+        },
+        {
+          "cn": "黑色修身西装",
+          "en": "Black slim-fit suit"
+        },
+        {
+          "cn": "战术机能风外套",
+          "en": "Tactical techwear jacket"
+        },
+        {
+          "cn": "复古碎花连衣裙",
+          "en": "Vintage floral print dress"
+        }
+      ]
+    },
+    "clothing_male": {
+      "label": {
+        "cn": "男性服饰",
+        "en": "Male Clothing"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "剪裁合体的深蓝西装",
+          "en": "Tailored deep blue suit"
+        },
+        {
+          "cn": "复古棕色皮夹克",
+          "en": "Vintage brown leather jacket"
+        },
+        {
+          "cn": "战术背心与工装裤",
+          "en": "Tactical vest and cargo pants"
+        },
+        {
+          "cn": "宽松的灰色卫衣",
+          "en": "Loose grey hoodie"
+        },
+        {
+          "cn": "白色亚麻衬衫",
+          "en": "White linen shirt"
+        },
+        {
+          "cn": "黑色高领毛衣",
+          "en": "Black turtleneck sweater"
+        }
+      ]
+    },
+    "clothing_female": {
+      "label": {
+        "cn": "女性服饰",
+        "en": "Female Clothing"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "炭灰色无袖连衣裙",
+          "en": "Charcoal grey sleeveless dress"
+        },
+        {
+          "cn": "丝绸吊带晚礼服",
+          "en": "Silk slip evening gown"
+        },
+        {
+          "cn": "机车皮衣与短裙",
+          "en": "Biker leather jacket and short skirt"
+        },
+        {
+          "cn": "白色蕾丝衬衫",
+          "en": "White lace blouse"
+        },
+        {
+          "cn": "黑色紧身连体衣",
+          "en": "Black tight bodysuit"
+        },
+        {
+          "cn": "优雅的香奈儿风套装",
+          "en": "Elegant Chanel-style suit"
+        }
+      ]
+    },
+    "expressions": {
+      "label": {
+        "cn": "表情集",
+        "en": "Expressions"
+      },
+      "category": "character",
+      "options": [
+        {
+          "cn": "疯狂、病娇、狂喜",
+          "en": "Crazy, Yandere, Ecstatic"
+        },
+        {
+          "cn": "羞涩、躲闪、红晕",
+          "en": "Shy, Evasive, Blushing"
+        },
+        {
+          "cn": "冷漠、鄙视、高傲",
+          "en": "Indifferent, Contemptuous, Proud"
+        },
+        {
+          "cn": "痛苦、忍耐、咬唇",
+          "en": "Painful, Enduring, Biting lip"
+        }
+      ]
+    },
+    "character_originality": {
+      "label": {
+        "cn": "人物原创性",
+        "en": "Character Originality"
+      },
+      "category": "character",
+      "options": [
+        {
+          "cn": "创作一个原创人物",
+          "en": "Create an original character"
+        },
+        {
+          "cn": "使用附图中的人物，确保结果与人物一致性",
+          "en": "Use character in attachment, ensure consistency"
+        },
+        {
+          "cn": "对知名角色再创作",
+          "en": "Re-create a well-known character"
+        }
+      ]
+    },
+    "character_groups": {
+      "label": {
+        "cn": "人物组合",
+        "en": "Character Groups"
+      },
+      "category": "character",
+      "options": [
+        {
+          "cn": "中国古代开国皇帝",
+          "en": "Ancient Chinese Founding Emperors"
+        },
+        {
+          "cn": "漫威人物",
+          "en": "Marvel Characters"
+        },
+        {
+          "cn": "金庸古龙武侠人物",
+          "en": "Jin Yong & Gu Long Wuxia Characters"
+        },
+        {
+          "cn": "三国知名人物",
+          "en": "Famous Three Kingdoms Figures"
+        },
+        {
+          "cn": "知名军事家（拿破仑、凯撒、曹操等）",
+          "en": "Famous Military Strategists (Napoleon, Caesar, Cao Cao, etc.)"
+        },
+        {
+          "cn": "全球知名运动员",
+          "en": "World-famous Athletes"
+        },
+        {
+          "cn": "中外知名侦探（包青天、狄仁杰、福尔摩斯、柯南等）",
+          "en": "Famous Detectives (Bao Zheng, Di Renjie, Sherlock Holmes, Conan, etc.)"
+        },
+        {
+          "cn": "动漫游戏角色",
+          "en": "Anime & Game Characters"
+        },
+        {
+          "cn": "历史名人",
+          "en": "Historical Celebrities"
+        },
+        {
+          "cn": "明星艺人",
+          "en": "Stars & Celebrities"
+        }
+      ]
+    },
+    "social_media": {
+      "label": {
+        "cn": "社交媒体",
+        "en": "Social Media"
+      },
+      "category": "location",
+      "options": [
+        {
+          "cn": "微信朋友圈",
+          "en": "WeChat Moments"
+        },
+        {
+          "cn": "微博",
+          "en": "Weibo"
+        },
+        {
+          "cn": "Twitter(X)",
+          "en": "Twitter(X)"
+        },
+        {
+          "cn": "小红书",
+          "en": "Little Red Book (Xiaohongshu)"
+        },
+        {
+          "cn": "Instagram",
+          "en": "Instagram"
+        },
+        {
+          "cn": "Facebook",
+          "en": "Facebook"
+        },
+        {
+          "cn": "抖音",
+          "en": "Douyin"
+        },
+        {
+          "cn": "TikTok",
+          "en": "TikTok"
+        }
+      ]
+    },
+    "texture_zoom": {
+      "label": {
+        "cn": "材质特写",
+        "en": "Texture Zoom"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "凌乱感与私处汗渍",
+          "en": "Messiness and sweat stains in private areas"
+        },
+        {
+          "cn": "皮肤上的勒痕与红印",
+          "en": "Strangulation marks and red imprints on skin"
+        },
+        {
+          "cn": "丝袜的抽丝细节",
+          "en": "Snagged details on silk stockings"
+        },
+        {
+          "cn": "皮革的光泽与磨损",
+          "en": "Luster and wear on leather"
+        }
+      ]
+    },
+    "action_detail": {
+      "label": {
+        "cn": "动作细节",
+        "en": "Action Detail"
+      },
+      "category": "action",
+      "options": [
+        {
+          "cn": "带着项圈的爬行",
+          "en": "Crawling with a collar"
+        },
+        {
+          "cn": "双手被缚在身后的挣扎",
+          "en": "Struggling with hands bound behind back"
+        },
+        {
+          "cn": "跪姿并展示鞋底",
+          "en": "Kneeling and showing soles"
+        },
+        {
+          "cn": "拉扯领口的诱惑",
+          "en": "Temptation of pulling at the neckline"
+        }
+      ]
+    },
+    "special_view": {
+      "label": {
+        "cn": "特殊视角",
+        "en": "Special View"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "被踩在脚下的仰视视角",
+          "en": "Low-angle view from being stepped on"
+        },
+        {
+          "cn": "从门缝中偷窥的视角",
+          "en": "Perspective of peeking through a door crack"
+        },
+        {
+          "cn": "镜子反射的背影",
+          "en": "Back view reflected in a mirror"
+        },
+        {
+          "cn": "监控摄像头的俯视视角",
+          "en": "Top-down view from a security camera"
+        }
+      ]
+    },
+    "bag_content": {
+      "label": {
+        "cn": "随身包袋",
+        "en": "Bag Content"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "日常通勤包或手拿包",
+          "en": "Daily commuter bag or clutch"
+        },
+        {
+          "cn": "战术腿包",
+          "en": "Tactical leg bag"
+        },
+        {
+          "cn": "可爱的毛绒背包",
+          "en": "Cute plush backpack"
+        },
+        {
+          "cn": "透明材质的痛包",
+          "en": "Ita-bag made of transparent material"
+        }
+      ]
+    },
+    "cosmetics": {
+      "label": {
+        "cn": "美妆与护理",
+        "en": "Cosmetics"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "常用的化妆品组合",
+          "en": "Commonly used cosmetics combo"
+        },
+        {
+          "cn": "散落的口红与粉饼",
+          "en": "Scattered lipsticks and compact powder"
+        },
+        {
+          "cn": "便携式补妆镜",
+          "en": "Portable makeup mirror"
+        },
+        {
+          "cn": "香水小样与护手霜",
+          "en": "Perfume samples and hand cream"
+        }
+      ]
+    },
+    "private_items": {
+      "label": {
+        "cn": "私密生活物件",
+        "en": "Private Items"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "震动棒与项圈",
+          "en": "Vibrator and collar"
+        },
+        {
+          "cn": "手铐与眼罩",
+          "en": "Handcuffs and eye mask"
+        },
+        {
+          "cn": "鞭子与蜡烛",
+          "en": "Whip and candle"
+        },
+        {
+          "cn": "润滑液与安全套",
+          "en": "Lubricant and condom"
+        }
+      ]
+    },
+    "art_style": {
+      "label": {
+        "cn": "画风",
+        "en": "Art Style"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "高质量的 2D 插画风格",
+          "en": "High-quality 2D illustration style"
+        },
+        {
+          "cn": "写实厚涂风格",
+          "en": "Realistic impasto style"
+        },
+        {
+          "cn": "赛博朋克霓虹风格",
+          "en": "Cyberpunk neon style"
+        },
+        {
+          "cn": "水彩手绘风格",
+          "en": "Watercolor hand-drawn style"
+        }
+      ]
+    },
+    "background_style": {
+      "label": {
+        "cn": "背景风格",
+        "en": "Background Style"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "漫画网格笔记本",
+          "en": "Manga grid notebook"
+        },
+        {
+          "cn": "蓝图设计稿纸",
+          "en": "Blueprint design paper"
+        },
+        {
+          "cn": "工业风金属背景",
+          "en": "Industrial metal background"
+        },
+        {
+          "cn": "极简纯色背景",
+          "en": "Minimalist solid color background"
+        }
+      ]
+    },
+    "classic_scene": {
+      "label": {
+        "cn": "经典场景",
+        "en": "Classic Scene"
+      },
+      "category": "location",
+      "options": [
+        {
+          "cn": "黑客帝国",
+          "en": "The Matrix"
+        },
+        {
+          "cn": "千与千寻",
+          "en": "Spirited Away"
+        },
+        {
+          "cn": "疯狂动物城（Zootopia）",
+          "en": "Zootopia"
+        },
+        {
+          "cn": "生活大爆炸",
+          "en": "The Big Bang Theory"
+        },
+        {
+          "cn": "霍格沃茨魔法学院",
+          "en": "Hogwarts School of Witchcraft and Wizardry"
+        },
+        {
+          "cn": "侏罗纪公园丛林入口",
+          "en": "Jurassic Park Jungle Entrance"
+        },
+        {
+          "cn": "星球大战塔图因集市",
+          "en": "Star Wars Tatooine Market"
+        },
+        {
+          "cn": "指环王夏尔",
+          "en": "The Lord of the Rings - The Shire"
+        },
+        {
+          "cn": "权力的游戏君临城城墙",
+          "en": "Game of Thrones - King's Landing Walls"
+        },
+        {
+          "cn": "盗梦空间折叠城市",
+          "en": "Inception - Folding City"
+        },
+        {
+          "cn": "赛博朋克霓虹夜市",
+          "en": "Cyberpunk Neon Night Market"
+        },
+        {
+          "cn": "未来城市空港枢纽",
+          "en": "Future City Spaceport Hub"
+        }
+      ]
+    },
+    "position": {
+      "label": {
+        "cn": "文字位置",
+        "en": "Text Position"
+      },
+      "category": "location",
+      "options": [
+        {
+          "cn": "顶部中央",
+          "en": "Top Center"
+        },
+        {
+          "cn": "底部中央",
+          "en": "Bottom Center"
+        },
+        {
+          "cn": "左上角偏中",
+          "en": "Top Left biased center"
+        },
+        {
+          "cn": "右上角偏中",
+          "en": "Top Right biased center"
+        },
+        {
+          "cn": "画面中上方悬浮",
+          "en": "Floating in top middle"
+        }
+      ]
+    },
+    "render_style": {
+      "label": {
+        "cn": "渲染风格",
+        "en": "Render Style"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "Octane Render 和 Cinema 4D",
+          "en": "Octane Render and Cinema 4D"
+        },
+        {
+          "cn": "乐高积木风格",
+          "en": "LEGO Block Style"
+        },
+        {
+          "cn": "Unreal Engine 5 写实光追",
+          "en": "Unreal Engine 5 Realistic Ray Tracing"
+        },
+        {
+          "cn": "Pixar 卡通渲染",
+          "en": "Pixar Cartoon Rendering"
+        },
+        {
+          "cn": "黏土动画质感",
+          "en": "Claymation Texture"
+        },
+        {
+          "cn": "手办级实体渲染",
+          "en": "Figurine-level Physical Rendering"
+        },
+        {
+          "cn": "3D像素风格",
+          "en": "3D Pixel Art Style"
+        },
+        {
+          "cn": "手工毛线针织风格",
+          "en": "Hand-knitted Yarn Style"
+        },
+        {
+          "cn": "毛线针织",
+          "en": "Knitted Yarn"
+        },
+        {
+          "cn": "毛毡与粘土",
+          "en": "Felt and Clay"
+        },
+        {
+          "cn": "纸壳纸板",
+          "en": "Cardboard"
+        }
+      ]
+    },
+    "show_name": {
+      "label": {
+        "cn": "剧名",
+        "en": "Show Name"
+      },
+      "category": "other",
+      "options": [
+        {
+          "cn": "泰坦尼克号",
+          "en": "Titanic"
+        },
+        {
+          "cn": "龙猫",
+          "en": "My Neighbor Totoro"
+        },
+        {
+          "cn": "哈利·波特",
+          "en": "Harry Potter"
+        },
+        {
+          "cn": "星际穿越",
+          "en": "Interstellar"
+        },
+        {
+          "cn": "千与千寻",
+          "en": "Spirited Away"
+        },
+        {
+          "cn": "复仇者联盟",
+          "en": "The Avengers"
+        }
+      ]
+    },
+    "character_name": {
+      "label": {
+        "cn": "角色",
+        "en": "Character Name"
+      },
+      "category": "character",
+      "options": [
+        {
+          "cn": "Jack and Rose",
+          "en": "Jack and Rose"
+        },
+        {
+          "cn": "龙猫",
+          "en": "Totoro"
+        },
+        {
+          "cn": "哈利·波特",
+          "en": "Harry Potter"
+        },
+        {
+          "cn": "库珀",
+          "en": "Cooper"
+        },
+        {
+          "cn": "千寻",
+          "en": "Chihiro"
+        },
+        {
+          "cn": "绿巨人",
+          "en": "Hulk"
+        },
+        {
+          "cn": "萨诺斯",
+          "en": "Thanos"
+        },
+        {
+          "cn": "钢铁侠",
+          "en": "Iron Man"
+        }
+      ]
+    },
+    "art_type": {
+      "label": {
+        "cn": "艺术门类",
+        "en": "Art Type"
+      },
+      "category": "other",
+      "options": [
+        {
+          "cn": "美术学",
+          "en": "Fine Arts"
+        },
+        {
+          "cn": "时尚学",
+          "en": "Fashion Studies"
+        },
+        {
+          "cn": "建筑学",
+          "en": "Architecture"
+        },
+        {
+          "cn": "摄影学",
+          "en": "Photography"
+        },
+        {
+          "cn": "雕塑艺术",
+          "en": "Sculpture Art"
+        },
+        {
+          "cn": "工业设计",
+          "en": "Industrial Design"
+        }
+      ]
+    },
+    "company": {
+      "label": {
+        "cn": "公司",
+        "en": "Company"
+      },
+      "category": "location",
+      "options": [
+        {
+          "cn": "Apple",
+          "en": "Apple"
+        },
+        {
+          "cn": "任天堂（Nintendo）",
+          "en": "Nintendo"
+        },
+        {
+          "cn": "SONY",
+          "en": "SONY"
+        },
+        {
+          "cn": "宜家（IKEA）",
+          "en": "IKEA"
+        }
+      ]
+    },
+    "ratio": {
+      "label": {
+        "cn": "画幅比例",
+        "en": "Aspect Ratio"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "3:4竖构图",
+          "en": "3:4 Vertical"
+        },
+        {
+          "cn": "9:16竖构图",
+          "en": "9:16 Vertical"
+        },
+        {
+          "cn": "1:1",
+          "en": "1:1 Square"
+        },
+        {
+          "cn": "4:3横构图",
+          "en": "4:3 Horizontal"
+        },
+        {
+          "cn": "16:9横构图",
+          "en": "16:9 Horizontal"
+        },
+        {
+          "cn": "圆形画幅",
+          "en": "Circular Aspect Ratio"
+        }
+      ]
+    },
+    "fashion_deconstruct": {
+      "label": {
+        "cn": "穿搭解构",
+        "en": "Fashion Deconstruct"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "整齐折叠的外套和精致的高跟鞋",
+          "en": "Neatly folded coat and exquisite high heels"
+        },
+        {
+          "cn": "散落的配饰与包包",
+          "en": "Scattered accessories and bags"
+        },
+        {
+          "cn": "悬挂的衬衫与百褶裙",
+          "en": "Hanging shirt and pleated skirt"
+        },
+        {
+          "cn": "堆叠的金属配饰与皮带",
+          "en": "Stacked metal accessories and belts"
+        }
+      ]
+    },
+    "toy_companion": {
+      "label": {
+        "cn": "互动公仔",
+        "en": "Toy Companion"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "Labubu艺术公仔",
+          "en": "Labubu Art Toy"
+        },
+        {
+          "cn": "暴力熊积木熊",
+          "en": "Bearbrick"
+        },
+        {
+          "cn": "泡泡玛特Molly",
+          "en": "Pop Mart Molly"
+        },
+        {
+          "cn": "复古泰迪熊",
+          "en": "Vintage Teddy Bear"
+        },
+        {
+          "cn": "赛博朋克机械狗",
+          "en": "Cyberpunk Robo-Dog"
+        }
+      ]
+    },
+    "lens_param": {
+      "label": {
+        "cn": "九宫格镜头",
+        "en": "Lens Parameter"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "85mm, f/1.8",
+          "en": "85mm, f/1.8"
+        },
+        {
+          "cn": "85mm, f/2.0",
+          "en": "85mm, f/2.0"
+        },
+        {
+          "cn": "50mm, f/2.2",
+          "en": "50mm, f/2.2"
+        },
+        {
+          "cn": "50mm, f/2.5",
+          "en": "50mm, f/2.5"
+        },
+        {
+          "cn": "50mm, f/3.2",
+          "en": "50mm, f/3.2"
+        },
+        {
+          "cn": "35mm, f/4.5",
+          "en": "35mm, f/4.5"
+        },
+        {
+          "cn": "85mm, f/1.9",
+          "en": "85mm, f/1.9"
+        },
+        {
+          "cn": "50mm, f/1.8",
+          "en": "50mm, f/1.8"
+        },
+        {
+          "cn": "85mm, f/2.2",
+          "en": "85mm, f/2.2"
+        },
+        {
+          "cn": "50mm, f/2.0",
+          "en": "50mm, f/2.0"
+        }
+      ]
+    },
+    "lighting": {
+      "label": {
+        "cn": "灯光布置",
+        "en": "Lighting"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "大型顶置柔光箱，轻微侧向反射光",
+          "en": "Large overhead softbox, slight side reflection"
+        },
+        {
+          "cn": "自然窗光",
+          "en": "Natural window light"
+        },
+        {
+          "cn": "伦勃朗光",
+          "en": "Rembrandt lighting"
+        },
+        {
+          "cn": "赛博朋克霓虹光",
+          "en": "Cyberpunk neon lighting"
+        },
+        {
+          "cn": "影棚硬光",
+          "en": "Studio hard light"
+        }
+      ]
+    },
+    "sticker_core": {
+      "label": {
+        "cn": "核心贴纸",
+        "en": "Sticker Core"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "用户穿着甜美约会装的照片",
+          "en": "Photo of user in a sweet date outfit"
+        },
+        {
+          "cn": "复古摇滚乐队T恤穿搭",
+          "en": "Vintage rock band T-shirt outfit"
+        },
+        {
+          "cn": "日系JK制服穿搭",
+          "en": "Japanese JK uniform outfit"
+        },
+        {
+          "cn": "极简职场通勤装",
+          "en": "Minimalist office commuter outfit"
+        }
+      ]
+    },
+    "sticker_decor": {
+      "label": {
+        "cn": "装饰元素",
+        "en": "Sticker Decor"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "手绘爱心、闪光符号",
+          "en": "Hand-drawn hearts, sparkle symbols"
+        },
+        {
+          "cn": "星星、月亮贴纸",
+          "en": "Star and moon stickers"
+        },
+        {
+          "cn": "复古邮票与票据",
+          "en": "Vintage stamps and bills"
+        },
+        {
+          "cn": "赛博故障风Glitch元素",
+          "en": "Cyberpunk glitch elements"
+        }
+      ]
+    },
+    "action_pose": {
+      "label": {
+        "cn": "互动姿势",
+        "en": "Action Pose"
+      },
+      "category": "action",
+      "options": [
+        {
+          "cn": "用手指在男人脑后比划'兔耳朵'",
+          "en": "Using fingers to make 'bunny ears' behind the man's head"
+        },
+        {
+          "cn": "勾肩搭背比V字手势",
+          "en": "Arm around shoulder making V sign"
+        },
+        {
+          "cn": "互相指着对方大笑",
+          "en": "Pointing at each other and laughing"
+        },
+        {
+          "cn": "背靠背酷炫站姿",
+          "en": "Cool back-to-back standing pose"
+        }
+      ]
+    },
+    "background_scene": {
+      "label": {
+        "cn": "背景场景",
+        "en": "Background Scene"
+      },
+      "category": "location",
+      "options": [
+        {
+          "cn": "俯瞰纽约市的复仇者大厦楼顶",
+          "en": "Rooftop of Avengers Tower overlooking New York City"
+        },
+        {
+          "cn": "废弃的工业仓库",
+          "en": "Abandoned industrial warehouse"
+        },
+        {
+          "cn": "熙熙攘攘的时代广场",
+          "en": "Bustling Times Square"
+        },
+        {
+          "cn": "外太空飞船内部",
+          "en": "Inside a space-age spaceship"
+        }
+      ]
+    },
+    "lens_type": {
+      "label": {
+        "cn": "镜头类型",
+        "en": "Lens Type"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "标准镜头",
+          "en": "Standard Lens"
+        },
+        {
+          "cn": "广角镜头",
+          "en": "Wide-angle Lens"
+        },
+        {
+          "cn": "长焦镜头",
+          "en": "Telephoto Lens"
+        },
+        {
+          "cn": "极端鱼眼镜头",
+          "en": "Extreme Fisheye Lens"
+        },
+        {
+          "cn": "移轴镜头",
+          "en": "Tilt-shift Lens"
+        },
+        {
+          "cn": "微距镜头",
+          "en": "Macro Lens"
+        }
+      ]
+    },
+    "school_uniform": {
+      "label": {
+        "cn": "校服样式",
+        "en": "School Uniform"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "传统水手服校服",
+          "en": "Traditional Sailor Uniform"
+        },
+        {
+          "cn": "灰色开衫和格子裙校服",
+          "en": "Grey cardigan and plaid skirt uniform"
+        },
+        {
+          "cn": "英伦风百褶裙校服",
+          "en": "British style pleated skirt uniform"
+        },
+        {
+          "cn": "日系JK制服",
+          "en": "Japanese JK Uniform"
+        },
+        {
+          "cn": "运动校服",
+          "en": "Tracksuit School Uniform"
+        },
+        {
+          "cn": "冬季大衣校服",
+          "en": "Winter coat school uniform"
+        }
+      ]
+    },
+    "urban_location": {
+      "label": {
+        "cn": "城市地点",
+        "en": "Urban Location"
+      },
+      "category": "location",
+      "options": [
+        {
+          "cn": "涩谷十字路口",
+          "en": "Shibuya Crossing"
+        },
+        {
+          "cn": "东京塔下",
+          "en": "Under Tokyo Tower"
+        },
+        {
+          "cn": "时代广场",
+          "en": "Times Square"
+        },
+        {
+          "cn": "埃菲尔铁塔旁",
+          "en": "By the Eiffel Tower"
+        },
+        {
+          "cn": "中央公园",
+          "en": "Central Park"
+        },
+        {
+          "cn": "北京王府井",
+          "en": "Beijing Wangfujing"
+        },
+        {
+          "cn": "上海外滩",
+          "en": "Shanghai Bund"
+        },
+        {
+          "cn": "香港维多利亚港",
+          "en": "Hong Kong Victoria Harbour"
+        }
+      ]
+    },
+    "dynamic_action": {
+      "label": {
+        "cn": "动态动作",
+        "en": "Dynamic Action"
+      },
+      "category": "action",
+      "options": [
+        {
+          "cn": "一只手夸张地伸向镜头前景",
+          "en": "One hand exaggeratedly reaching towards the foreground"
+        },
+        {
+          "cn": "双臂张开拥抱天空",
+          "en": "Arms open wide embracing the sky"
+        },
+        {
+          "cn": "旋转跳跃",
+          "en": "Spinning and jumping"
+        },
+        {
+          "cn": "奔跑前进",
+          "en": "Running forward"
+        },
+        {
+          "cn": "蹲下捡拾",
+          "en": "Squatting down to pick up"
+        },
+        {
+          "cn": "挥手致意",
+          "en": "Waving greeting"
+        },
+        {
+          "cn": "舞蹈姿势",
+          "en": "Dance pose"
+        },
+        {
+          "cn": "比心手势",
+          "en": "Heart gesture"
+        }
+      ]
+    },
+    "fingernail_detail": {
+      "label": {
+        "cn": "手指甲细节",
+        "en": "Fingernail Detail"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "手指甲清晰可见",
+          "en": "Fingernails clearly visible"
+        },
+        {
+          "cn": "涂有鲜艳指甲油",
+          "en": "Coated with bright nail polish"
+        },
+        {
+          "cn": "自然裸色指甲",
+          "en": "Natural nude nails"
+        },
+        {
+          "cn": "装饰有钻石指甲",
+          "en": "Decorated with diamond nails"
+        },
+        {
+          "cn": "渐变色指甲",
+          "en": "Gradient nails"
+        },
+        {
+          "cn": "艺术图案指甲",
+          "en": "Artistic pattern nails"
+        }
+      ]
+    },
+    "building_cluster": {
+      "label": {
+        "cn": "建筑群",
+        "en": "Building Cluster"
+      },
+      "category": "location",
+      "options": [
+        {
+          "cn": "扭曲的涩谷109大楼和其他建筑林立",
+          "en": "Distorted Shibuya 109 building and other forest of buildings"
+        },
+        {
+          "cn": "纽约摩天大楼群",
+          "en": "New York skyscraper cluster"
+        },
+        {
+          "cn": "巴黎古典建筑",
+          "en": "Parisian classical architecture"
+        },
+        {
+          "cn": "上海现代高层建筑",
+          "en": "Shanghai modern high-rise buildings"
+        },
+        {
+          "cn": "东京传统寺庙与现代建筑混合",
+          "en": "Mix of traditional Tokyo temples and modern architecture"
+        },
+        {
+          "cn": "伦敦金融城高楼",
+          "en": "City of London high-rises"
+        }
+      ]
+    },
+    "monster_element": {
+      "label": {
+        "cn": "怪兽元素",
+        "en": "Monster Element"
+      },
+      "category": "character",
+      "options": [
+        {
+          "cn": "巨大的粉色和蓝色渐变卡通怪兽",
+          "en": "Giant pink and blue gradient cartoon monster"
+        },
+        {
+          "cn": "机械机器人怪兽",
+          "en": "Mecha robot monster"
+        },
+        {
+          "cn": "神话传说中的龙",
+          "en": "Legendary dragon"
+        },
+        {
+          "cn": "外星生物",
+          "en": "Alien creature"
+        },
+        {
+          "cn": "海洋深渊巨兽",
+          "en": "Deep sea behemoth"
+        },
+        {
+          "cn": "森林精灵",
+          "en": "Forest elf"
+        }
+      ]
+    },
+    "monster_feature": {
+      "label": {
+        "cn": "怪兽特征",
+        "en": "Monster Feature"
+      },
+      "category": "character",
+      "options": [
+        {
+          "cn": "巨大的触手和角",
+          "en": "Giant tentacles and horns"
+        },
+        {
+          "cn": "锋利的爪子和牙齿",
+          "en": "Sharp claws and teeth"
+        },
+        {
+          "cn": "多彩的翅膀",
+          "en": "Colorful wings"
+        },
+        {
+          "cn": "发光的眼睛",
+          "en": "Glowing eyes"
+        },
+        {
+          "cn": "金属外壳",
+          "en": "Metal shell"
+        },
+        {
+          "cn": "藤蔓植物",
+          "en": "Vining plants"
+        }
+      ]
+    },
+    "distorted_city": {
+      "label": {
+        "cn": "扭曲城市",
+        "en": "Distorted City"
+      },
+      "category": "location",
+      "options": [
+        {
+          "cn": "扭曲的城市景观",
+          "en": "Distorted urban landscape"
+        },
+        {
+          "cn": "镜面反射的城市",
+          "en": "Specularly reflected city"
+        },
+        {
+          "cn": "梦幻泡泡中的城市",
+          "en": "City inside dream bubbles"
+        },
+        {
+          "cn": "像素化的城市",
+          "en": "Pixelated city"
+        },
+        {
+          "cn": "水墨画风格的城市",
+          "en": "Ink-wash style city"
+        },
+        {
+          "cn": "未来科幻城市",
+          "en": "Future sci-fi city"
+        }
+      ]
+    },
+    "lighting_atmosphere": {
+      "label": {
+        "cn": "灯光氛围",
+        "en": "Lighting Atmosphere"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "阳光明媚",
+          "en": "Sunny"
+        },
+        {
+          "cn": "月光皎洁",
+          "en": "Bright moonlight"
+        },
+        {
+          "cn": "霓虹灯闪烁",
+          "en": "Flickering neon lights"
+        },
+        {
+          "cn": "烛光摇曳",
+          "en": "Flickering candlelight"
+        },
+        {
+          "cn": "舞台聚光灯",
+          "en": "Stage spotlights"
+        },
+        {
+          "cn": "自然晨光",
+          "en": "Natural morning light"
+        },
+        {
+          "cn": "夕阳余晖",
+          "en": "Sunset afterglow"
+        },
+        {
+          "cn": "室内暖光",
+          "en": "Indoor warm light"
+        }
+      ]
+    },
+    "shadow_contrast": {
+      "label": {
+        "cn": "阴影对比",
+        "en": "Shadow Contrast"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "光影对比强烈",
+          "en": "Strong light-shadow contrast"
+        },
+        {
+          "cn": "柔和的阴影",
+          "en": "Soft shadows"
+        },
+        {
+          "cn": "戏剧性阴影",
+          "en": "Dramatic shadows"
+        },
+        {
+          "cn": "无阴影平光",
+          "en": "No-shadow flat lighting"
+        },
+        {
+          "cn": "轮廓光",
+          "en": "Rim lighting"
+        },
+        {
+          "cn": "背光剪影",
+          "en": "Backlit silhouette"
+        }
+      ]
+    },
+    "travel_location": {
+      "label": {
+        "cn": "旅游地点",
+        "en": "Travel Location"
+      },
+      "category": "location",
+      "options": [
+        {
+          "cn": "西藏拉萨布达拉宫",
+          "en": "Potala Palace, Lhasa, Tibet"
+        },
+        {
+          "cn": "湖南林中小寨",
+          "en": "Forest Village in Hunan"
+        },
+        {
+          "cn": "东北雪乡",
+          "en": "Snow Village in Northeast China"
+        },
+        {
+          "cn": "老北京胡同",
+          "en": "Old Beijing Hutongs"
+        },
+        {
+          "cn": "云南大理洱海",
+          "en": "Erhai Lake, Dali, Yunnan"
+        },
+        {
+          "cn": "新疆喀纳斯湖",
+          "en": "Kanas Lake, Xinjiang"
+        },
+        {
+          "cn": "四川九寨沟",
+          "en": "Jiuzhaigou, Sichuan"
+        },
+        {
+          "cn": "桂林漓江",
+          "en": "Li River, Guilin"
+        },
+        {
+          "cn": "张家界天门山",
+          "en": "Tianmen Mountain, Zhangjiajie"
+        },
+        {
+          "cn": "敦煌莫高窟",
+          "en": "Mogao Grottoes, Dunhuang"
+        },
+        {
+          "cn": "内蒙古呼伦贝尔草原",
+          "en": "Hulunbuir Grassland, Inner Mongolia"
+        },
+        {
+          "cn": "台湾日月潭",
+          "en": "Sun Moon Lake, Taiwan"
+        }
+      ]
+    },
+    "comic_scene": {
+      "label": {
+        "cn": "漫画场景",
+        "en": "Comic Scene"
+      },
+      "category": "location",
+      "options": [
+        {
+          "cn": "唯美的卧室",
+          "en": "Beautiful bedroom"
+        },
+        {
+          "cn": "繁华的街头",
+          "en": "Busy street"
+        },
+        {
+          "cn": "温馨的教室",
+          "en": "Cozy classroom"
+        },
+        {
+          "cn": "现代咖啡厅",
+          "en": "Modern cafe"
+        },
+        {
+          "cn": "公园长椅",
+          "en": "Park bench"
+        },
+        {
+          "cn": "图书馆角落",
+          "en": "Library corner"
+        },
+        {
+          "cn": "艺术工作室",
+          "en": "Art studio"
+        },
+        {
+          "cn": "屋顶天台",
+          "en": "Rooftop"
+        },
+        {
+          "cn": "火车站月台",
+          "en": "Railway platform"
+        },
+        {
+          "cn": "书店一角",
+          "en": "Bookstore corner"
+        }
+      ]
+    },
+    "designer": {
+      "label": {
+        "cn": "设计师",
+        "en": "Designer"
+      },
+      "category": "character",
+      "options": [
+        {
+          "cn": "安东尼·高迪 (Antoni Gaudí)",
+          "en": "Antoni Gaudí"
+        },
+        {
+          "cn": "Jonathan Ive (Jony Ive)",
+          "en": "Jonathan Ive"
+        },
+        {
+          "cn": "Gio Ponti",
+          "en": "Gio Ponti"
+        },
+        {
+          "cn": "迪特·拉姆斯 (Dieter Rams)",
+          "en": "Dieter Rams"
+        },
+        {
+          "cn": "菲利普·斯塔克 (Philippe Starck)",
+          "en": "Philippe Starck"
+        },
+        {
+          "cn": "原研哉 (Kenya Hara)",
+          "en": "Kenya Hara"
+        },
+        {
+          "cn": "深泽直人 (Naoto Fukasawa)",
+          "en": "Naoto Fukasawa"
+        },
+        {
+          "cn": "扎哈·哈迪德 (Zaha Hadid)",
+          "en": "Zaha Hadid"
+        },
+        {
+          "cn": "马克·纽森 (Marc Newson)",
+          "en": "Marc Newson"
+        },
+        {
+          "cn": "汤姆·迪克森 (Tom Dixon)",
+          "en": "Tom Dixon"
+        },
+        {
+          "cn": "贾斯珀·莫里森 (Jasper Morrison)",
+          "en": "Jasper Morrison"
+        },
+        {
+          "cn": "康斯坦丁·葛切奇 (Konstantin Grcic)",
+          "en": "Konstantin Grcic"
+        }
+      ]
+    },
+    "design_item": {
+      "label": {
+        "cn": "设计物品",
+        "en": "Design Item"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "无人机",
+          "en": "Drone"
+        },
+        {
+          "cn": "台球桌",
+          "en": "Pool table"
+        },
+        {
+          "cn": "拖拉机",
+          "en": "Tractor"
+        },
+        {
+          "cn": "机械键盘",
+          "en": "Mechanical keyboard"
+        },
+        {
+          "cn": "复古打字机",
+          "en": "Vintage typewriter"
+        },
+        {
+          "cn": "单反相机",
+          "en": "DSLR camera"
+        },
+        {
+          "cn": "扫地机器人",
+          "en": "Robot vacuum"
+        },
+        {
+          "cn": "咖啡机",
+          "en": "Coffee machine"
+        },
+        {
+          "cn": "台灯",
+          "en": "Desk lamp"
+        },
+        {
+          "cn": "椅子",
+          "en": "Chair"
+        },
+        {
+          "cn": "音响系统",
+          "en": "Sound system"
+        },
+        {
+          "cn": "手表",
+          "en": "Watch"
+        },
+        {
+          "cn": "自行车",
+          "en": "Bicycle"
+        },
+        {
+          "cn": "电动滑板车",
+          "en": "Electric scooter"
+        },
+        {
+          "cn": "蓝牙耳机",
+          "en": "Bluetooth headphones"
+        },
+        {
+          "cn": "智能音箱",
+          "en": "Smart speaker"
+        },
+        {
+          "cn": "剃须刀",
+          "en": "Razor"
+        },
+        {
+          "cn": "电风扇",
+          "en": "Electric fan"
+        },
+        {
+          "cn": "水壶",
+          "en": "Kettle"
+        }
+      ]
+    },
+    "rain_shape": {
+      "label": {
+        "cn": "雨水形象",
+        "en": "Rain Shape"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "芭蕾舞者",
+          "en": "Ballerina"
+        },
+        {
+          "cn": "飞舞的蝴蝶",
+          "en": "Flying butterfly"
+        },
+        {
+          "cn": "奔跑的骏马",
+          "en": "Running steed"
+        },
+        {
+          "cn": "绽放的莲花",
+          "en": "Blooming lotus"
+        },
+        {
+          "cn": "轻盈的羽毛",
+          "en": "Light feather"
+        },
+        {
+          "cn": "灵动的音符",
+          "en": "Lively musical note"
+        }
+      ]
+    },
+    "fruit": {
+      "label": {
+        "cn": "水果",
+        "en": "Fruit"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "猕猴桃",
+          "en": "Kiwi"
+        },
+        {
+          "cn": "橙子",
+          "en": "Orange"
+        },
+        {
+          "cn": "苹果",
+          "en": "Apple"
+        },
+        {
+          "cn": "草莓",
+          "en": "Strawberry"
+        },
+        {
+          "cn": "柠檬",
+          "en": "Lemon"
+        },
+        {
+          "cn": "葡萄",
+          "en": "Grape"
+        },
+        {
+          "cn": "芒果",
+          "en": "Mango"
+        },
+        {
+          "cn": "椰子",
+          "en": "Coconut"
+        }
+      ]
+    },
+    "jewelry_style": {
+      "label": {
+        "cn": "珠宝样式",
+        "en": "Jewelry Style"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "精美的金色背链",
+          "en": "Fine gold back necklace"
+        },
+        {
+          "cn": "简约银色链条",
+          "en": "Minimalist silver chain"
+        },
+        {
+          "cn": "珍珠身体链",
+          "en": "Pearl body chain"
+        },
+        {
+          "cn": "钻石露背项链",
+          "en": "Diamond back drop necklace"
+        },
+        {
+          "cn": "祖母绿吊坠背链",
+          "en": "Emerald pendant back necklace"
+        }
+      ]
+    },
+    "flower_type": {
+      "label": {
+        "cn": "花卉品种",
+        "en": "Flower Type"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "一束深红色玫瑰",
+          "en": "A bouquet of deep red roses"
+        },
+        {
+          "cn": "优雅的白色马蹄莲",
+          "en": "Elegant white calla lilies"
+        },
+        {
+          "cn": "淡粉色牡丹",
+          "en": "Pale pink peonies"
+        },
+        {
+          "cn": "名贵的深色兰花",
+          "en": "Exotic dark orchids"
+        },
+        {
+          "cn": "干枯的桉树叶",
+          "en": "Dried eucalyptus leaves"
+        },
+        {
+          "cn": "鲜艳的向日葵",
+          "en": "Vibrant sunflowers"
+        }
+      ]
+    }
+  },
+  "categories": {
+    "character": {
+      "id": "character",
+      "label": {
+        "cn": "人物",
+        "en": "CHARACTER"
+      },
+      "color": "blue"
+    },
+    "item": {
+      "id": "item",
+      "label": {
+        "cn": "物品",
+        "en": "ITEM"
+      },
+      "color": "amber"
+    },
+    "action": {
+      "id": "action",
+      "label": {
+        "cn": "动作",
+        "en": "ACTION"
+      },
+      "color": "rose"
+    },
+    "location": {
+      "id": "location",
+      "label": {
+        "cn": "地点",
+        "en": "LOCATION"
+      },
+      "color": "emerald"
+    },
+    "visual": {
+      "id": "visual",
+      "label": {
+        "cn": "画面",
+        "en": "VISUALS"
+      },
+      "color": "violet"
+    },
+    "other": {
+      "id": "other",
+      "label": {
+        "cn": "其他",
+        "en": "OTHER"
+      },
+      "color": "slate"
+    }
+  },
+  "version": "v9",
+  "exportDate": "2025-12-26T03:32:19.402Z"
+}
