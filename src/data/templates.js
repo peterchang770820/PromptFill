@@ -601,250 +601,800 @@ export const TEMPLATE_TAGS = [
  */
 export const INITIAL_TEMPLATES_CONFIG = [
   {
-    id: "tpl_default",
-    name: { 'zh-tw': "角色概念分解圖", en: "Character Concept Sheet" },
-    content: DEFAULT_TEMPLATE_CONTENT,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/08/ec433cf214faf102.jpg",
-    author: "官方",
-    selections: {},
-    tags: ["人物", "創意", "圖表"],
-    language: ["zh-tw", "en"]
-  },
-  {
-    id: "tpl_photo_grid",
-    name: { 'zh-tw': "3x3 攝影網格", en: "3x3 Photo Grid" },
-    content: TEMPLATE_PHOTO_GRID,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/08/5302794e63fa130b.jpg",
-    author: "官方",
-    selections: {
-      "clothing": { 'zh-tw': "炭灰色無袖連衣裙", en: "Charcoal grey sleeveless dress" },
-      "grid_pose-0": { 'zh-tw': "前景手指虛化", en: "Out-of-focus fingers in foreground" },
-      "grid_pose-1": { 'zh-tw': "目光鎖定鏡頭", en: "Eyes locked on camera" },
-      "grid_pose-2": { 'zh-tw': "單色下巴托手", en: "Monochrome hand on chin" },
-      "grid_pose-3": { 'zh-tw': "正面特寫陰影", en: "Frontal close-up with shadows" },
-      "grid_pose-4": { 'zh-tw': "斜角拍攝", en: "Angled shot" },
-      "grid_pose-5": { 'zh-tw': "雙手置於鎖骨", en: "Hands on collarbones" },
-      "grid_pose-6": { 'zh-tw': "坐姿半身側面", en: "Seated half-body profile" },
-      "grid_pose-7": { 'zh-tw': "側面微距水滴", en: "Side macro with water drops" },
-      "grid_pose-8": { 'zh-tw': "回眸一笑", en: "Looking back with a smile" },
-      "lens_param-0": { 'zh-tw': "85mm, f/1.8", en: "85mm, f/1.8" },
-      "lens_param-1": { 'zh-tw': "85mm, f/2.0", en: "85mm, f/2.0" },
-      "lens_param-2": { 'zh-tw': "50mm, f/2.2", en: "50mm, f/2.2" },
-      "lens_param-3": { 'zh-tw': "50mm, f/2.5", en: "50mm, f/2.5" },
-      "lens_param-4": { 'zh-tw': "50mm, f/3.2", en: "50mm, f/3.2" },
-      "lens_param-5": { 'zh-tw': "35mm, f/4.5", en: "35mm, f/4.5" },
-      "lens_param-6": { 'zh-tw': "85mm, f/1.9", en: "85mm, f/1.9" },
-      "lens_param-7": { 'zh-tw': "50mm, f/1.8", en: "50mm, f/1.8" },
-      "lens_param-8": { 'zh-tw': "85mm, f/2.2", en: "85mm, f/2.2" }
+    "id": "tpl_default",
+    "name": {
+      "zh-tw": "角色概念分解圖",
+      "en": "Character Concept Sheet"
     },
-    tags: ["人物", "攝影"],
-    language: ["zh-tw", "en"]
-  },
-  {
-    id: "tpl_fashion",
-    name: { 'zh-tw': "時尚情緒板插畫", en: "Fashion Moodboard" },
-    content: TEMPLATE_FASHION_MOODBOARD,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/08/4d9f92ccb4113fdd.jpg",
-    author: "官方",
-    selections: {},
-    tags: ["人物", "創意", "卡通"],
-    language: ["zh-tw", "en"]
-  },
-  {
-    id: "tpl_character_selfie",
-    name: { 'zh-tw': "人物趣味合影", en: "Character Selfie" },
-    content: TEMPLATE_CHARACTER_SELFIE,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/08/c2312d24d0f2c38e.jpeg",
-    author: "官方",
-    selections: {},
-    tags: ["人物", "創意"],
-    language: ["zh-tw", "en"]
-  },
-  {
-    id: "tpl_classic_scene",
-    name: { 'zh-tw': "經典場景微縮復刻", en: "Classic Scene Miniature" },
-    content: TEMPLATE_CLASSIC_SCENE,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/10/1eac697f5a438542.jpg",
-    author: "官方",
-    selections: {
-      "classic_scene": { 'zh-tw': "千與千尋", en: "Spirited Away" },
-      "render_style": { 'zh-tw': "Octane Render 和 Cinema 4D", en: "Octane Render and Cinema 4D" },
-      "position": { 'zh-tw': "頂部中央", en: "Top Center" }
+    "content": {
+      "zh-tw": "### Role (角色設定)\n你是一位頂尖的 {{role}}，擅長製作詳盡的角色設定圖（Character Sheet）。你具備“像素級拆解”的能力，能夠透視角色的穿著層級、捕捉微表情變化，並將與其相關的物品進行具象化還原。你特別擅長通過 {{subject}} 的私密物品、隨身物件和生活細節來側面豐滿人物性格與背景故事。\n\n### Task (任務目標)\n根據用戶上傳或描述的主體形象，生成一張**“全景式角色深度概念分解圖”**。該圖片必須包含 {{layout_focus}}，並在其周圍環繞展示該人物的服裝分層、不同表情、核心道具、材質特寫，以及極具生活氣息的私密與隨身物品展示。\n\n### Visual Guidelines (視覺規範)\n**1. 構圖佈局 (Layout):**\n- **中心位 (Center):** 放置角色的 {{layout_focus}}，作為視覺錨點。\n- **環繞位 (Surroundings):** 在中心人物四周空白處，有序排列拆解後的元素。\n- **視覺引導 (Connectors):** 使用{{connectors}}，將周邊的拆解物品與中心人物的對應部位或所屬區域連接起來。\n\n**2. 拆解內容 (Deconstruction Details):**\n- **服裝分層 (Clothing Layers):** 將角色的服裝拆分為單品展示\n- **私密內著拆解:** 獨立展示角色的內層衣物，重點突出設計感與材質。例如： {{underwear_style}} （展示細節與剪裁）。\n- **表情集 (Expression Sheet):** 在角落繪製 3-4 個不同的頭部特寫，展示不同的情緒，如： {{expressions}} 。\n- **材質特寫 (Texture & Zoom):** 選取關鍵部位進行放大特寫. 例如： {{texture_zoom}} ，增加對小物件材質的描繪。\n- **動作:** 繪製特殊的動作和表情，例如：{{action_detail}}，增加動作的深度刻畫。\n- **特殊視角:** 繪製從某種特殊場景下拍攝的特殊視角，例如：{{special_view}}\n\n- **關聯物品 (Related Items):**\n - **隨身包袋與內容物:** 繪製 {{bag_content}}，並將其“打開”，展示散落在旁的物品。\n - **美妝與護理:** 展示 {{cosmetics}}。\n - **私密生活物件:** 具象化角色隱藏面的物品。根據角色性格可能包括： {{private_items}}，需以一種設計圖的客觀視角呈現。\n\n**3.風格與註釋 (Style & Annotations):**\n- **畫風:** {{art_style}}，線條幹淨利落。\n- **背景:** {{background_style}}，營造設計手稿的氛圍。\n- **文字說明:** 在每個拆解元素旁模擬手寫註釋，簡要說明材質或品牌/型號暗示。\n\n### Workflow (執行邏輯)\n1. 分析主體的核心特徵、穿著風格及潛在性格。\n2. 提取可拆解的一級元素（外套、鞋子、大表情）。\n3. 腦補並設計二級深度元素（她內衣穿什麼風格？包裡裝什麼？獨處時用什麼？）。\n4. 生成一張包含所有這些元素的組合圖，確保透視準確，光影統一，註釋清晰。\n5. 使用中文，高清輸出。",
+      "en": "### Role\nYou are a top-tier {{role}}, specializing in creating detailed Character Sheets. You possess the ability of \"pixel-level deconstruction,\" capable of seeing through the layering of characters' outfits, capturing subtle facial expressions, and restoring related items into concrete visuals. You particularly excel at enriching character personalities and background stories through {{subject}}'s private items, personal belongings, and daily life details.\n\n### Task\nBased on the subject image uploaded or described by the user, generate a **\"Panoramic Deep Concept Deconstruction Map\"**. This image must include the character's {{layout_focus}}, surrounded by displays of their clothing layers, different expressions, core props, material close-ups, and intimate and everyday items that evoke a sense of life.\n\n### Visual Guidelines\n**1. Layout:**\n- **Center:** Place the character's {{layout_focus}} as the visual anchor.\n- **Surroundings:** Arrange the deconstructed elements in an orderly manner in the empty spaces around the central character.\n- **Connectors:** Use {{connectors}} to link the peripheral items to the corresponding body parts or areas of the central character.\n\n**2. Deconstruction Details:**\n- **Clothing Layers:** Break down the character's clothing into individual items for display.\n- **Intimate Underwear Deconstruction:** Independently display the character's inner layers, highlighting design sense and materials. For example: {{underwear_style}} (showcasing details and tailoring).\n- **Expression Sheet:** Draw 3-4 different head close-ups in the corner, showing different emotions like: {{expressions}}.\n- **Texture & Zoom:** Select key parts for enlarged close-ups. For example: {{texture_zoom}}, adding more depiction of the materials of small items.\n- **Action:** Draw special movements and expressions, such as: {{action_detail}}, increasing depth in action portrayal.\n- **Special View:** Draw from unique scene perspectives, for example: {{special_view}}.\n\n- **Related Items:**\n - **Bag Content:** Draw {{bag_content}} and \"open\" it to show the items scattered beside it.\n - **Cosmetics & Care:** Show {{cosmetics}}.\n - **Private Life Items:** Concretize the character's hidden-side items. Depending on the personality, these could include: {{private_items}}, presented from an objective design-sheet perspective.\n\n**3. Style & Annotations:**\n- **Art Style:** {{art_style}}, with clean and crisp lines.\n- **Background:** {{background_style}}, creating a design manuscript atmosphere.\n- **Annotations:** Simulate handwritten notes next to each deconstructed element, briefly explaining the material or suggesting brands/models.\n\n### Workflow\n1. Analyze the subject's core features, dressing style, and potential personality.\n2. Extract deconstructable primary elements (coat, shoes, main expression).\n3. Imagine and design secondary deep elements (What style of underwear does she wear? What's in her bag? What does she use when alone?).\n4. Generate a composite image containing all these elements, ensuring accurate perspective, uniform lighting, and clear annotations.\n5. Use English, high-definition output."
     },
-    tags: ["卡通", "創意", "遊戲"],
-    language: ["zh-tw", "en"]
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/08/ec433cf214faf102.jpg",
+    "author": "官方",
+    "selections": {},
+    "tags": [
+      "人物",
+      "創意",
+      "圖表"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
   },
   {
-    id: "tpl_corporate_growth",
-    name: { 'zh-tw': "可視化企業成長之路", en: "Corporate Evolution Path" },
-    content: TEMPLATE_CORPORATE_GROWTH,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/10/a7e87e49c6144fdc.jpg",
-    author: "官方",
-    selections: {
-      "company": { 'zh-tw': "任天堂（Nintendo）", en: "Nintendo" },
-      "render_style": { 'zh-tw': "3D 像素風格", en: "3D Pixel Art Style" },
-      "ratio": { 'zh-tw': "3:4 直式構圖", en: "3:4 Vertical" }
+    "id": "tpl_photo_grid",
+    "name": {
+      "zh-tw": "3x3 攝影網格",
+      "en": "3x3 Photo Grid"
     },
-    tags: ["建築", "創意", "圖表"],
-    language: ["zh-tw", "en"]
-  },
-  {
-    id: "tpl_fisheye_urban",
-    name: { 'zh-tw': "極端魚眼都市奇觀", en: "Fisheye Urban Wonder" },
-    content: TEMPLATE_FISHEYE_URBAN,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/14/b21165a2afefaf4d.jpg",
-    author: "官方",
-    selections: {
-      "lens_type": { 'zh-tw': "極端魚眼鏡頭", en: "Extreme Fisheye Lens" },
-      "role": { 'zh-tw': "年輕女性", en: "Young woman" },
-      "character_originality": { 'zh-tw': "使用附圖中的人物，確保結果與人物一致性", en: "Use character in attachment, ensure consistency" },
-      "school_uniform": { 'zh-tw': "灰色開襟衫和格子裙校服", en: "Grey cardigan and plaid skirt uniform" },
-      "urban_location": { 'zh-tw': "澀谷十字路口", en: "Shibuya Crossing" },
-      "dynamic_action": { 'zh-tw': "一隻手誇張地伸向鏡頭前景", en: "One hand exaggeratedly reaching towards the foreground" },
-      "fingernail_detail": { 'zh-tw': "手指甲清晰可見", en: "Fingernails clearly visible" },
-      "building_cluster": { 'zh-tw': "扭曲的澀谷 109 大樓與林立建築", en: "Distorted Shibuya 109 building and other forest of buildings" },
-      "crowd_traffic": { 'zh-tw': "擠滿行人與車輛", en: "Bustling traffic" },
-      "monster_element": { 'zh-tw': "巨大的粉藍漸層卡通怪獸", en: "Giant pink and blue gradient cartoon monster" },
-      "monster_feature": { 'zh-tw': "巨大的觸手與角", en: "Giant tentacles and horns" },
-      "distorted_city": { 'zh-tw': "扭曲的城市景觀", en: "Distorted urban landscape" },
-      "lighting_atmosphere": { 'zh-tw': "陽光明媚", en: "Sunny" },
-      "shadow_contrast": { 'zh-tw': "光影對比強烈", en: "Strong light-shadow contrast" },
-      "ratio": { 'zh-tw': "圓形畫幅", en: "Circular Aspect Ratio" },
-      "render_style": { 'zh-tw': "高品質 2D 插畫風格", en: "High-quality 2D illustration style" }
+    "content": {
+      "zh-tw": "### Photo Grid Composition (九宮格攝影)\n\n**編輯場景:** 3x3網格佈局，採用冷灰色無縫背景。人物（面部特徵與上傳圖片完全一致）身穿 {{clothing}}，確保每張照片中人物形象保持一致。\n\n**燈光設置:** {{lighting}}，營造統一而富有層次的光影效果。\n\n**照片細節包括 (Grid Details)：**\n1. {{grid_pose}}，畫面風格統一，鏡頭參數為 {{lens_param}}；\n2. {{grid_pose}}，鏡頭參數為 {{lens_param}}，展現不同的拍攝角度和表情；\n3. {{grid_pose}}，鏡頭參數為 {{lens_param}}，捕捉細膩的情感表達；\n4. {{grid_pose}}，鏡頭參數為 {{lens_param}}，利用景深營造層次感；\n5. {{grid_pose}}，鏡頭參數為 {{lens_param}}，突出動態瞬間的生動性；\n6. {{grid_pose}}，鏡頭參數為 {{lens_param}}，通過前景虛化增強視覺焦點；\n7. {{grid_pose}}，鏡頭參數為 {{lens_param}}，展現優雅的姿態和放鬆的狀態；\n8. {{grid_pose}}，鏡頭參數為 {{lens_param}}，捕捉自然光線下的表情變化；\n9. {{grid_pose}}，鏡頭參數為 {{lens_param}}，微距特寫展現面部細節和質感。\n\n**後期處理:** 保持原始素材的真實感，平滑對比度，適度應用柔化效果，確保整體色調統一且富有質感。",
+      "en": "### Photo Grid Composition\n\n**Scene:** 3x3 grid layout, using a seamless cool grey background. The character (facial features exactly as in the uploaded image) is wearing {{clothing}}, ensuring character consistency across all photos.\n\n**Lighting:** {{lighting}}, creating a unified and layered lighting effect.\n\n**Grid Details:**\n1. {{grid_pose}}, unified style, lens parameter: {{lens_param}};\n2. {{grid_pose}}, lens parameter: {{lens_param}}, showing different angles and expressions;\n3. {{grid_pose}}, lens parameter: {{lens_param}}, capturing subtle emotional expressions;\n4. {{grid_pose}}, lens parameter: {{lens_param}}, using depth of field to create layers;\n5. {{grid_pose}}, lens parameter: {{lens_param}}, highlighting the vividness of dynamic moments;\n6. {{grid_pose}}, lens parameter: {{lens_param}}, enhancing visual focus through foreground blur;\n7. {{grid_pose}}, lens parameter: {{lens_param}}, showing elegant posture and relaxed state;\n8. {{grid_pose}}, lens parameter: {{lens_param}}, capturing facial changes under natural light;\n9. {{grid_pose}}, lens parameter: {{lens_param}}, macro close-up showing facial details and texture.\n\n**Post-processing:** Maintain the realism of the original material, smooth contrast, apply moderate softening effects, ensuring uniform overall tone and high-quality texture."
     },
-    tags: ["攝影", "創意", "人物"],
-    language: ["zh-tw", "en"]
-  },
-  {
-    id: "tpl_detective_social",
-    name: { 'zh-tw': "歷史名人的朋友圈", en: "Historical Figure's Moments" },
-    content: TEMPLATE_DETECTIVE_SOCIAL,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/14/6ff892060de55ea9.jpg",
-    author: "@dotey(寶玉)",
-    selections: {
-      "character_groups": { 'zh-tw': "中國古代開國皇帝", en: "Ancient Chinese Founding Emperors" },
-      "social_media": { 'zh-tw': "臉書塗鴉牆", en: "WeChat Moments" },
-      "ratio": { 'zh-tw': "9:16 直式構圖", en: "9:16 Vertical" }
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/08/5302794e63fa130b.jpg",
+    "author": "官方",
+    "selections": {
+      "clothing": {
+        "zh-tw": "炭灰色無袖連衣裙",
+        "en": "Charcoal grey sleeveless dress"
+      },
+      "grid_pose-0": {
+        "zh-tw": "前景手指虛化",
+        "en": "Out-of-focus fingers in foreground"
+      },
+      "grid_pose-1": {
+        "zh-tw": "目光鎖定鏡頭",
+        "en": "Eyes locked on camera"
+      },
+      "grid_pose-2": {
+        "zh-tw": "單色下巴託手",
+        "en": "Monochrome hand on chin"
+      },
+      "grid_pose-3": {
+        "zh-tw": "正面特寫陰影",
+        "en": "Frontal close-up with shadows"
+      },
+      "grid_pose-4": {
+        "zh-tw": "斜角拍攝",
+        "en": "Angled shot"
+      },
+      "grid_pose-5": {
+        "zh-tw": "雙手置於鎖骨",
+        "en": "Hands on collarbones"
+      },
+      "grid_pose-6": {
+        "zh-tw": "坐姿半身側面",
+        "en": "Seated half-body profile"
+      },
+      "grid_pose-7": {
+        "zh-tw": "側面微距水滴",
+        "en": "Side macro with water drops"
+      },
+      "grid_pose-8": {
+        "zh-tw": "回眸一笑",
+        "en": "Looking back with a smile"
+      },
+      "lens_param-0": {
+        "zh-tw": "85mm, f/1.8",
+        "en": "85mm, f/1.8"
+      },
+      "lens_param-1": {
+        "zh-tw": "85mm, f/2.0",
+        "en": "85mm, f/2.0"
+      },
+      "lens_param-2": {
+        "zh-tw": "50mm, f/2.2",
+        "en": "50mm, f/2.2"
+      },
+      "lens_param-3": {
+        "zh-tw": "50mm, f/2.5",
+        "en": "50mm, f/2.5"
+      },
+      "lens_param-4": {
+        "zh-tw": "50mm, f/3.2",
+        "en": "50mm, f/3.2"
+      },
+      "lens_param-5": {
+        "zh-tw": "35mm, f/4.5",
+        "en": "35mm, f/4.5"
+      },
+      "lens_param-6": {
+        "zh-tw": "85mm, f/1.9",
+        "en": "85mm, f/1.9"
+      },
+      "lens_param-7": {
+        "zh-tw": "50mm, f/1.8",
+        "en": "50mm, f/1.8"
+      },
+      "lens_param-8": {
+        "zh-tw": "85mm, f/2.2",
+        "en": "85mm, f/2.2"
+      }
     },
-    tags: ["創意", "人物", "攝影"],
-    language: ["zh-tw", "en"]
+    "tags": [
+      "人物",
+      "攝影"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
   },
   {
-    id: "tpl_magazine_cover",
-    name: { 'zh-tw': "雜誌大片", en: "Magazine Cover" },
-    content: TEMPLATE_MAGAZINE_COVER,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/16/a6106f5cc6e92a74.jpg",
-    imageUrls: [
+    "id": "tpl_fashion",
+    "name": {
+      "zh-tw": "時尚情緒板插畫",
+      "en": "Fashion Moodboard"
+    },
+    "content": {
+      "zh-tw": "### Fashion Illustration Moodboard (時尚插畫情緒板)\n一張9:16豎屏的高級時尚插畫情緒板，模擬平板掃描效果。\n\n**背景:** 純手繪的奶油色水彩暈染紙張，帶有淡淡的粉色網格。\n**視覺核心:** 數張具有明顯白色模切寬邊和柔和投影的亮面乙烯基貼紙。\n\n**貼紙內容:**\n- **中央:** {{sticker_core}}，光線明亮。\n- **左側:** {{fashion_deconstruct}}。\n- **右下角:** 關鍵的隱藏層貼紙：一套摺疊整齊的內衣，展現細膩紋理。\n- **互動元素:** 一隻穿著粉色系、與用戶服裝呼應的 {{toy_companion}} 正趴在一個手繪對話框上。\n\n**裝飾細節:** 周圍裝飾著蠟筆質感的 {{sticker_decor}} 和潦草的中文書法標註OOTD。\n**注意:** 畫面中絕無任何人手、筆或物理桌面背景，純粹的平面藝術插畫。",
+      "en": "### Fashion Illustration Moodboard\nA high-end 9:16 vertical fashion illustration moodboard, simulating a tablet scan effect.\n\n**Background:** Hand-painted cream-colored watercolor stained paper with a faint pink grid.\n**Visual Core:** Several glossy vinyl stickers with distinct white die-cut borders and soft shadows.\n\n**Sticker Contents:**\n- **Center:** {{sticker_core}}, with bright lighting.\n- **Left Side:** {{fashion_deconstruct}}.\n- **Bottom Right:** Key hidden layer sticker: a set of neatly folded underwear, showing fine texture.\n- **Interactive Element:** A {{toy_companion}} wearing pink tones that match the user's outfit is leaning on a hand-drawn speech bubble.\n\n**Decorative Details:** Surrounded by crayon-textured {{sticker_decor}} and scribbled calligraphy OOTD annotations.\n**Note:** Absolutely no hands, pens, or physical desk backgrounds in the frame; pure flat art illustration."
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/08/4d9f92ccb4113fdd.jpg",
+    "author": "官方",
+    "selections": {},
+    "tags": [
+      "人物",
+      "創意",
+      "卡通"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
+  },
+  {
+    "id": "tpl_character_selfie",
+    "name": {
+      "zh-tw": "人物趣味合影",
+      "en": "Character Selfie"
+    },
+    "content": {
+      "zh-tw": "### Character Selfie (人物趣味合影)\n讓 {{character_companion}} 站在男人旁邊，{{action_pose}}，同時對著鏡頭露出調皮的表情。\n\n**背景:** 以 {{background_scene}} 為背景。\n\n**要求:** 保持自拍構圖不變，讓兩個角色自然地融入畫面，光影統一，互動自然。",
+      "en": "### Character Selfie\nHave {{character_companion}} stand next to the man, {{action_pose}}, while making a playful expression at the camera.\n\n**Background:** Set against the backdrop of {{background_scene}}.\n\n**Requirements:** Maintain the selfie composition, integrating both characters naturally into the frame with unified lighting and natural interaction."
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/08/c2312d24d0f2c38e.jpeg",
+    "author": "官方",
+    "selections": {},
+    "tags": [
+      "人物",
+      "創意"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
+  },
+  {
+    "id": "tpl_classic_scene",
+    "name": {
+      "zh-tw": "經典場景微縮復刻",
+      "en": "Classic Scene Miniature"
+    },
+    "content": {
+      "zh-tw": "### 經典場景微縮復刻\n\n展示一個精緻的、微縮 3D 卡通風格的{{classic_scene}}場景，採用清晰的 45° 俯視等軸側視角（Isometric view）。\n\n**核心構圖：** 將主體最經典的形象突出地置於中心。自動搭配比例適宜的關鍵元素圖標、象徵性物品、迷人的小角色以及能詮釋主體故事的道具。整體佈局應當充滿趣味且緊湊聚集，宛如一套高端的玩具盲盒套裝。\n\n**渲染與材質：** 採用{{render_style}}風格進行渲染。建模必須精細、圓潤流暢且質感豐富。使用逼真的 PBR 材質：混合用於有機形態的柔和啞光粘土、用於水體/玻璃元素的光澤樹脂，以及用於結構組件的光滑 PVC 材質。著重表現具有觸感、“看起來手感很好”的紋理細節。\n\n**燈光與氛圍：** 採用柔和、逼真的攝影棚布光配合全局光照（Global Illumination）。利用柔和的陰影營造出溫暖、舒適且充滿魔力的氛圍。\n\n**佈局：** 保持乾淨、極簡的佈局，使用與主體配色相協調的純色背景。\n\n**文字：** 在{{position}}，使用巨大的、圓潤的 3D 字體醒目地展示主體名稱，使其輕微懸浮於場景上方。",
+      "en": "### Classic Scene Miniature Restoration\nShowcase an exquisite, miniature 3D cartoon-style {{classic_scene}} scene, using a clear 45° isometric view.\n\n**Core Composition:** Place the most classic image of the subject prominently in the center. Automatically pair it with appropriately scaled key element icons, symbolic items, charming little characters, and props that interpret the subject's story. The overall layout should be playful and tightly clustered, like a high-end toy blind box set.\n\n**Rendering & Materials:** Render in {{render_style}} style. Modeling must be fine, rounded, smooth, and rich in texture. Use realistic PBR materials: a mix of soft matte clay for organic forms, glossy resin for water/glass elements, and smooth PVC for structural components. Focus on tactile, \"looks good to touch\" texture details.\n\n**Lighting & Atmosphere:** Use soft, realistic studio lighting with Global Illumination. Utilize soft shadows to create a warm, cozy, and magical atmosphere.\n\n**Layout:** Maintain a clean, minimalist layout with a solid color background that coordinates with the subject's color scheme.\n\n**Text:** At {{position}}, prominently display the subject's name in giant, rounded 3D font, making it slightly float above the scene."
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/10/1eac697f5a438542.jpg",
+    "author": "官方",
+    "selections": {
+      "classic_scene": {
+        "zh-tw": "千與千尋",
+        "en": "Spirited Away"
+      },
+      "render_style": {
+        "zh-tw": "Octane Render 和 Cinema 4D",
+        "en": "Octane Render and Cinema 4D"
+      },
+      "position": {
+        "zh-tw": "頂部中央",
+        "en": "Top Center"
+      }
+    },
+    "tags": [
+      "卡通",
+      "創意",
+      "遊戲"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
+  },
+  {
+    "id": "tpl_corporate_growth",
+    "name": {
+      "zh-tw": "可視化企業成長之路",
+      "en": "Corporate Evolution Path"
+    },
+    "content": {
+      "zh-tw": "### 可視化企業成長之路\n\n**角色定義**  \n你是一位企業演變建築師 (Corporate Evolution Architect)。你的目標是創建一個超高密度、垂直堆疊的等距軸測（Isometric）3D 渲染可視化圖像，展示 {{company}} 公司的技術和產品歷史。通過圖像展示一個企業的時間線：底部是簡陋的創業故事，通過產品迭代垂直向上升起，直到現代或未來的巔峰。\n\n**核心能力 | 關鍵視覺策略（rameless Tech-Lapse）：**\n- **根除容器：** 嚴禁使用底板、邊框或橫截面視圖。底部邊緣是創業基地（車庫/實驗室/小辦公室），無限延伸。\n- **垂直時間線：** “之字形上升（Zig-Zag Ascent）”穿越創新曆程。  \n  - 底部（前景）：創業階段歲月 + 第一個原型機  \n  - 中部（上升中）：快速增長 / 全球擴張 / 標誌性的中期產品  \n  - 頂部（背景）：當前總部 / 生態系統 / 未來研發\n- **集成 3D 標題：** 企業 Logo 必須渲染為巨大的、電影般的 3D 字體，矗立在前景，使用公司標誌性字體/材質。\n\n**檢索與梳理：**\n- 提取企業歷史的幾個階段。\n- 列出定義每個時代的“經典產品”。\n- 勞動力演變：可視化員工與設備的變化。\n\n**構圖與光影：**  \n無框架、無邊界、無橫截面。垂直之字形時間線，將產品代際從底部的創業階段堆疊到未來的頂部。燈光從近現代的暖光（創業初期）過渡到乾淨的白/藍 LED 光（現代科技）。環境與公司經典產品隨高度演變。公司的多款經典產品以“巨物化”呈現。  \n移軸攝影（Tilt-shift）與 {{render_style}}，畫幅 {{ratio}}。",
+      "en": "### Visualized Corporate Growth Path\n**Role Definition**\nYou are a Corporate Evolution Architect. Your goal is to create an ultra-high-density, vertically stacked isometric 3D rendered visualization showing the technological and product history of {{company}}. Showcase a corporate timeline: the base is the humble startup story, rising vertically through product iterations to the modern or future peak.\n\n**Core Competency | Key Visual Strategy (Frameless Tech-Lapse):**\n- **Eradicate Containers:** Strictly forbid base plates, borders, or cross-section views. The bottom edge is the startup base (garage/lab/small office), extending infinitely.\n- **Vertical Timeline:** A \"Zig-Zag Ascent\" through the innovation journey.\n  - Bottom (Foreground): Startup years + the first prototype.\n  - Middle (Ascending): Rapid growth / global expansion / iconic mid-term products.\n  - Top (Background): Current headquarters / ecosystem / future R&D.\n- **Integrated 3D Title:** The corporate logo must be rendered as a giant, cinematic 3D font, standing in the foreground, using the company's signature font/material.\n\n**Retrieval & Organization:**\n- Extract several stages of corporate history.\n- List \"classic products\" defining each era.\n- Workforce Evolution: Visualize changes in employees and equipment.\n\n**Composition & Lighting:**\nFrameless, borderless, no cross-sections. A vertical zig-zag timeline stacking product generations from the startup phase at the bottom to the future at the top. Lighting transitions from warm near-modern light (early startup) to clean white/blue LED light (modern tech). The environment and company's classic products evolve with height. Multiple classic products are presented as \"megaliths.\"\nTilt-shift photography with {{render_style}}, aspect ratio {{ratio}}."
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/10/a7e87e49c6144fdc.jpg",
+    "author": "官方",
+    "selections": {
+      "company": {
+        "zh-tw": "任天堂（Nintendo）",
+        "en": "Nintendo"
+      },
+      "render_style": {
+        "zh-tw": "3D像素風格",
+        "en": "3D Pixel Art Style"
+      },
+      "ratio": {
+        "zh-tw": "3:4豎構圖",
+        "en": "3:4 Vertical"
+      }
+    },
+    "tags": [
+      "建築",
+      "創意",
+      "圖表"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
+  },
+  {
+    "id": "tpl_fisheye_urban",
+    "name": {
+      "zh-tw": "極端魚眼都市奇觀",
+      "en": "Fisheye Urban Wonder"
+    },
+    "content": {
+      "zh-tw": "### 極端魚眼都市奇觀\n\n{{character_originality}}，用{{lens_type}}拍攝的照片，主體是一位穿著{{school_uniform}}的{{subject}}，在{{urban_location}}興奮地跳起，{{dynamic_action}}。\n\n**視覺焦點：**\n- **前景細節：** {{fingernail_detail}}\n- **背景景觀：** {{building_cluster}}，街道上擠滿行人和車輛\n- **超現實元素：** {{monster_element}}漂浮在城市上空，{{monster_feature}}環繞著扭曲的城市景觀\n\n**整體基調：**\n創造一個融合現實與奇幻的都市奇觀，魚眼鏡頭的畸變效果與卡通怪獸的出現形成強烈對比，營造出夢幻而充滿活力的視覺衝擊。",
+      "en": "### Extreme Fisheye Urban Spectacle\n{{character_originality}}, a photo taken with {{lens_type}}, the subject is a {{subject}} wearing {{school_uniform}}, jumping excitedly in {{urban_location}}, {{dynamic_action}}.\n\n**Visual Focus:**\n- **Foreground Detail:** {{fingernail_detail}}.\n- **Background Landscape:** {{building_cluster}}, streets packed with pedestrians and vehicles.\n- **Surreal Elements:** {{monster_element}} floating above the city, with {{monster_feature}} surrounding the distorted urban landscape.\n\n**Overall Tone:**\nCreate an urban spectacle blending reality and fantasy. The distortion of the fisheye lens contrasted with the appearance of cartoon monsters creates a dreamy and vibrant visual impact."
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/14/b21165a2afefaf4d.jpg",
+    "author": "官方",
+    "selections": {
+      "lens_type": {
+        "zh-tw": "極端魚眼鏡頭",
+        "en": "Extreme Fisheye Lens"
+      },
+      "role": {
+        "zh-tw": "年輕女性",
+        "en": "Young woman"
+      },
+      "character_originality": {
+        "zh-tw": "使用附圖中的人物，確保結果與人物一致性",
+        "en": "Use character in attachment, ensure consistency"
+      },
+      "school_uniform": {
+        "zh-tw": "灰色開衫和格子裙校服",
+        "en": "Grey cardigan and plaid skirt uniform"
+      },
+      "urban_location": {
+        "zh-tw": "澀谷十字路口",
+        "en": "Shibuya Crossing"
+      },
+      "dynamic_action": {
+        "zh-tw": "一隻手誇張地伸向鏡頭前景",
+        "en": "One hand exaggeratedly reaching towards the foreground"
+      },
+      "fingernail_detail": {
+        "zh-tw": "手指甲清晰可見",
+        "en": "Fingernails clearly visible"
+      },
+      "building_cluster": {
+        "zh-tw": "扭曲的澀谷109大樓和其他建築林立",
+        "en": "Distorted Shibuya 109 building and other forest of buildings"
+      },
+      "crowd_traffic": {
+        "zh-tw": "擠滿行人和車輛",
+        "en": "Bustling traffic"
+      },
+      "monster_element": {
+        "zh-tw": "巨大的粉色和藍色漸變卡通怪獸",
+        "en": "Giant pink and blue gradient cartoon monster"
+      },
+      "monster_feature": {
+        "zh-tw": "巨大的觸手和角",
+        "en": "Giant tentacles and horns"
+      },
+      "distorted_city": {
+        "zh-tw": "扭曲的城市景觀",
+        "en": "Distorted urban landscape"
+      },
+      "lighting_atmosphere": {
+        "zh-tw": "陽光明媚",
+        "en": "Sunny"
+      },
+      "shadow_contrast": {
+        "zh-tw": "光影對比強烈",
+        "en": "Strong light-shadow contrast"
+      },
+      "ratio": {
+        "zh-tw": "圓形畫幅",
+        "en": "Circular Aspect Ratio"
+      },
+      "render_style": {
+        "zh-tw": "高質量的 2D 插畫風格",
+        "en": "High-quality 2D illustration style"
+      }
+    },
+    "tags": [
+      "攝影",
+      "創意",
+      "人物"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
+  },
+  {
+    "id": "tpl_detective_social",
+    "name": {
+      "zh-tw": "歷史名人的朋友圈",
+      "en": "Historical Figure's Moments"
+    },
+    "content": {
+      "zh-tw": "發揮你的創意幫我一起腦洞，假設{{character_groups}}使用{{social_media}}，包括回覆評論點贊，設計一些有趣、有反差的人物使用社交媒體互動朋友圈的場景，結合一些符合人物的大事件，有趣有梗有反差，製作一張{{social_media}}的截圖，使用中文，{{ratio}}。",
+      "en": "Use your creativity to brainstorm with me. Imagine {{character_groups}} using {{social_media}}, including replying, commenting, and liking. Design some fun, high-contrast scenarios of characters interacting on social media feeds, combining big events that fit the characters with humor, memes, and contrast. Create a screenshot of {{social_media}}, in English, with aspect ratio {{ratio}}."
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/14/6ff892060de55ea9.jpg",
+    "author": "@dotey(寶玉)",
+    "selections": {
+      "character_groups": {
+        "zh-tw": "中國古代開國皇帝",
+        "en": "Ancient Chinese Founding Emperors"
+      },
+      "social_media": {
+        "zh-tw": "微信朋友圈",
+        "en": "WeChat Moments"
+      },
+      "ratio": {
+        "zh-tw": "9:16豎構圖",
+        "en": "9:16 Vertical"
+      }
+    },
+    "tags": [
+      "創意",
+      "人物",
+      "攝影"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
+  },
+  {
+    "id": "tpl_magazine_cover",
+    "name": {
+      "zh-tw": "雜誌大片",
+      "en": "Magazine Cover"
+    },
+    "content": {
+      "zh-tw": "### PROJECT GOAL | 項目目標\n生成一張 9:16 旅遊雜誌封面級照片，以我上傳的真人照片為基準，實現 100% 五官還原，呈現專業、精緻、具有真實雜誌質感的封面畫面。\n\n### SUBJECT | 人物設定\n根據我上傳人物的五官特徵進行完整還原；人物置身於 {{travel_location}}，請根據這個地理位置給人物穿著符合當地此刻的實時天氣、溫度與季節服裝邏輯；整體風格自然、優雅、有現場氛圍。\n\n### POSE & EXPRESSION | 姿態與表情\n人物以雜誌封面標準姿態入鏡，略帶從容質感；面部表情自然放鬆但具吸引力；\n身體姿勢根據場景與天氣自由適配，呈現\"在當地旅行中的真實狀態\"。\n\n### ENVIRONMENT | 場景要求\n背景呈現用戶輸入的地名代表性視覺線索，請根據用戶輸入的地理位置呈現符合當地此刻的實時天氣、溫度與季節場景邏輯；保持高級寫實風格，不誇張、不超現實；\n光線以真實自然光為主，具有現場環境的時間感。\n\n### CAMERA & AESTHETICS | 拍攝規格\n畫幅比例: {{ratio}}\n構圖: 充分利用豎幅空間，打造\"封面級\"視覺中心；鏡頭語言: 專業攝影棚級別的清晰度與景深；膚質感可見毛孔與自然紋理（非磨皮）；整體氛圍具有高級旅行雜誌的真實感與美感。\n\n### MAGAZINE DESIGN | 封面設計\n版面風格現代、乾淨、具有國際旅行雜誌氛圍；\n主標題、副標題、雜誌圖形元素可自動生成但需與人物與地點匹配；\n色彩搭配高級、協調；\n最終呈現接近《Vogue》《National Geographic Traveler》級別的封面氣質。",
+      "en": "### PROJECT GOAL\nGenerate a 9:16 travel magazine cover-quality photo based on the uploaded real-life photo, achieving 100% facial feature restoration, presenting a professional, exquisite, and authentic magazine-textured cover.\n\n### SUBJECT\nFully restore based on the uploaded person's facial features; the person is located in {{travel_location}}. Please dress the character according to the real-time weather, temperature, and seasonal clothing logic of that location; the overall style should be natural, elegant, and atmospheric.\n\n### POSE & EXPRESSION\nThe person enters the frame in a standard magazine cover pose, with a touch of composed quality; natural and relaxed facial expressions but with attractiveness.\nBody posture adapts freely according to the scene and weather, presenting a \"real state of traveling locally.\"\n\n### ENVIRONMENT\nThe background shows representative visual cues of the location input by the user. Please present scene logic consistent with the local real-time weather, temperature, and season; maintain a high-end realistic style, not exaggerated or surreal.\nLighting is mainly natural, with a sense of time of the site environment.\n\n### CAMERA & AESTHETICS\nAspect Ratio: {{ratio}}\nComposition: Make full use of vertical space to create a \"cover-level\" visual center. Lens language: Professional studio-level clarity and depth of field; skin texture shows pores and natural grain (no smoothing); overall atmosphere has the realism and beauty of a high-end travel magazine.\n\n### MAGAZINE DESIGN\nModern, clean layout with an international travel magazine vibe.\nMain title, subtitle, and magazine graphic elements can be automatically generated but must match the person and location.\nHigh-end, coordinated color palette.\nThe final result should approach the cover temperament of \"Vogue\" or \"National Geographic Traveler.\""
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/16/a6106f5cc6e92a74.jpg",
+    "imageUrls": [
       "https://s3.bmp.ovh/imgs/2025/12/16/a6106f5cc6e92a74.jpg",
       "https://s3.bmp.ovh/imgs/2025/12/16/cf8edb6f54db15bf.jpg"
     ],
-    author: "官方",
-    selections: {
-      "travel_location": { 'zh-tw': "東北雪鄉", en: "Snow Village in Northeast China" },
-      "ratio": { 'zh-tw': "9:16 直式構圖", en: "9:16 Vertical" }
+    "author": "官方",
+    "selections": {
+      "travel_location": {
+        "zh-tw": "東北雪鄉",
+        "en": "Snow Village in Northeast China"
+      },
+      "ratio": {
+        "zh-tw": "9:16豎構圖",
+        "en": "9:16 Vertical"
+      }
     },
-    tags: ["人物", "攝影", "創意"],
-    language: ["zh-tw", "en"]
+    "tags": [
+      "人物",
+      "攝影",
+      "創意"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
   },
   {
-    id: "tpl_manga_reality",
-    name: { 'zh-tw': "漫畫人物成真", en: "Manga to Reality" },
-    content: TEMPLATE_MANGA_TO_REALITY,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/16/f5291c56ece88cd9.jpg",
-    author: "官方",
-    selections: {
-      "character_originality": { 'zh-tw': "使用附圖中的人物，確保結果與人物一致性", en: "Use character in attachment, ensure consistency" },
-      "comic_scene": { 'zh-tw': "唯美的臥室", en: "Beautiful bedroom" },
-      "ratio": { 'zh-tw': "9:16 直式構圖", en: "9:16 Vertical" }
+    "id": "tpl_manga_reality",
+    "name": {
+      "zh-tw": "漫畫人物成真",
+      "en": "Manga to Reality"
     },
-    tags: ["人物", "創意", "卡通"],
-    language: ["zh-tw", "en"]
+    "content": {
+      "zh-tw": "### SUBJECT | 人物主體\n{{character_originality}}，從漫畫分鏡邊框中跨步走出並打破界限。真實版本與漫畫版本之間充滿動態且無縫的互動。\n\n### SETTING | 場景設定\n地點：{{comic_scene}}\n地板上攤開一本巨大的漫畫書。\n\n### MANGA DETAILS | 漫畫細節\n- **風格：** 超現實風格的黑白四格漫畫\n- **技法：** 正宗日式排版，網點紙效果，粗黑墨線，線條清晰利落\n- **內容：** 同一個人的漫畫版本被困在漫畫書裡面\n- **對比：** 單色漫畫世界與鮮豔現實世界的強烈視覺對比\n\n### REAL LIFE VERSION | 真實版本\n- **視覺質感：** 生動、色彩豐富、照片級真實感、超逼真 8K 畫質\n- **互動方式：** 動態地浮現於漫畫表面，直接與漫畫版本互動\n- **情緒氛圍：** 元風格 (Meta)，幽默的相遇\n\n### TECHNICAL SPECS | 技術規格\n- **畫質：** 超逼真，8K 分辨率，高度細節化\n- **融合效果：** 漫畫線條藝術與現實攝影的無縫融合\n- **畫幅比例：** {{ratio}}",
+      "en": "### SUBJECT\n{{character_originality}}, stepping out from the manga panel borders and breaking boundaries. A dynamic and seamless interaction between the real-life version and the manga version.\n\n### SETTING\nLocation: {{comic_scene}}\nA giant manga book is spread open on the floor.\n\n### MANGA DETAILS\n- **Style:** Surreal black and white four-panel manga.\n- **Technique:** Authentic Japanese layout, screentone effects, thick black ink lines, clean and sharp linework.\n- **Content:** The manga version of the same person is trapped inside the manga book.\n- **Contrast:** Strong visual contrast between the monochromatic manga world and the vibrant real world.\n\n### REAL LIFE VERSION\n- **Visual Texture:** Vivid, colorful, photo-realistic, ultra-realistic 8K quality.\n- **Interaction:** Dynamically emerging from the manga surface, interacting directly with the manga version.\n- **Atmosphere:** Meta-style, a humorous encounter.\n\n### TECHNICAL SPECS\n- **Image Quality:** Ultra-realistic, 8K resolution, highly detailed.\n- **Blending:** Seamless fusion of manga line art and real-life photography.\n- **Aspect Ratio:** {{ratio}}"
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/16/f5291c56ece88cd9.jpg",
+    "author": "官方",
+    "selections": {
+      "character_originality": {
+        "zh-tw": "使用附圖中的人物，確保結果與人物一致性",
+        "en": "Use character in attachment, ensure consistency"
+      },
+      "comic_scene": {
+        "zh-tw": "唯美的臥室",
+        "en": "Beautiful bedroom"
+      },
+      "ratio": {
+        "zh-tw": "9:16豎構圖",
+        "en": "9:16 Vertical"
+      }
+    },
+    "tags": [
+      "人物",
+      "創意",
+      "卡通"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
   },
   {
-    id: "tpl_industrial_design",
-    name: { 'zh-tw': "設計大師的產品設計", en: "Industrial Design Masterpiece" },
-    content: TEMPLATE_INDUSTRIAL_DESIGN,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/17/7dbe43ae66b1a78c.jpg",
-    author: "官方",
-    selections: {
-      "designer": { 'zh-tw': "Jonathan Ive (Jony Ive)", en: "Jonathan Ive" },
-      "design_item": { 'zh-tw': "無人機", en: "Drone" },
-      "ratio": { 'zh-tw': "3:4 直式構圖", en: "3:4 Vertical" }
+    "id": "tpl_industrial_design",
+    "name": {
+      "zh-tw": "設計大師的產品設計",
+      "en": "Industrial Design Masterpiece"
     },
-    tags: ["產品", "創意", "圖表"],
-    language: ["zh-tw", "en"]
+    "content": {
+      "zh-tw": "### 目標\n設計一個頂級的工業設計產品介紹頁，使用極簡的宣傳頁風格；需要深刻理解該設計師的設計理念、設計風格，並將這種設計理解完全融入到設計產品的工業設計與展示頁面中\n\n### 內容\n- **設計師：** {{designer}}\n- **產品：** {{design_item}}\n\n### 畫面\n- **設計師介紹：**\n約佔整個畫面非常少的部分，包括設計師的介紹（極具氛圍感的頭像）與設計師對於這個產品的設計思路與設計理解，以及設計師的簽名。\n- **畫面核心內容：**\n佔整個畫面的80%或更多用於呈現產品本身，一個完全符合設計師自己設計風格與設計方法的頂級產品設計圖（一個完整的單張產品效果的呈現），基於工業成品設計成果使用不同的構圖。整體配色需要與設計師的風格與產品內容完全相符\n- **構圖：**\n最終構圖：{{ratio}} \n整體排版主次分明，規整，極具格調與設計特色",
+      "en": "### Goal\nDesign a top-tier industrial design product introduction page using a minimalist promotional layout. Deeply understand the designer's philosophy and style, and fully integrate this design understanding into the product's industrial design and presentation page.\n\n### Content\n- **Designer:** {{designer}}\n- **Product:** {{design_item}}\n\n### Visuals\n- **Designer Intro:**\nOccupies a very small part of the frame, including a bio (with an atmospheric portrait), the designer's thoughts and design philosophy for this product, and their signature.\n- **Core Content:**\n80% or more of the frame is used to present the product itself—a top-tier product design illustration fully consistent with the designer's own style and methods (a complete single product effect presentation). Use different compositions based on the industrial design results. The overall color scheme must match the designer's style and product content.\n- **Composition:**\nFinal Composition: {{ratio}}.\nThe overall layout is clear in hierarchy, organized, and highly stylish and characteristic."
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/17/7dbe43ae66b1a78c.jpg",
+    "author": "官方",
+    "selections": {
+      "designer": {
+        "zh-tw": "Jonathan Ive (Jony Ive)",
+        "en": "Jonathan Ive"
+      },
+      "design_item": {
+        "zh-tw": "無人機",
+        "en": "Drone"
+      },
+      "ratio": {
+        "zh-tw": "3:4豎構圖",
+        "en": "3:4 Vertical"
+      }
+    },
+    "tags": [
+      "產品",
+      "創意",
+      "圖表"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
   },
   {
-    id: "tpl_photo_grid_v2",
-    name: { 'zh-tw': "3x3 攝影網格出格版", en: "3x3 Photo Grid (Out of Box)" },
-    content: TEMPLATE_PHOTO_GRID_V2,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/17/77bfd2bf7abc3eac.png",
-    author: "官方",
-    selections: {
-      "clothing": { 'zh-tw': "炭灰色無袖連衣裙", en: "Charcoal grey sleeveless dress" },
-      "grid_pose-0": { 'zh-tw': "前景手指虛化", en: "Out-of-focus fingers in foreground" },
-      "grid_pose-1": { 'zh-tw': "目光鎖定鏡頭", en: "Eyes locked on camera" },
-      "grid_pose-2": { 'zh-tw': "單色下巴托手", en: "Monochrome hand on chin" },
-      "grid_pose-3": { 'zh-tw': "正面特寫陰影", en: "Frontal close-up with shadows" },
-      "grid_pose-4": { 'zh-tw': "斜角拍攝", en: "Angled shot" },
-      "grid_pose-5": { 'zh-tw': "雙手置於鎖骨", en: "Hands on collarbones" },
-      "grid_pose-6": { 'zh-tw': "坐姿半身側面", en: "Seated half-body profile" },
-      "grid_pose-7": { 'zh-tw': "側面微距水滴", en: "Side macro with water drops" },
-      "grid_pose-8": { 'zh-tw': "回眸一笑", en: "Looking back with a smile" },
-      "lens_param-0": { 'zh-tw': "85mm, f/1.8", en: "85mm, f/1.8" },
-      "lens_param-1": { 'zh-tw': "85mm, f/2.0", en: "85mm, f/2.0" },
-      "lens_param-2": { 'zh-tw': "50mm, f/2.2", en: "50mm, f/2.2" },
-      "lens_param-3": { 'zh-tw': "50mm, f/2.5", en: "50mm, f/2.5" },
-      "lens_param-4": { 'zh-tw': "50mm, f/3.2", en: "50mm, f/3.2" },
-      "lens_param-5": { 'zh-tw': "35mm, f/4.5", en: "35mm, f/4.5" },
-      "lens_param-6": { 'zh-tw': "85mm, f/1.9", en: "85mm, f/1.9" },
-      "lens_param-7": { 'zh-tw': "50mm, f/1.8", en: "50mm, f/1.8" },
-      "lens_param-8": { 'zh-tw': "85mm, f/2.2", en: "85mm, f/2.2" }
+    "id": "tpl_photo_grid_v2",
+    "name": {
+      "zh-tw": "3x3 攝影網格出格版",
+      "en": "3x3 Photo Grid (Out of Box)"
     },
-    tags: ["人物", "攝影"],
-    language: ["zh-tw", "en"]
+    "content": {
+      "zh-tw": "### Photo Grid Composition (九宮格攝影出格版)\n\n**編輯場景:** 3x3網格佈局，採用冷灰色無縫背景。人物（面部特徵與上傳圖片完全一致）身穿 {{clothing}}，確保每張照片中人物形象保持一致。\n\n**燈光設置:** {{lighting}}，營造統一而富有層次的光影效果。\n\n**照片細節包括 (Grid Details)：**\n1. {{grid_pose}}，畫面風格統一，鏡頭參數為 {{lens_param}}；\n2. {{grid_pose}}，鏡頭參數為 {{lens_param}}，展現不同的拍攝角度和表情；\n3. {{grid_pose}}，鏡頭參數為 {{lens_param}}，捕捉細膩的情感表達；\n4. {{grid_pose}}，鏡頭參數為 {{lens_param}}，利用景深營造層次感；\n5. {{grid_pose}}，鏡頭參數為 {{lens_param}}，突出動態瞬間的生動性；\n6. {{grid_pose}}，鏡頭參數為 {{lens_param}}，通過前景虛化增強視覺焦點；\n7. {{grid_pose}}，鏡頭參數為 {{lens_param}}，展現優雅的姿態和放鬆的狀態；\n8. {{grid_pose}}，鏡頭參數為 {{lens_param}}，捕捉自然光線下的表情變化；\n9. {{grid_pose}}，鏡頭參數為 {{lens_param}}，微距特寫展現面部細節和質感。\n\n**後期處理:** 保持原始素材的真實感，平滑對比度，適度應用柔化效果，確保整體色調統一且富有質感。\n\n**需要單獨處理:**中央宮格的圖片不侷限在自己的宮格內，形成一種從中央宮格躍出畫面的3D立體視覺，中央宮格人物佔據圖片較大面積且全身出鏡，會覆蓋到其他宮格，並對其他宮格形成陰影效果，營造一種裸眼3D的視覺張力",
+      "en": "### Photo Grid Composition (Out-of-Box Version)\n\n**Scene:** 3x3 grid layout, using a seamless cool grey background. The character (facial features exactly as in the uploaded image) is wearing {{clothing}}, ensuring character consistency across all photos.\n\n**Lighting:** {{lighting}}, creating a unified and layered lighting effect.\n\n**Grid Details:**\n1. {{grid_pose}}, unified style, lens parameter: {{lens_param}};\n2. {{grid_pose}}, lens parameter: {{lens_param}}, showing different angles and expressions;\n3. {{grid_pose}}, lens parameter: {{lens_param}}, capturing subtle emotional expressions;\n4. {{grid_pose}}, lens parameter: {{lens_param}}, using depth of field to create layers;\n5. {{grid_pose}}, lens parameter: {{lens_param}}, highlighting the vividness of dynamic moments;\n6. {{grid_pose}}, lens parameter: {{lens_param}}, enhancing visual focus through foreground blur;\n7. {{grid_pose}}, lens parameter: {{lens_param}}, showing elegant posture and relaxed state;\n8. {{grid_pose}}, lens parameter: {{lens_param}}, capturing facial changes under natural light;\n9. {{grid_pose}}, lens parameter: {{lens_param}}, macro close-up showing facial details and texture.\n\n**Post-processing:** Maintain the realism of the original material, smooth contrast, apply moderate softening effects, ensuring uniform overall tone and high-quality texture.\n\n**Special Instructions:** The central grid image is not confined to its own square, creating a 3D visual effect as if jumping out of the frame. The central character occupies a larger area and is shown in full-body, overlapping other squares and casting shadows on them, creating a naked-eye 3D visual tension."
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/17/77bfd2bf7abc3eac.png",
+    "author": "官方",
+    "selections": {
+      "clothing": {
+        "zh-tw": "炭灰色無袖連衣裙",
+        "en": "Charcoal grey sleeveless dress"
+      },
+      "grid_pose-0": {
+        "zh-tw": "前景手指虛化",
+        "en": "Out-of-focus fingers in foreground"
+      },
+      "grid_pose-1": {
+        "zh-tw": "目光鎖定鏡頭",
+        "en": "Eyes locked on camera"
+      },
+      "grid_pose-2": {
+        "zh-tw": "單色下巴託手",
+        "en": "Monochrome hand on chin"
+      },
+      "grid_pose-3": {
+        "zh-tw": "正面特寫陰影",
+        "en": "Frontal close-up with shadows"
+      },
+      "grid_pose-4": {
+        "zh-tw": "斜角拍攝",
+        "en": "Angled shot"
+      },
+      "grid_pose-5": {
+        "zh-tw": "雙手置於鎖骨",
+        "en": "Hands on collarbones"
+      },
+      "grid_pose-6": {
+        "zh-tw": "坐姿半身側面",
+        "en": "Seated half-body profile"
+      },
+      "grid_pose-7": {
+        "zh-tw": "側面微距水滴",
+        "en": "Side macro with water drops"
+      },
+      "grid_pose-8": {
+        "zh-tw": "回眸一笑",
+        "en": "Looking back with a smile"
+      },
+      "lens_param-0": {
+        "zh-tw": "85mm, f/1.8",
+        "en": "85mm, f/1.8"
+      },
+      "lens_param-1": {
+        "zh-tw": "85mm, f/2.0",
+        "en": "85mm, f/2.0"
+      },
+      "lens_param-2": {
+        "zh-tw": "50mm, f/2.2",
+        "en": "50mm, f/2.2"
+      },
+      "lens_param-3": {
+        "zh-tw": "50mm, f/2.5",
+        "en": "50mm, f/2.5"
+      },
+      "lens_param-4": {
+        "zh-tw": "50mm, f/3.2",
+        "en": "50mm, f/3.2"
+      },
+      "lens_param-5": {
+        "zh-tw": "35mm, f/4.5",
+        "en": "35mm, f/4.5"
+      },
+      "lens_param-6": {
+        "zh-tw": "85mm, f/1.9",
+        "en": "85mm, f/1.9"
+      },
+      "lens_param-7": {
+        "zh-tw": "50mm, f/1.8",
+        "en": "50mm, f/1.8"
+      },
+      "lens_param-8": {
+        "zh-tw": "85mm, f/2.2",
+        "en": "85mm, f/2.2"
+      }
+    },
+    "tags": [
+      "人物",
+      "攝影"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
   },
   {
-    id: "tpl_raindrop_art",
-    name: { 'zh-tw': "雨滴定格藝術", en: "Raindrop Art" },
-    content: TEMPLATE_RAINDROP_ART,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/19/6b6e14845635b168.jpg",
-    author: "@tanshilong",
-    selections: {
-      "rain_shape": { 'zh-tw': "芭蕾舞者", en: "Ballerina" },
-      "ratio": { 'zh-tw': "3:4 直式構圖", en: "3:4 Vertical" }
+    "id": "tpl_raindrop_art",
+    "name": {
+      "zh-tw": "雨滴定格藝術",
+      "en": "Raindrop Art"
     },
-    tags: ["攝影", "創意"],
-    language: ["zh-tw", "en"]
+    "content": {
+      "zh-tw": "### Raindrop Art (雨滴定格藝術)\n\n**核心表現:**\n捕捉了雨滴落入水面的瞬間，雨滴打落在水面上，飛濺的水珠在空中形成一個抽象的 {{rain_shape}}。\n\n**藝術視覺:**\n水滴構成的結果相對比較概念化，更遵從水滴濺落形成的動態感，但能從動作或神態中感受到其表達的藝術視覺。畫面將雨水與自然交互的微妙之美的定格藝術作品，動感與優雅交融，呈現出詩意的視覺表達。\n\n**環境背景:**\n背景是朦朧的雨景。\n\n**規格:**\n{{ratio}}",
+      "en": "### Raindrop Art\n**Core Performance:**\nCapture the moment a raindrop falls into the water surface, with the splashing droplets forming an abstract {{rain_shape}} in the air.\n\n**Artistic Vision:**\nThe resulting water droplet form is relatively conceptual, following the dynamic feel of the splash, yet the artistic vision can be felt through the movement or pose. The image is a frozen-in-time artwork of the subtle beauty of rain interacting with nature, blending dynamism and elegance to present a poetic visual expression.\n\n**Environment/Background:**\nThe background is a hazy rainy scene.\n\n**Specifications:**\n{{ratio}}"
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/19/6b6e14845635b168.jpg",
+    "author": "@tanshilong",
+    "selections": {
+      "rain_shape": {
+        "zh-tw": "芭蕾舞者",
+        "en": "Ballerina"
+      },
+      "ratio": {
+        "zh-tw": "3:4豎構圖",
+        "en": "3:4 Vertical"
+      }
+    },
+    "tags": [
+      "攝影",
+      "創意"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
   },
   {
-    id: "tpl_art_growth",
-    name: { 'zh-tw': "可視化藝術成長之路", en: "Artistic Evolution Path" },
-    content: TEMPLATE_ART_GROWTH,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/19/47a2cbfec635a29a.jpg", 
-    author: "@sundyme",
-    selections: {
-      "art_type": { 'zh-tw': "美術學", en: "Fine Arts" },
-      "render_style": { 'zh-tw': "3D 像素風格", en: "3D Pixel Art Style" },
-      "ratio": { 'zh-tw': "3:4 直式構圖", en: "3:4 Vertical" }
+    "id": "tpl_art_growth",
+    "name": {
+      "zh-tw": "可視化藝術成長之路",
+      "en": "Artistic Evolution Path"
     },
-    tags: ["建築", "創意", "圖表"],
-    language: ["zh-tw", "en"]
+    "content": {
+      "zh-tw": "### 可視化藝術成長之路\n\n**角色定義**  \n你是一位歷史演變建築師 (History Evolution Architect)。你的目標是創建一個超高密度、垂直堆疊的等距軸測（Isometric）3D 展廳渲染可視化圖像，展示 {{art_type}} 的發展歷史。通過展廳來展示一個里程發展的時間線：底部是簡陋的發展初期，通過歷史更迭迭代垂直向上升起，直到現代或未來的巔峰。\n\n**核心能力 | 關鍵視覺策略（rameless Tech-Lapse）：**\n- **展廳模擬：** 使用一個多層的藝術展廳承載所要表達的事物發展，層級代表時間維度的發展，每層可能存在不同的“房間”用於展示同一時代不同風格的作品\n- **根除容器：** 嚴禁使用底板、邊框或橫截面視圖。底部邊緣是歷史起源（原始社會或古代社會）\n- **垂直時間線：** “之字形上升（Zig-Zag Ascent）”穿越創新曆程。  \n  - 底部（前景）：起源與原型  \n  - 中部（上升中）：古代到現代的輝煌發展  \n  - 頂部（背景）：當前的發展狀態與未來的可能性\n- **集成 3D 標題：** 明確的與主題相符合的標題\n\n**檢索與梳理：**\n- 提取重要發展歷史中的的幾個階段。\n- 列出定義每個時代的“經典”。\n- 工具與媒介的變化\n\n**構圖與光影：**  \n等距視角的展廳視角。垂直之字形時間線，將事物發展從底部的創業階段堆疊到未來的頂部，環境與劃時代的經典作品隨高度演變。多款經典產品以“巨物化”呈現。  \n移軸攝影（Tilt-shift）與 {{render_style}}，畫幅 {{ratio}}。",
+      "en": "### Visualized Artistic Growth Path\n**Role Definition**\nYou are a History Evolution Architect. Your goal is to create an ultra-high-density, vertically stacked isometric 3D gallery render showing the development history of {{art_type}}. Use a gallery to showcase a milestone timeline: the base is the humble early stages, rising vertically through historical changes to the modern or future peak.\n\n**Core Competency | Key Visual Strategy (Frameless Tech-Lapse):**\n- **Gallery Simulation:** Use a multi-level art gallery to host the development. Levels represent temporal progression, with different \"rooms\" potentially showing different styles from the same era.\n- **Eradicate Containers:** Strictly forbid base plates, borders, or cross-section views. The bottom edge is the historical origin (primitive or ancient society).\n- **Vertical Timeline:** A \"Zig-Zag Ascent\" through the innovation journey.\n  - Bottom (Foreground): Origins and prototypes.\n  - Middle (Ascending): Brilliant development from ancient to modern times.\n  - Top (Background): Current development status and future possibilities.\n- **Integrated 3D Title:** A clear title consistent with the theme.\n\n**Retrieval & Organization:**\n- Extract several important historical development stages.\n- List \"classics\" defining each era.\n- Changes in tools and media.\n\n**Composition & Lighting:**\nIsometric gallery view. A vertical zig-zag timeline stacking development from the base to the future at the top. The environment and era-defining classics evolve with height. Multiple classic products are presented as \"megaliths.\"\nTilt-shift photography with {{render_style}}, aspect ratio {{ratio}}."
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/19/47a2cbfec635a29a.jpg",
+    "author": "@sundyme",
+    "selections": {
+      "art_type": {
+        "zh-tw": "美術學",
+        "en": "Fine Arts"
+      },
+      "render_style": {
+        "zh-tw": "3D像素風格",
+        "en": "3D Pixel Art Style"
+      },
+      "ratio": {
+        "zh-tw": "3:4豎構圖",
+        "en": "3:4 Vertical"
+      }
+    },
+    "tags": [
+      "建築",
+      "創意",
+      "圖表"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
   },
   {
-    id: "tpl_miniature_desk",
-    name: { 'zh-tw': "窗邊書桌微縮場景", en: "Window Desk Miniature" },
-    content: TEMPLATE_MINIATURE_DESK,
-    imageUrl: "https://s3.bmp.ovh/imgs/2025/12/20/8e9c9c28b3d2cf1b.jpg",
-    author: "@tanshilong",
-    selections: {
-      "show_name": { 'zh-tw': "龍貓", en: "My Neighbor Totoro" },
-      "character_name": { 'zh-tw': "龍貓", en: "Totoro" },
-      "render_style": { 'zh-tw': "毛氈與黏土", en: "Felt and Clay" },
-      "ratio": { 'zh-tw': "4:3 橫向構圖", en: "4:3 Horizontal" }
+    "id": "tpl_miniature_desk",
+    "name": {
+      "zh-tw": "窗邊書桌微縮場景",
+      "en": "Window Desk Miniature"
     },
-    tags: ["攝影", "創意", "卡通"],
-    language: ["zh-tw", "en"]
+    "content": {
+      "zh-tw": "### 窗邊書桌微縮場景\n\n展示一個在窗邊書桌上的場景。\n\n**核心內容：**\n《{{show_name}}》的經典鏡頭微縮場景展示，採用了{{render_style}}風格，充分體現了微縮攝影的藝術表達。\n\n**環境背景：**\n背景是真實的書桌，有一些製作工具，散亂的書本，營造一種剛剛加工完這個場景的凌亂感。書桌上還有編制的圖紙和原型手稿。\n\n**窗外互動：**\n窗外，真實的{{character_name}}正好奇地向內觀察這個桌上的作品。\n\n**畫面規格：**\n{{ratio}}",
+      "en": "### Window-side Desk Miniature Scene\nDisplays a scene on a desk by a window.\n\n**Core Content:**\nA miniature restoration of a classic scene from \"{{show_name}}\", using the {{render_style}} style, fully embodying the artistic expression of miniature photography.\n\n**Environment/Background:**\nThe background is a real desk, with some crafting tools and scattered books, creating a sense of messiness as if the scene was just finished. There are also woven plans and prototype manuscripts on the desk.\n\n**Window Interaction:**\nOutside the window, a real {{character_name}} is curiously looking inside at the work on the desk.\n\n**Image Specs:**\n{{ratio}}"
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/20/8e9c9c28b3d2cf1b.jpg",
+    "author": "@tanshilong",
+    "selections": {
+      "show_name": {
+        "zh-tw": "龍貓",
+        "en": "My Neighbor Totoro"
+      },
+      "character_name": {
+        "zh-tw": "龍貓",
+        "en": "Totoro"
+      },
+      "render_style": {
+        "zh-tw": "毛氈與粘土",
+        "en": "Felt and Clay"
+      },
+      "ratio": {
+        "zh-tw": "4:3橫構圖",
+        "en": "4:3 Horizontal"
+      }
+    },
+    "tags": [
+      "攝影",
+      "創意",
+      "卡通"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
+  },
+  {
+    "id": "tpl_japanese_product_poster",
+    "name": {
+      "zh-tw": "日式產品海報",
+      "en": "Japanese Product Poster"
+    },
+    "content": {
+      "zh-tw": "### 日式產品海報（16:9橫構圖）\n\n高級日式產品海報，16:9橫構圖格式，編輯級設計展示{{fruit_1}}汁皮膚包裝概念，具有精緻的視覺敘事：\n\n**左側（畫布40%）：**\n- **主角產品：** 一個大型{{fruit_1}}汁皮膚包裝垂直展示，採用戲劇性柔和燈光，展現超寫實的{{fruit_1}}果皮紋理包裹矩形容器，符合{{fruit_1}}特徵質感的皮膚紋理，覆蓋整個表面，具有該水果特有的自然質感、顏色和細節變化，看起來完全像真正的{{fruit_1}}果皮拉伸覆蓋在包裝上\n- **下方：** 一個橫切的新鮮{{fruit_1}}，展示符合{{fruit_1}}特徵的果肉質感，展現其獨特的內部結構和顏色\n- **日式排版垂直對齊：** \"{{fruit_1}}スキン\"（{{fruit_1}}皮膚）採用優雅的細體哥特字體\n- **副標題：** \"果汁皮膚 / {{fruit_1}}\"採用精緻風格\n- **小字設計理念文本（日文）**\n\n**中央（畫布30%）：**\n- **大量白色負空間（間 - Ma）**\n- **極簡幾何元素：** 精緻的細線\n- **浮動文字：** \"自然な素材\"（天然材料）\n- **極簡品牌標識**\n- **背景中非常微妙的{{fruit_1}}特徵紋理圖案（低不透明度）**\n\n**右側（畫布30%）：**\n- **兩個{{fruit_1}}汁皮膚包裝以不同角度和高度藝術性排列**\n- **一個完整的新鮮{{fruit_1}}，帶有符合該水果特徵的自然皮膚質感**\n- **排版：** \"Natural Packaging / 自然な包裝\"\n- **標語：** \"The skin is the package / 皮膚が包裝である\"\n- **細節標註指向符合水果特徵的皮膚紋理細節**\n\n**設計原則：** 充足的留白，不對稱平衡，侘寂美學，無印良品/則武編輯級極簡主義\n**色彩調色板：** 符合{{fruit_1}}特徵的色調，純白背景，果肉的特徵顏色作為點綴\n**攝影：** 柔和擴散的影棚燈光，超清晰的微距細節展現符合水果特徵的紋理，照片級真實渲染\n**關鍵：** {{fruit_1}}皮膚包裝必須看起來極其真實——實際的有機紋理，完全符合該水果的自然特徵，包括其特有的質感、顏色和細節，絕非塑料\n\n16:9寬屏，高端日式產品海報，畫廊級品質",
+      "en": "### Premium Japanese-style Product Poster (16:9 Landscape)\n\nPremium Japanese-style product poster in 16:9 landscape format, editorial design showcasing {{fruit_1}} juice skin packaging concept with sophisticated visual storytelling:\n\n**LEFT SIDE (40% of canvas):**\n- **Hero product:** One large {{fruit_1}} juice skin package displayed vertically with dramatic soft lighting, showing ultra-realistic {{fruit_1}} peel texture wrapped around rectangular container, skin texture that matches the characteristic features of {{fruit_1}}, covering entire surface, with natural texture, color and detail variations specific to this fruit, looks exactly like real {{fruit_1}} skin stretched over package\n- **Below:** One cross-sectioned fresh {{fruit_1}} showing flesh texture that matches the characteristic features of {{fruit_1}}, displaying its unique internal structure and color\n- **Japanese typography vertically aligned:** \"{{fruit_1}}スキン\" ({{fruit_1}} Skin) in elegant thin gothic font\n- **Subtitle:** \"果汁皮膚 / {{fruit_1}}\" in refined style\n- **Small design philosophy text in Japanese**\n\n**CENTER (30% of canvas):**\n- **Generous white negative space (Ma - 間)**\n- **Minimal geometric elements:** delicate thin lines\n- **Floating text:** \"自然な素材\" (natural materials)\n- **Subtle minimalist brand mark**\n- **Very subtle {{fruit_1}} characteristic texture pattern in background (low opacity)**\n\n**RIGHT SIDE (30% of canvas):**\n- **Two {{fruit_1}} juice skin packages arranged artistically at different angles and heights**\n- **One whole fresh {{fruit_1}} with natural skin texture that matches the characteristic features of this fruit**\n- **Typography:** \"Natural Packaging / 自然な包裝\"\n- **Tagline:** \"The skin is the package / 皮膚が包裝である\"\n- **Detail callouts pointing to skin texture details that match the fruit's characteristics**\n\n**DESIGN PRINCIPLES:** Abundant white space, asymmetrical balance, Wabi-sabi aesthetic, Muji/Noritake editorial minimalism\n**COLOR PALETTE:** tones that match {{fruit_1}} characteristics, pure white background, characteristic flesh color as accent\n**PHOTOGRAPHY:** Soft diffused studio lighting, ultra-sharp macro details showing texture that matches the fruit's characteristics, photorealistic rendering\n**CRITICAL:** The {{fruit_1}} skin packaging must look incredibly realistic - actual organic texture that fully matches the natural characteristics of this fruit, including its unique texture, color and details, NOT plastic\n\n16:9 widescreen, high-end Japanese product poster, gallery quality"
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/25/a574127d24ac34e3.png",
+    "author": "@berryxia（Berryxia.AI）",
+    "selections": {
+      "fruit_1-0": {
+        "zh-tw": "檸檬",
+        "en": "Lemon"
+      },
+      "ratio": {
+        "zh-tw": "16:9橫構圖",
+        "en": "16:9 Horizontal"
+      }
+    },
+    "tags": [
+      "產品",
+      "創意",
+      "攝影"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
+  },
+  {
+    "id": "tpl_luxury_editorial",
+    "name": {
+      "zh-tw": "高級時裝露揹人像",
+      "en": "Luxury Editorial Portrait"
+    },
+    "content": {
+      "zh-tw": "### 高級時裝編輯部人像\n\n使用上傳的參考圖作為同一位{{subject}}。嚴格保持身份：相同的面部結構、膚色、髮型。無性別轉換。\n\n**姿態與構圖：**\n四分之三背影。背部部分朝向鏡頭，軀幹稍微向左傾斜。頭部輕輕向右轉動，露出乾淨的側臉。眼睛輕輕向下看或閉上。肩膀放鬆。露背是主要的視覺焦點。\n\n**服裝：**\n{{clothing}}。深V露背，帶有優雅的垂墜感。啞光面料，無光澤，無閃粉，無婚禮元素。\n\n**配飾：**\n精美小巧的耳環。{{jewelry_style}}，帶有微妙的寶石細節，沿著脊柱垂下。\n\n**花卉：**\n{{flower_type}}，拿在右肩上方。花朵部分重疊肩膀，營造出層次感的時尚遮擋效果。\n\n**攝影：**\n平視或略高於肩膀高度。85mm人像鏡頭質感。淺景深，壓縮透視。無廣角畸變。\n\n**燈光：**\n{{lighting}}。主光來自左上方，照亮側臉和上背部。微妙的補光展現皮膚紋理。非常柔和的輪廓光勾勒出裙子和花朵。低對比度，平滑的色調過渡。\n\n**背景：**\n{{background_style}}。無環境，無道具，無紋理。\n\n**風格：**\n奢侈時尚雜誌美學。優雅、剋制、永恆。自然精緻的皮膚紋理，不過度磨皮。",
+      "en": "### High-Fashion Luxury Editorial Portrait\n\nUse the uploaded reference image as the same {{subject}}. Preserve identity strictly: same face structure, skin tone, hairstyle. No gender swap.\n\n**POSE & COMPOSITION:**\nThree-quarter back view. Back partially facing camera, torso angled slightly left. Head gently turned to the right, revealing a clean side profile. Eyes softly lowered or closed. Shoulders relaxed. The open back is the main visual focus.\n\n**WARDROBE:**\n{{clothing}}. Deep V open back with elegant drape. Matte fabric, no shine, no glitter, no bridal elements.\n\n**ACCESSORIES:**\nSmall delicate earrings. {{jewelry_style}} with subtle gemstone details resting along the spine.\n\n**FLOWERS:**\n{{flower_type}} held over the right shoulder. The flowers partially overlap the shoulder, creating layered fashion blocking.\n\n**CAMERA:**\nEye-level to slightly above shoulder height. 85mm portrait lens look. Shallow depth of field, compressed perspective. No wide-angle distortion.\n\n**LIGHTING:**\n{{lighting}}. Key light from upper-left, illuminating side face and upper back. Subtle fill light for skin texture. Very soft rim light outlining dress and flowers. Low contrast, smooth tonal transitions.\n\n**BACKGROUND:**\n{{background_style}}. No environment, no props, no texture.\n\n**STYLE:**\nLuxury fashion magazine aesthetic. Elegant, restrained, timeless. Natural refined skin texture, not over-smoothed."
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/25/bb94a5f7b87af2ee.jpg",
+    "author": "@sidona",
+    "selections": {
+      "subject": {
+        "zh-tw": "女性",
+        "en": "Woman"
+      },
+      "clothing": {
+        "zh-tw": "極簡黑色高級定製禮服",
+        "en": "Minimalist black couture gown"
+      },
+      "background_style": {
+        "zh-tw": "乾淨的純白影棚背景",
+        "en": "Clean pure white studio background"
+      },
+      "lighting": {
+        "zh-tw": "柔和的編輯級影棚布光",
+        "en": "Soft editorial studio lighting"
+      },
+      "ratio": {
+        "zh-tw": "3:4豎構圖",
+        "en": "3:4 Vertical"
+      }
+    },
+    "tags": [
+      "人物",
+      "攝影",
+      "創意"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
+  },
+  {
+    "id": "tpl_street_self_dialogue",
+    "name": {
+      "zh-tw": "街頭的自我對話",
+      "en": "Street Self-Dialogue"
+    },
+    "content": {
+      "zh-tw": "### 街頭的自我“對話”\n\n1. **核心主題與風格：** 一張具有深刻故事性和極佳攝影質感的街頭攝影人像作品，捕捉“自我對話”的哲學瞬間。採用自然光影，呈現電影級敘事感和動態模糊藝術效果。\n2. **場景與背景地點：** {{building_cluster}}。時間與光影：{{lighting_atmosphere}}。光線聚焦於中心人物。氛圍：忙碌、疏離，充滿動態與靜謐的對比。\n3. **核心人物描述位置與狀態：** 位於畫面正中央，靜止站立，神態若有所思或平靜凝視鏡頭，與周圍環境的匆忙形成鮮明對比。著裝：{{clothing}}，面部與上傳圖片高度一致\n4. **周邊人群描述（關鍵敘事元素）身份與著裝：** 所有路過行人都是核心人物的“不同自我”，身著代表其社會角色的服裝：周圍人物面部需要保持與上傳圖片的高度一致，眾多不同著裝的“我”在核心人物周圍穿梭，周邊人物快速移動，產生了較大的動態模糊，周邊人物全部有移動產生的殘影，極大的動態模糊和視覺殘留，與核心人物的靜態形成了鮮明對比，周邊人物與核心人物都是一樣的面孔和人物，不要添加其他無關人物，周邊人物需要與核心人物有準確的前後關係。\n5. **攝影技術與構圖鏡頭與景深：** {{lens_param}}，偏向與人物特寫，較大的景深。核心人物面部和上身清晰銳利，前景和背景（包括動態模糊的人群和街頭環境）適度虛化。半身像為主構圖：中心構圖，核心人物類似半身像，處畫面中心較大位置。相機視角稍稍高出人物並微微向下俯視，只有核心人物抬頭看向鏡頭，{{ratio}}。\n6. **畫質與色調：** 高分辨率，細膩的膠片質感，輕微顆粒感。色調以暖橙色和深藍色陰影為主，色彩鮮明但有層次。\n7. **情緒與故事：** 傳遞出孤獨、內省、身份多元性與內心對話的複雜情感。畫面在動態中凝結了一個安靜的哲學瞬間",
+      "en": "### Street Self-Dialogue\n\n1. **CORE THEME & STYLE:** A deeply storytelling street photography portrait capturing a philosophical moment of \"self-dialogue.\" Uses natural lighting, cinematic narrative feel, and motion blur artistic effects.\n2. **SCENE & BACKGROUND:** {{building_cluster}}. Time & Lighting: {{lighting_atmosphere}}. Light focused on the central character. Atmosphere: Busy, alienated, filled with contrast between dynamics and tranquility.\n3. **CENTRAL CHARACTER:** Located in the center, standing still, with a pensive expression or calmly staring at the camera, forming a sharp contrast with the rush of the surrounding environment. Wardrobe: {{clothing}}, facial features highly consistent with the uploaded image.\n4. **SURROUNDING CROWD (KEY NARRATIVE ELEMENT):** All passing pedestrians are \"different selves\" of the central character, wearing clothes representing their social roles: surrounding characters' faces must remain highly consistent with the uploaded image. Numerous \"selves\" in different outfits weave around the central character. Surrounding characters move rapidly, creating significant motion blur and visual trailing, contrasting with the static nature of the central character. Surrounding characters and the central character share the same face and identity—do not add irrelevant people. Surrounding characters need accurate spatial relationships (front/back) with the central character.\n5. **PHOTOGRAPHY & COMPOSITION:** {{lens_param}}, leaning towards character close-up with larger depth of field. Central character's face and upper body are sharp and clear, while foreground and background (including motion-blurred crowd and street environment) are moderately blurred. Composition: Central composition, half-body style, occupying a large portion of the center. Camera angle slightly above the character looking slightly downward, only the central character looks up at the camera, {{ratio}}.\n6. **QUALITY & TONE:** High resolution, delicate film texture, slight grain. Tones dominated by warm oranges and deep blue shadows, vivid but layered colors.\n7. **EMOTION & STORY:** Conveys feelings of loneliness, introspection, identity multiplicity, and the complexity of inner dialogue. The image freezes a quiet philosophical moment within dynamics."
+    },
+    "imageUrl": "https://s3.bmp.ovh/imgs/2025/12/25/fd3cbc98f5afa970.png",
+    "author": "@MarioTan",
+    "selections": {
+      "building_cluster": {
+        "zh-tw": "紐約摩天大樓群",
+        "en": "New York skyscraper cluster"
+      },
+      "lighting_atmosphere": {
+        "zh-tw": "夕陽餘暉",
+        "en": "Sunset afterglow"
+      },
+      "clothing": {
+        "zh-tw": "黑色修身西裝",
+        "en": "Black slim-fit suit"
+      },
+      "lens_param": {
+        "zh-tw": "85mm, f/1.8",
+        "en": "85mm, f/1.8"
+      },
+      "ratio": {
+        "zh-tw": "3:4豎構圖",
+        "en": "3:4 Vertical"
+      }
+    },
+    "tags": [
+      "人物",
+      "攝影",
+      "創意"
+    ],
+    "language": [
+      "zh-tw",
+      "en"
+    ]
   }
 ];
-

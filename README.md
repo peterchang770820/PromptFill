@@ -68,12 +68,15 @@ Prompt Fill 已更新至 **v0.5.1**。專案初衷是解決 AI 繪圖時提示�
 
 * 內建 Prompt Gallery（模板/詞庫）維護與更新：`docs/prompt-gallery.md`
 
-### 📦 資料更新（以 `src/data/data.json` 為單一來源）
-* 放檔：將匯出的 JSON（含 `categories`、`banks`、`templates`）存成 `src/data/data.json`。
-* 同步：在專案根目錄執行 `node scripts/sync-data.mjs`，會覆寫：
-  * `src/data/banks.js` 的 `INITIAL_CATEGORIES`、`INITIAL_BANKS`
-  * `src/data/templates.js` 的 `INITIAL_TEMPLATES_CONFIG`
-* 驗證：`git diff` 查看變更，啟動前端確認載入正常。
+### 📦 資料更新流程（上游 → data.json → 程式）
+* **上游檔案**：放到 `src/data/upstream-data.json`（可包含 `categories`、`banks`、`templates`，中文欄位用 `cn`）。
+* **執行同步**：在專案根目錄跑 `node scripts/sync-upstream.mjs`，腳本會：
+  * 將 `cn` 鍵改為 `zh-tw`，並用 OpenCC 做簡轉繁。
+  * 只合併「新增」的資料（banks 只補新的 `options`，templates 只加新 `id`，categories 只加新類別）。
+  * 更新 `src/data/data.json`，並呼叫 `scripts/sync-data.mjs` 產出 `src/data/banks.js` / `src/data/templates.js`。
+* **僅用本地來源**：若只有本地 `data.json` 變更，可直接跑 `node scripts/sync-data.mjs`。
+* **重要**：`sync-data.mjs` 會用 `data.json` 完整覆蓋 `banks.js` / `templates.js`。執行前請先確保 `data.json` 已包含完整資料（可先匯出備份、再整合上游），避免遺漏。
+* **驗證**：`git diff` 查看變更，啟動前端確認載入正常。
 
 ## 🚀 快速開始
 
